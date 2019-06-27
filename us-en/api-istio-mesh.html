@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-  <title>Create a Google Compute Engine (GCE) Cluster | NetApp Cloud Docs</title>
+  <title>Istio Meshes | NetApp Cloud Docs</title>
   <meta charset="utf-8">
-  <meta property="og:title" content="Create a Google Compute Engine (GCE) Cluster | NetApp Cloud Docs" />
+  <meta property="og:title" content="Istio Meshes | NetApp Cloud Docs" />
 	<meta property="og:type" content="website" />
-	<meta property="og:url" content="https://docs.netapp.com/kubernetes-service/us-en/create-gce-cluster.html" />
-	<meta property="og:description" content="Documentation on how to create a GCE cluster using NetApp Kubernetes Service (NKS)." />
+	<meta property="og:url" content="https://docs.netapp.com/kubernetes-service/us-en/api-istio-mesh.html" />
+	<meta property="og:description" content="How to use the Istio Mesh API resource for the NKS API." />
   <meta property="og:image" content="https://docs.netapp.com/kubernetes-service/us-en/images/logo-tophat-social.png" />
   <meta property="og:image:alt" content="NetApp Logo" />
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -17,7 +17,7 @@
   <meta http-equiv="nss-type" content="Product Documentation"/>
   <meta http-equiv="nss-subtype" content="User Guide"/>
   
-  <meta name="description" content="Documentation on how to create a GCE cluster using NetApp Kubernetes Service (NKS).">
+  <meta name="description" content="How to use the Istio Mesh API resource for the NKS API.">
   <meta name="keywords" content=" ">
   
 
@@ -346,7 +346,7 @@
   
 
   
-    <li class="active"><a href="create-gce-cluster.html">Create a GCE Cluster</a></li>
+    <li><a href="create-gce-cluster.html">Create a GCE Cluster</a></li>
   
 
   
@@ -458,7 +458,7 @@
   
 
   
-    <li><a href="api-istio-mesh.html">Istio Mesh</a></li>
+    <li class="active"><a href="api-istio-mesh.html">Istio Mesh</a></li>
   
 
   
@@ -501,11 +501,11 @@
           
 
 <div class="n-doc__component-detail-heading-wrap">
-  <h1 class="n-doc__component-detail-heading">Create a Google Compute Engine (GCE) Cluster
+  <h1 class="n-doc__component-detail-heading">Istio Meshes
     <span>
       
-        <a target="_blank" href="https://github.com/NetAppDocs/kubernetes-service/blob/master/create-gce-cluster.adoc" class="btn btn-default githubEditButton" role="button"><i class="fa fa-github fa-lg"></i> Edit on GitHub</a>
-        <a target="_blank" href="https://github.com/NetAppDocs/kubernetes-service/issues/new?body=Page%3A%20[Create a Google Compute Engine (GCE) Cluster](https://docs.netapp.com/us-en/kubernetes-service/create-gce-cluster.html)" class="btn btn-default githubEditButton" role="button"><i class="fa fa-github fa-lg"></i> Request doc changes</a>
+        <a target="_blank" href="https://github.com/NetAppDocs/kubernetes-service/blob/master/api-istio-mesh.adoc" class="btn btn-default githubEditButton" role="button"><i class="fa fa-github fa-lg"></i> Edit on GitHub</a>
+        <a target="_blank" href="https://github.com/NetAppDocs/kubernetes-service/issues/new?body=Page%3A%20[Istio Meshes](https://docs.netapp.com/us-en/kubernetes-service/api-istio-mesh.html)" class="btn btn-default githubEditButton" role="button"><i class="fa fa-github fa-lg"></i> Request doc changes</a>
       
     </span>
   </h1>
@@ -513,7 +513,7 @@
 
 <p class="page-details">
 
-<time datetime="2019-05-31 19:08:07 +0000">05/31/2019</time>
+<time datetime="2019-06-27 19:22:11 +0000">06/27/2019</time>
 
 
 <span>Contributors
@@ -533,111 +533,371 @@
 <div id="preamble">
 <div class="sectionbody">
 <div class="paragraph">
-<p>Learn how to create a Kubernetes cluster on GCE in three clicks, using <a href="https://nks.netapp.io">NetApp Kubernetes Service (NKS)</a>.</p>
+<p>The Istio Mesh API resource lets you create and manage Istio meshes with your <a href="https://nks.netapp.io">NetApp Kubernetes Service (NKS)</a> clusters.</p>
 </div>
 <div class="paragraph">
-<p>To create a Google Compute Engine (GCE) cluster, you will need:</p>
+<p><strong>Requirements</strong></p>
+</div>
+<div class="paragraph">
+<p>In order to be part of an Istio mesh, each node in the cluster must have:</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p>A set of GCE credentials. <a href="https://docs.netapp.com/us-en/kubernetes-service/create-auth-credentials-on-gce.html">Find Your GKE Credentials</a>.</p>
+<p>Istio installed as a solution.</p>
 </li>
 <li>
-<p>An NKS account.</p>
+<p>At least 1 provider load balancer available.</p>
+</li>
+<li>
+<p>At least 2 CPU units.</p>
+</li>
+<li>
+<p>At least 4 GB of memory.</p>
 </li>
 </ul>
-</div>
-<div class="paragraph">
-<p>For more details, see <a href="https://docs.netapp.com/us-en/kubernetes-service/nks-requirements.html">our Requirements page</a>.</p>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="step-1-add-cluster">Step 1: Add Cluster</h2>
+<h2 id="get-all-istio-meshes">GET All Istio Meshes</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Log in to <a href="https://nks.netapp.io">NetApp Kubernetes Service (NKS)</a> and click <strong>+ ADD CLUSTER</strong>.</p>
+<p>Get the details for all existing Istio meshes for the specified organization.</p>
 </div>
-<div class="imageblock">
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Note</div>
+</td>
+<td class="content">
+Due to the volume of data returned by this query, we recommend you pipe the results into a file as shown in the example request below.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p><strong>Path Parameter</strong></p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Name</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Required</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Description</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Org ID</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Yes</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The Organization ID.</p></td>
+</tr>
+</tbody>
+</table>
+<div class="listingblock">
 <div class="content">
-<img src="assets/documentation/create-clusters/create-kubernetes-cluster-on-gce-01.png?raw=true" alt="Create Kubernetes Cluster on GCE">
+<pre class="highlight"><code class="language-shell" data-lang="shell">GET https://api.nks.netapp.io/orgs/{Org ID}/istio-meshes</code></pre>
 </div>
 </div>
 <div class="paragraph">
-<p>Click the <strong>GCE</strong> tile to select GKE as a provider.</p>
+<p>Example request:</p>
 </div>
-<div class="imageblock">
+<div class="listingblock">
 <div class="content">
-<img src="assets/documentation/create-clusters/create-kubernetes-cluster-on-gce-02.png?raw=true" alt="Create Kubernetes Cluster on GCE">
+<pre class="highlight"><code class="language-shell" data-lang="shell">curl -X GET \
+-H "Authorization: Bearer abcdef123456789abcdef123456789" \
+"https://api.nks.netapp.io/orgs/352/istio-meshes"
+&gt; get-istio-meshes.json</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Example response: Note, If there are no Istio meshes for the organization, an empty response is returned.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-json" data-lang="json">{
+  "pk": 112,
+  "name": "New Mesh",
+  "mesh_type": "cross_cluster",
+  "org": 132,
+  "workspace": {
+
+     Workspace details omitted for space considerations. See the Workspaces endpoint reference for response details.
+
+  },
+  "members": [
+
+    Cluster details omitted for space considerations. See the Clusters endpoint reference for response details.
+
+  ],
+
+  "created": "2019-06-27T17:52:31.356392Z",
+  "updated": "2019-06-27T17:52:31.356412Z"
+}</code></pre>
 </div>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="step-2-provider-configuration">Step 2: Provider Configuration</h2>
+<h2 id="get-a-specific-istio-mesh">GET A Specific Istio Mesh</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>In this step, you will set your provider configurations. Here you can update any of the following if you wish:</p>
+<p>Get the details for the specified Istio mesh.</p>
 </div>
-<div class="ulist">
-<ul>
-<li>
-<p>Number and size of master and worker nodes.</p>
-</li>
-<li>
-<p>Region.</p>
-</li>
-<li>
-<p>NKS workspace.</p>
-</li>
-<li>
-<p>GCE credentials.</p>
-</li>
-<li>
-<p>SSH keypair.</p>
-</li>
-</ul>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Note</div>
+</td>
+<td class="content">
+Due to the volume of data returned by this query, we recommend you pipe the results into a file as shown in the example request below.
+</td>
+</tr>
+</table>
 </div>
-<div class="imageblock">
+<div class="paragraph">
+<p><strong>Path Parameter</strong></p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Name</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Required</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Description</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Org ID</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Yes</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The Organization ID.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Istio Mesh ID</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Yes</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The Istio mesh ID.</p></td>
+</tr>
+</tbody>
+</table>
+<div class="listingblock">
 <div class="content">
-<img src="assets/documentation/create-clusters/create-kubernetes-cluster-on-gce-03.png?raw=true" alt="Create Kubernetes Cluster on GCE">
+<pre class="highlight"><code class="language-shell" data-lang="shell">GET https://api.nks.netapp.io/orgs/{Org ID}/istio-meshes/{Istio Mesh ID}</code></pre>
 </div>
 </div>
 <div class="paragraph">
-<p>If everything looks good, scroll down and click <strong>Submit</strong>.</p>
+<p>Example request:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-shell" data-lang="shell">curl -X GET \
+-H "Authorization: Bearer abcdef123456789abcdef123456789" \
+"https://api.nks.netapp.io/orgs/352/istio-meshes/112"
+&gt; get-istio-mesh.json</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Example response: Note, If there are no Istio meshes for the organization, an empty response is returned.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-json" data-lang="json">{
+  "pk": 112,
+  "name": "New Mesh",
+  "mesh_type": "cross_cluster",
+  "org": 132,
+  "workspace": {
+
+     Workspace details omitted for space considerations. See the Workspaces endpoint reference for response details.
+
+  },
+  "members": [
+
+    Cluster details omitted for space considerations. See the Clusters endpoint reference for response details.
+
+  ],
+
+  "created": "2019-06-27T17:52:31.356392Z",
+  "updated": "2019-06-27T17:52:31.356412Z"
+}</code></pre>
+</div>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="step-3-cluster-configuration">Step 3: Cluster Configuration</h2>
+<h2 id="post-create-a-new-istio-mesh">POST Create a New Istio Mesh</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>On the third and final step, you can make any desired changes to your cluster configuration:</p>
+<p>Create a new Istio mesh with two or more nodes.</p>
 </div>
-<div class="ulist">
-<ul>
-<li>
-<p>Update the cluster name.</p>
-</li>
-<li>
-<p>Change the Kubernetes version.</p>
-</li>
-<li>
-<p>Change the OS distribution.</p>
-</li>
-<li>
-<p>Add Solutions to the cluster from our solutions gallery, trusted charts, or add your own Helm chart repo.</p>
-</li>
-</ul>
+<div class="paragraph">
+<p><strong>Path Parameter</strong></p>
 </div>
-<div class="imageblock">
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Name</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Required</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Description</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Org ID</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Yes</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The Organization ID.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Workspace ID</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Yes</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The Workspace ID.</p></td>
+</tr>
+</tbody>
+</table>
+<div class="listingblock">
 <div class="content">
-<img src="assets/documentation/create-clusters/create-kubernetes-cluster-on-gce-04.png?raw=true" alt="Create Kubernetes Cluster on GCE">
+<pre class="highlight"><code class="language-shell" data-lang="shell">POST https://api.nks.netapp.io/orgs/{Org ID}/workspaces/{Workspace ID/istio-meshes</code></pre>
 </div>
 </div>
 <div class="paragraph">
-<p>When your cluster configurations are ready, click <strong>Submit</strong>. Your cluster will begin building, and will be ready for use within minutes.</p>
+<p>Example request:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-shell" data-lang="shell">curl -X POST \
+-H "Content-Type: application/json" \
+-H "Authorization: Bearer abcdef123456789abcdef123456789" \
+-d @new-istio-mesh.json \
+"https://api.nks.netapp.io/orgs/350/workspaces/182/istio-meshes"</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Contents of file <code>new-istio-mesh.json</code>:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-json" data-lang="json">{
+  "name": "New Mesh",
+  "mesh_type": "cross_cluster",
+  "workspace": 152,
+  "members": [
+    {
+      "cluster": 6507,
+      "role": "host"
+    },
+    {
+      "cluster": 6503,
+      "role": "guest"
+    }
+  ]
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>Istio Mesh Attributes</strong></p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Name</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Description</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>name</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The name of the new Istio mesh.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>mesh_type</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The type of mesh. The only type currently available is <code>cross_cluster</code>.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>workspace</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The ID of the workspace where the mesh will be built.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>members</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">An array with details for each node in the mesh.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>cluster</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The ID of the cluster to add to the mesh.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>role</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The role of the cluster in the mesh, either <code>host</code> or <code>guest</code>. Note: You will need to add at least one of each role.</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>If the request is successful, the server will respond with the full details of the mesh and all clusters assigned to the mesh.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="delete-an-istio-mesh">DELETE an Istio Mesh</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Disband the specified Istio mesh. Any clusters assigned to the mesh will continue to run.</p>
+</div>
+<div class="paragraph">
+<p><strong>Path Parameter</strong></p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Name</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Required</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Description</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Org ID</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Yes</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The Organization ID.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Istio Mesh ID</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Yes</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The Istio mesh ID.</p></td>
+</tr>
+</tbody>
+</table>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-shell" data-lang="shell">DELETE https://api.nks.netapp.io/orgs/{Org ID}/istio-meshes/{Istio Mesh ID}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Example request:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-shell" data-lang="shell">curl -X DELETE \
+-H "Authorization: Bearer abcdef123456789abcdef123456789" \
+"https://api.nks.netapp.io/orgs/352/istio-meshes/112"</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>If the operation is successful, an empty response will be returned.</p>
 </div>
 </div>
 </div>
