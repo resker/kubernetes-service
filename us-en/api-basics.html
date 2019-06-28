@@ -513,7 +513,7 @@
 
 <p class="page-details">
 
-<time datetime="2019-06-24 18:19:02 +0000">06/24/2019</time>
+<time datetime="2019-06-28 19:18:43 +0000">06/28/2019</time>
 
 
 <span>Contributors
@@ -533,7 +533,7 @@
 <div id="preamble">
 <div class="sectionbody">
 <div class="paragraph">
-<p>Welcome to the NKS API Reference. This section guides you through the setup process of creating an NKS API token, passing the token in your API requests, and the response codes returned by the API.</p>
+<p>Welcome to the <a href="https://nks.netapp.io">NetApp Kubernetes Service (NKS)</a> API Reference. This section guides you through the setup process of creating an NKS API token, passing the token in your API requests, and the response codes returned by the API.</p>
 </div>
 </div>
 </div>
@@ -567,17 +567,70 @@
 </li>
 </ol>
 </div>
-<div class="admonitionblock important">
-<table>
-<tr>
-<td class="icon">
-<div class="title">Important</div>
-</td>
-<td class="content">
-The API only accepts keys from accounts which have the role of <code>Owner</code> in the related Organization.
-</td>
-</tr>
-</table>
+</div>
+</div>
+<div class="sect1">
+<h2 id="access-rights">Access Rights</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Your UI access and your API access are both tied to the same account. This means that you can only do through the API what you would be able to do through the UI.</p>
+</div>
+<div class="paragraph">
+<p>Most API operations are scoped under the organization. You will only be able to carry out these operations if you have <code>Owner</code> level access to the specified organization.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="scope">Scope</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The following resources are scoped under the organization:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Workspaces</p>
+</li>
+<li>
+<p>Teams</p>
+</li>
+<li>
+<p>Members</p>
+</li>
+<li>
+<p>Keysets</p>
+</li>
+<li>
+<p>Clusters</p>
+</li>
+<li>
+<p>Nodes</p>
+</li>
+<li>
+<p>Node Pools</p>
+</li>
+<li>
+<p>Federations</p>
+</li>
+<li>
+<p>Istio Mesh</p>
+</li>
+<li>
+<p>Trusted Charts</p>
+</li>
+<li>
+<p>Subscription</p>
+</li>
+<li>
+<p>Invoices</p>
+</li>
+<li>
+<p>Notifications</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>The user resource is scoped under the user account.</p>
 </div>
 </div>
 </div>
