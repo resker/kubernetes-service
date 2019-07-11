@@ -541,7 +541,7 @@
 
 <p class="page-details">
 
-<time datetime="2019-07-10 23:36:43 +0000">07/10/2019</time>
+<time datetime="2019-07-11 20:02:35 +0000">07/11/2019</time>
 
 
 <span>Contributors
@@ -558,8 +558,261 @@
 
 </p>
 
+<div id="preamble">
+<div class="sectionbody">
 <div class="paragraph">
-<p>Coming soon.</p>
+<p>A Package is one of three types of Solutions that can be added to your Project. Keep reading to find out how to use Packages.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="packages">Packages</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Packages are Helm charts. You will find a number of commonly used Packages available to added to your Project. You also have the option to import your own charts from an external repository.</p>
+</div>
+<div class="sect2">
+<h3 id="add-a-package">Add a Package</h3>
+<div class="paragraph">
+<p>Navigate into your Project details page.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="assets/documentation/alm-packages/project-overview.png?raw=true" alt="NKS project overview">
+</div>
+</div>
+<div class="paragraph">
+<p>From the Overview tab, you can scroll down to the Solutions section and then click the <strong> + Add Solution</strong> button.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="assets/documentation/alm-packages/add-solution.png?raw=true" alt="NKS add solution">
+</div>
+</div>
+<div class="paragraph">
+<p>Another option is to switch from the Project Overview tab to the Project Solutions tab and then click the <strong> + Add Solution</strong> button.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="assets/documentation/alm-packages/project-solutions.png?raw=true" alt="NKS project solutions">
+</div>
+</div>
+<div class="paragraph">
+<p>Either way, you should end up at the same place.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="assets/documentation/alm-packages/solutions-overview.png?raw=true" alt="NKS solutions overview">
+</div>
+</div>
+<div class="paragraph">
+<p>Click the button labeled <strong>+ Add A New Package</strong>. This will bring up the <strong>Select Solution Package</strong> page which has its own set of Charts navigation tabs and a Search field.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="assets/documentation/alm-packages/select-solution-package.png?raw=true" alt="NKS select solution package">
+</div>
+</div>
+<div class="paragraph">
+<p>Selecting the <strong>Trusted Helm Charts</strong> tab displays the galley of included charts.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="assets/documentation/alm-packages/trusted-helm-charts.png?raw=true" alt="NKS trusted helm charts">
+</div>
+</div>
+<div class="paragraph">
+<p>Click on any of the cards to bring up details about it. For example, clicking on the "rethinkdb" card takes us to a screen where we can:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Customize the package name.</p>
+</li>
+<li>
+<p>Select a specific version.</p>
+</li>
+<li>
+<p>Customize the values YAML.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="assets/documentation/alm-packages/configuring-rethinkdb.png?raw=true" alt="NKS configure rethinkdb">
+</div>
+</div>
+<div class="paragraph">
+<p>Make any desired changes and then press the <strong>Create Package</strong> button to continue.</p>
+</div>
+<div class="paragraph">
+<p>It will take a little while for the package to install.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="assets/documentation/alm-packages/package-not-ready.png?raw=true" alt="NKS package not ready">
+</div>
+</div>
+<div class="paragraph">
+<p>The red circle with an ! icon will be replaced by a green circle with a check mark when the package is ready.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="assets/documentation/alm-packages/package-ready.png?raw=true" alt="NKS package ready">
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="view-installed-packages">View Installed Packages</h3>
+<div class="paragraph">
+<p>Navigate back to <strong>Project Name &#8594; Solutions &#8594; Packages</strong> to see the list of installed packages.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="assets/documentation/alm-packages/installed-packages.png?raw=true" alt="NKS installed packages">
+</div>
+</div>
+<div class="paragraph">
+<p>You can click on the name of the package to bring up its configuration screen. It will look similar to the one used to install the package.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="manage-chart-repos">Manage Chart Repos</h3>
+<div class="paragraph">
+<p>Navigating back to the Select Solutions Package screen, you will find a button labeled <strong>Manage Chart Repos</strong>.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="assets/documentation/alm-packages/select-solution-package.png?raw=true" alt="NKS select solution package">
+</div>
+</div>
+<div class="paragraph">
+<p>Pressing that button will begin the process of bringing in your own charts from an external repository. You also have the option of starting the process by navigating through <strong>Solutions &#8594; My Charts</strong> and using the <strong>+ Import Charts</strong> button.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="assets/documentation/alm-packages/my-charts-import-charts.png?raw=true" alt="NKS my charts import charts">
+</div>
+</div>
+<div class="paragraph">
+<p>There is a three step wizard that walks you through the process of importing charts.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="assets/documentation/alm-packages/my-charts-three-steps.png?raw=true" alt="NKS my charts three steps">
+</div>
+</div>
+<div class="sect3">
+<h4 id="select-source">Select Source</h4>
+<div class="paragraph">
+<p>The first step has a few options available.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>You may accept the random name assigned as the <strong>Chart Repository Name</strong>, or replace it. Be sure to follow the naming requirements. (Lowercase letters, digits, and dashes only.)</p>
+</li>
+<li>
+<p>Use the radio button under Source to specify the repository type. (GitHub or Packaged Charts)</p>
+</li>
+<li>
+<p>Provide the Repository URL.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="assets/documentation/alm-packages/my-charts-select-source.png?raw=true" alt="NKS my charts select source">
+</div>
+</div>
+<div class="paragraph">
+<p>If the GitHub repository is private, you may check the box and provide credentials to enable access.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="assets/documentation/alm-packages/my-charts-private-repo.png?raw=true" alt="NKS my charts private repo">
+</div>
+</div>
+<div class="paragraph">
+<p>For Packaged Charts, provide the requested URL.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="assets/documentation/alm-packages/my-charts-packaged-charts.png?raw=true" alt="NKS my charts select source">
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="select-repository">Select Repository</h4>
+<div class="paragraph">
+<p>NKS will use the supplied information to verify access to the GitHub Repository or Packaged Charts URL.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="assets/documentation/alm-packages/my-charts-review-repo.png?raw=true" alt="NKS my charts review repo">
+</div>
+</div>
+<div class="paragraph">
+<p>If everything checks out properly, you may continue by pressing the <strong>Save Repository</strong> button.</p>
+</div>
+<div class="paragraph">
+<p>The charts will be imported. This process happens fairly quickly, and you are provided with visual feedback in the <strong>State</strong> column.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="assets/documentation/alm-packages/my-charts-save-repo.png?raw=true" alt="NKS my charts save repo">
+</div>
+</div>
+<div class="paragraph">
+<p>The <strong>State</strong> column updates from a progress bar to a green circle with white check mark when complete.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="assets/documentation/alm-packages/my-charts-repo-added.png?raw=true" alt="NKS my charts repo added">
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="verify-imported-charts">Verify Imported Charts</h3>
+<div class="paragraph">
+<p>The imported charts should appear in the <strong>Project &#8594; Solutions</strong> tab when you click the <strong>+ Add Solution</strong> and then <strong>+ Add a New Package</strong> buttons.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Note</div>
+</td>
+<td class="content">
+The <strong>Charts &#8594; My Charts</strong> tab can be used to filter the display to exclude Trusted Helm Charts.
+</td>
+</tr>
+</table>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="assets/documentation/alm-packages/my-charts-select-solution-package.png?raw=true" alt="NKS my charts select solution package">
+</div>
+</div>
+<div class="paragraph">
+<p>Selecting the chart allows you to configure and install it in a process similar to "Add a Package" described above.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="assets/documentation/alm-packages/my-charts-guestbook-configuration.png?raw=true" alt="NKS my charts guestbook configuration">
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="more-information">More Information</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Additional information about Helm charts can be found in the <a href="https://helm.sh/docs">Docs</a> section of the <a href="https://helm.sh/">Helm website</a>.</p>
+</div>
+</div>
 </div>
 
         </article>
