@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-  <title>Create a Microsoft AKS Cluster | NetApp Cloud Docs</title>
+  <title>Cipher Suites | NetApp Cloud Docs</title>
   <meta charset="utf-8">
-  <meta property="og:title" content="Create a Microsoft AKS Cluster | NetApp Cloud Docs" />
+  <meta property="og:title" content="Cipher Suites | NetApp Cloud Docs" />
 	<meta property="og:type" content="website" />
-	<meta property="og:url" content="https://docs.netapp.com/kubernetes-service/create-aks-cluster.html" />
-	<meta property="og:description" content="Documentation on how to create a Microsoft AKS cluster using NetApp Kubernetes Service (NKS)." />
+	<meta property="og:url" content="https://docs.netapp.com/kubernetes-service/cipher-suites.html" />
+	<meta property="og:description" content="More information on cypher suites used for SSL/TLS handshakes with the NKS API and web views" />
   <meta property="og:image" content="https://docs.netapp.com/kubernetes-service/images/logo-tophat-social.png" />
   <meta property="og:image:alt" content="NetApp Logo" />
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -17,7 +17,7 @@
   <meta http-equiv="nss-type" content="Product Documentation"/>
   <meta http-equiv="nss-subtype" content="User Guide"/>
   
-  <meta name="description" content="Documentation on how to create a Microsoft AKS cluster using NetApp Kubernetes Service (NKS).">
+  <meta name="description" content="More information on cypher suites used for SSL/TLS handshakes with the NKS API and web views">
   <meta name="keywords" content=" ">
   
 
@@ -334,7 +334,7 @@
   
 
   
-    <li class="active"><a href="create-aks-cluster.html">Create an AKS Cluster</a></li>
+    <li><a href="create-aks-cluster.html">Create an AKS Cluster</a></li>
   
 
   
@@ -537,11 +537,11 @@
           
 
 <div class="n-doc__component-detail-heading-wrap">
-  <h1 class="n-doc__component-detail-heading">Create a Microsoft AKS Cluster
+  <h1 class="n-doc__component-detail-heading">Cipher Suites
     <span>
       
-        <a target="_blank" href="https://github.com/NetAppDocs/kubernetes-service/blob/master/create-aks-cluster.adoc" class="btn btn-default githubEditButton" role="button"><i class="fa fa-github fa-lg"></i> Edit on GitHub</a>
-        <a target="_blank" href="https://github.com/NetAppDocs/kubernetes-service/issues/new?body=Page%3A%20[Create a Microsoft AKS Cluster](https://docs.netapp.com/us-en/kubernetes-service/create-aks-cluster.html)" class="btn btn-default githubEditButton" role="button"><i class="fa fa-github fa-lg"></i> Request doc changes</a>
+        <a target="_blank" href="https://github.com/NetAppDocs/kubernetes-service/blob/master/cypher-suites.adoc" class="btn btn-default githubEditButton" role="button"><i class="fa fa-github fa-lg"></i> Edit on GitHub</a>
+        <a target="_blank" href="https://github.com/NetAppDocs/kubernetes-service/issues/new?body=Page%3A%20[Cipher Suites](https://docs.netapp.com/us-en/kubernetes-service/cipher-suites.html)" class="btn btn-default githubEditButton" role="button"><i class="fa fa-github fa-lg"></i> Request doc changes</a>
       
     </span>
   </h1>
@@ -549,7 +549,7 @@
 
 <p class="page-details">
 
-<time datetime="2019-05-31 19:08:07 +0000">05/31/2019</time>
+<time datetime="2019-07-16 19:01:38 +0000">07/16/2019</time>
 
 
 <span>Contributors
@@ -566,116 +566,72 @@
 
 </p>
 
-<div id="preamble">
-<div class="sectionbody">
 <div class="paragraph">
-<p>Learn how to create a Kubernetes cluster on AKS in three clicks, using <a href="https://nks.netapp.io">NetApp Kubernetes Service (NKS)</a>.</p>
+<p>The following cipher suites are used for SSL/TLS handshakes with the NKS API and web views. This documentation was last tested and validated on July 2019.</p>
 </div>
 <div class="paragraph">
-<p>To create a Microsoft AKS cluster, you will need:</p>
+<p>Note that the cipher suites are presented in descending order of server preference. That means the <code>TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256</code> suite will be used if the client supports it.</p>
 </div>
-<div class="ulist">
-<ul>
-<li>
-<p>A set of Azure credentials with AKS permissions. <a href="https://docs.netapp.com/us-en/kubernetes-service/create-auth-credentials-on-azure.html">Find Your Azure Credentials</a>.</p>
-</li>
-<li>
-<p>An NKS account.</p>
-</li>
-</ul>
-</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Cipher Suite Name</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>TLS 1.0</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>TLS 1.1</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>TLS 1.2</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">:---</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">:---:</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">:---:</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">:---:</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">no</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">no</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">yes</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA256</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">no</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">no</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">yes</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">yes</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">yes</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">yes</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">no</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">no</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">yes</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA384</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">no</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">no</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">yes</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">yes</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">yes</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">yes</p></td>
+</tr>
+</tbody>
+</table>
 <div class="paragraph">
-<p>For more details, see <a href="https://docs.netapp.com/us-en/kubernetes-service/nks-requirements.html">our Requirements page</a>.</p>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="step-1-add-cluster">Step 1: Add Cluster</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>Log in to <a href="https://nks.netapp.io">NetApp Kubernetes Service (NKS)</a> and click <strong>+ ADD CLUSTER</strong>.</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="assets/documentation/create-clusters/create-kubernetes-cluster-on-aks-01.png?raw=true" alt="Create Kubernetes Cluster on AKS">
-</div>
-</div>
-<div class="paragraph">
-<p>Click the <strong>Microsoft AKS</strong> tile to select AKS as a provider.</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="assets/documentation/create-clusters/create-kubernetes-cluster-on-aks-02.png?raw=true" alt="Create Kubernetes Cluster on AKS">
-</div>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="step-2-provider-configuration">Step 2: Provider Configuration</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>In this step, you will set your provider configurations. Here you can update any of the following if you wish:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Number and size of master and worker nodes.</p>
-</li>
-<li>
-<p>Region, Resource Group, Network, or Subnet.</p>
-</li>
-<li>
-<p>NKS workspace.</p>
-</li>
-<li>
-<p>AKS credentials.</p>
-</li>
-<li>
-<p>SSH keypair.</p>
-</li>
-</ul>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="assets/documentation/create-clusters/create-kubernetes-cluster-on-aks-03.png?raw=true" alt="Create Kubernetes Cluster on AKS">
-</div>
-</div>
-<div class="paragraph">
-<p>If everything looks good, scroll down and click <strong>Submit</strong>.</p>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="step-3-cluster-configuration">Step 3: Cluster Configuration</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>On the third and final step, you can make any desired changes to your cluster configuration:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Update the cluster name.</p>
-</li>
-<li>
-<p>Change the Kubernetes version.</p>
-</li>
-<li>
-<p>Change the OS distribution.</p>
-</li>
-<li>
-<p>Add Solutions to the cluster from our solutions gallery, trusted charts, or add your own Helm chart repo.</p>
-</li>
-</ul>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="assets/documentation/create-clusters/create-kubernetes-cluster-on-aks-04.png?raw=true" alt="Create Kubernetes Cluster on AKS">
-</div>
-</div>
-<div class="paragraph">
-<p>When your cluster configurations are ready, click <strong>Submit</strong>. Your cluster will begin building, and will be ready for use within minutes.</p>
-</div>
-</div>
+<p>If you have questions about the above cipher suites, you can find contact information for NKS on our <a href="https://nks.netapp.io/contact">contact us</a> page.</p>
 </div>
 
         </article>
