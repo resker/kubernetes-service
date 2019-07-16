@@ -15,7 +15,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/kubernetes-service/a-sysdig-kubernetes-adventure.html</loc>
       
-        <lastmod>2019-03-28T15:36:34+00:00</lastmod>
+        <lastmod>2019-04-02T18:38:19+00:00</lastmod>
       
     </url>
   
@@ -65,6 +65,13 @@
       <loc>https://docs.netapp.com/us-en/kubernetes-service/alm-packages.html</loc>
       
         <lastmod>2019-07-16T17:11:26+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/kubernetes-service/alm-projects.html</loc>
+      
+        <lastmod>2019-07-16T18:35:19+00:00</lastmod>
       
     </url>
   
@@ -288,14 +295,14 @@
     <url>
       <loc>https://docs.netapp.com/us-en/kubernetes-service/install-kubectl-to-control-a-kubernetes-cluster.html</loc>
       
-        <lastmod>2019-03-28T15:36:34+00:00</lastmod>
+        <lastmod>2019-04-02T18:38:19+00:00</lastmod>
       
     </url>
   
     <url>
       <loc>https://docs.netapp.com/us-en/kubernetes-service/managing-ingresses-on-kubernetes.html</loc>
       
-        <lastmod>2019-03-28T15:36:34+00:00</lastmod>
+        <lastmod>2019-04-02T18:38:19+00:00</lastmod>
       
     </url>
   
@@ -316,7 +323,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/kubernetes-service//search.html</loc>
       
-        <lastmod>2019-07-16T17:12:48+00:00</lastmod>
+        <lastmod>2019-07-16T18:36:41+00:00</lastmod>
       
     </url>
   
@@ -344,7 +351,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/kubernetes-service/using-the-kubernetes-cloud-backup.html</loc>
       
-        <lastmod>2019-03-28T15:36:34+00:00</lastmod>
+        <lastmod>2019-04-02T18:38:19+00:00</lastmod>
       
     </url>
   
