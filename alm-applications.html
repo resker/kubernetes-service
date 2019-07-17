@@ -549,7 +549,7 @@
 
 <p class="page-details">
 
-<time datetime="2019-07-17 16:49:38 +0000">07/17/2019</time>
+<time datetime="2019-07-17 17:08:42 +0000">07/17/2019</time>
 
 
 <span>Contributors
@@ -670,6 +670,9 @@ To serve static HTML pages, be sure to add an empty file named <code>.static</co
 <div class="ulist">
 <ul>
 <li>
+<p>Create a Project for your Application. For more information on Projects, see our <a href="https://docs.netapp.com/us-en/kubernetes-service/alm-projects.html">Projects guide</a>.</p>
+</li>
+<li>
 <p>Before deploying your Application on NKS, you will need to commit it to a Git repository. You can either use a local repository on your desktop computer, or use a public <a href="https://github.com">GitHub</a> repository.</p>
 </li>
 <li>
@@ -678,51 +681,17 @@ To serve static HTML pages, be sure to add an empty file named <code>.static</co
 </ul>
 </div>
 <div class="sect2">
-<h3 id="create-an-application">Create an Application</h3>
+<h3 id="deploy-your-application">Deploy Your Application</h3>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>Go to App Management <a href="https://nks.netapp.io/v2" class="bare">https://nks.netapp.io/v2</a></p>
-</li>
-<li>
-<p>Select a workspace</p>
-</li>
-<li>
-<p>Press the Projects tab</p>
-</li>
-<li>
-<p>Select a project</p>
-</li>
-<li>
-<p>At the bottom of the page, press the [Add Solution] button</p>
-</li>
-<li>
-<p>Press Application</p>
-</li>
-<li>
-<p>Enter a name for identifying your application.</p>
-</li>
-<li>
-<p>Select an update strategy - this maps to the deployment object in Kubernetes.</p>
-</li>
-<li>
-<p>Optionally, enable autoscaling of the application by setting minimum and maximum replicas and CPU trigger values.</p>
-</li>
-</ol>
-</div>
-</div>
-<div class="sect2">
-<h3 id="deploy-to-cluster">Deploy to cluster</h3>
-<div class="olist arabic">
-<ol class="arabic">
-<li>
-<p>Copy the <code>git remote</code> address from the Project page</p>
+<p>Copy the <code>git remote</code> address from the Project page.</p>
 </li>
 <li>
 <p>On your terminal, paste the <code>git remote</code> address.</p>
 </li>
 <li>
-<p>Commit your changes</p>
+<p>Commit your changes.</p>
 </li>
 <li>
 <p><code>git push nks master</code></p>
