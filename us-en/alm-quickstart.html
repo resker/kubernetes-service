@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-  <title>ALM Quickstart Guide | NetApp Cloud Docs</title>
+  <title>Application Lifecycle Management: Quickstart Guide | NetApp Cloud Docs</title>
   <meta charset="utf-8">
-  <meta property="og:title" content="ALM Quickstart Guide | NetApp Cloud Docs" />
+  <meta property="og:title" content="Application Lifecycle Management: Quickstart Guide | NetApp Cloud Docs" />
 	<meta property="og:type" content="website" />
 	<meta property="og:url" content="https://docs.netapp.com/kubernetes-service/us-en/alm-quickstart.html" />
-	<meta property="og:description" content="Quickstart guide for NKS ALM" />
+	<meta property="og:description" content="Quickstart guide for NKS Application Lifecycle Management" />
   <meta property="og:image" content="https://docs.netapp.com/kubernetes-service/us-en/images/logo-tophat-social.png" />
   <meta property="og:image:alt" content="NetApp Logo" />
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -17,7 +17,7 @@
   <meta http-equiv="nss-type" content="Product Documentation"/>
   <meta http-equiv="nss-subtype" content="User Guide"/>
   
-  <meta name="description" content="Quickstart guide for NKS ALM">
+  <meta name="description" content="Quickstart guide for NKS Application Lifecycle Management">
   <meta name="keywords" content=" ">
   
 
@@ -537,11 +537,11 @@
           
 
 <div class="n-doc__component-detail-heading-wrap">
-  <h1 class="n-doc__component-detail-heading">ALM Quickstart Guide
+  <h1 class="n-doc__component-detail-heading">Application Lifecycle Management: Quickstart Guide
     <span>
       
         <a target="_blank" href="https://github.com/NetAppDocs/kubernetes-service/blob/master/alm-quickstart.adoc" class="btn btn-default githubEditButton" role="button"><i class="fa fa-github fa-lg"></i> Edit on GitHub</a>
-        <a target="_blank" href="https://github.com/NetAppDocs/kubernetes-service/issues/new?body=Page%3A%20[ALM Quickstart Guide](https://docs.netapp.com/us-en/kubernetes-service/alm-quickstart.html)" class="btn btn-default githubEditButton" role="button"><i class="fa fa-github fa-lg"></i> Request doc changes</a>
+        <a target="_blank" href="https://github.com/NetAppDocs/kubernetes-service/issues/new?body=Page%3A%20[Application Lifecycle Management: Quickstart Guide](https://docs.netapp.com/us-en/kubernetes-service/alm-quickstart.html)" class="btn btn-default githubEditButton" role="button"><i class="fa fa-github fa-lg"></i> Request doc changes</a>
       
     </span>
   </h1>
@@ -549,7 +549,7 @@
 
 <p class="page-details">
 
-<time datetime="2019-07-16 17:11:26 +0000">07/16/2019</time>
+<time datetime="2019-07-17 16:49:38 +0000">07/17/2019</time>
 
 
 <span>Contributors
@@ -586,7 +586,7 @@
 <div class="title">Note</div>
 </td>
 <td class="content">
-Application Management is currently in Functional Preview mode. To enable this feature you will need to create a new cluster, and "Enable experimental features."
+Application Lifecycle Management is currently in Functional Preview mode. To enable this feature you will need to create a new cluster, and "Enable experimental features."
 </td>
 </tr>
 </table>
@@ -595,6 +595,17 @@ Application Management is currently in Functional Preview mode. To enable this f
 <div class="content">
 <img src="assets/documentation/alm-quickstart/enable-experimental-features.png?raw=true" alt="NKS app management">
 </div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="projects">Projects</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Projects are the top level of Application Lifecycle Management. Projects are created in your desired Workspace, and can contain any combination of Applications, Trackers, and Packages.</p>
+</div>
+<div class="paragraph">
+<p>For more information about Projects, see our <a href="https://docs.netapp.com/us-en/kubernetes-service/alm-projects.html">Application Lifecycle Management: Projects Guide</a>.</p>
 </div>
 </div>
 </div>
@@ -611,7 +622,7 @@ Application Management is currently in Functional Preview mode. To enable this f
 <p>Developers can <code>git push</code> code to NKS, and NKS takes it from there. NKS will automatically build the container and deploy your code to the cluster. The Application is deployed to the cluster namespace which matches the project name.</p>
 </div>
 <div class="paragraph">
-<p>Learn more in our <a href="https://docs.netapp.com/us-en/kubernetes-service/alm-applications.html">ALM Applications Guide</a>.</p>
+<p>Learn more in our <a href="https://docs.netapp.com/us-en/kubernetes-service/alm-applications.html">Application Lifecycle Management: Applications Guide</a>.</p>
 </div>
 </div>
 </div>
@@ -622,7 +633,7 @@ Application Management is currently in Functional Preview mode. To enable this f
 <p>Trackers provide a method to visualize the state of Kubernetes objects that were created by directly applying manifests. This is accomplished by tracking Kubernetes labels and presenting that information in the NKS UI.</p>
 </div>
 <div class="paragraph">
-<p>For more information about Trackers, see our <a href="https://docs.netapp.com/us-en/kubernetes-service/alm-trackers.html">ALM Trackers Guide</a>.</p>
+<p>For more information about Trackers, see our <a href="https://docs.netapp.com/us-en/kubernetes-service/alm-trackers.html">Application Lifecycle Management: Trackers Guide</a>.</p>
 </div>
 </div>
 </div>
@@ -630,10 +641,10 @@ Application Management is currently in Functional Preview mode. To enable this f
 <h2 id="packages">Packages</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Packages are Helm charts. You will find a number of commonly used Packages available to added to your Project. You also have the option to import your own charts from an external repository.</p>
+<p>Packages are Helm charts. You will find a number of commonly-used Packages available to added to your Project. You also have the option to import your own charts from an external repository.</p>
 </div>
 <div class="paragraph">
-<p>For more information about Packages, see our <a href="https://docs.netapp.com/us-en/kubernetes-service/alm-packages.html">ALM Packages Guide</a>.</p>
+<p>For more information about Packages, see our <a href="https://docs.netapp.com/us-en/kubernetes-service/alm-packages.html">Application Lifecycle Management: Packages Guide</a>.</p>
 </div>
 </div>
 </div>
