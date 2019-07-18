@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-  <title>Create a Microsoft AKS Cluster | NetApp Cloud Docs</title>
+  <title>HCI Requirements | NetApp Cloud Docs</title>
   <meta charset="utf-8">
-  <meta property="og:title" content="Create a Microsoft AKS Cluster | NetApp Cloud Docs" />
+  <meta property="og:title" content="HCI Requirements | NetApp Cloud Docs" />
 	<meta property="og:type" content="website" />
-	<meta property="og:url" content="https://docs.netapp.com/kubernetes-service/create-aks-cluster.html" />
-	<meta property="og:description" content="Documentation on how to create a Microsoft AKS cluster using NetApp Kubernetes Service (NKS)." />
+	<meta property="og:url" content="https://docs.netapp.com/kubernetes-service/hci-requirements.html" />
+	<meta property="og:description" content="Requirements for using HCI with NKS" />
   <meta property="og:image" content="https://docs.netapp.com/kubernetes-service/images/logo-tophat-social.png" />
   <meta property="og:image:alt" content="NetApp Logo" />
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -17,7 +17,7 @@
   <meta http-equiv="nss-type" content="Product Documentation"/>
   <meta http-equiv="nss-subtype" content="User Guide"/>
   
-  <meta name="description" content="Documentation on how to create a Microsoft AKS cluster using NetApp Kubernetes Service (NKS).">
+  <meta name="description" content="Requirements for using HCI with NKS">
   <meta name="keywords" content=" ">
   
 
@@ -380,7 +380,7 @@
   
 
   
-    <li class="active"><a href="create-aks-cluster.html">Create an AKS Cluster</a></li>
+    <li><a href="create-aks-cluster.html">Create an AKS Cluster</a></li>
   
 
   
@@ -551,11 +551,11 @@
           
 
 <div class="n-doc__component-detail-heading-wrap">
-  <h1 class="n-doc__component-detail-heading">Create a Microsoft AKS Cluster
+  <h1 class="n-doc__component-detail-heading">HCI Requirements
     <span>
       
-        <a target="_blank" href="https://github.com/NetAppDocs/kubernetes-service/blob/master/create-aks-cluster.adoc" class="btn btn-default githubEditButton" role="button"><i class="fa fa-github fa-lg"></i> Edit on GitHub</a>
-        <a target="_blank" href="https://github.com/NetAppDocs/kubernetes-service/issues/new?body=Page%3A%20[Create a Microsoft AKS Cluster](https://docs.netapp.com/us-en/kubernetes-service/create-aks-cluster.html)" class="btn btn-default githubEditButton" role="button"><i class="fa fa-github fa-lg"></i> Request doc changes</a>
+        <a target="_blank" href="https://github.com/NetAppDocs/kubernetes-service/blob/master/hci-requirements.adoc" class="btn btn-default githubEditButton" role="button"><i class="fa fa-github fa-lg"></i> Edit on GitHub</a>
+        <a target="_blank" href="https://github.com/NetAppDocs/kubernetes-service/issues/new?body=Page%3A%20[HCI Requirements](https://docs.netapp.com/us-en/kubernetes-service/hci-requirements.html)" class="btn btn-default githubEditButton" role="button"><i class="fa fa-github fa-lg"></i> Request doc changes</a>
       
     </span>
   </h1>
@@ -563,7 +563,7 @@
 
 <p class="page-details">
 
-<time datetime="2019-05-31 19:08:07 +0000">05/31/2019</time>
+<time datetime="2019-07-18 18:25:42 +0000">07/18/2019</time>
 
 
 <span>Contributors
@@ -580,116 +580,67 @@
 
 </p>
 
-<div id="preamble">
-<div class="sectionbody">
 <div class="paragraph">
-<p>Learn how to create a Kubernetes cluster on AKS in three clicks, using <a href="https://nks.netapp.io">NetApp Kubernetes Service (NKS)</a>.</p>
-</div>
-<div class="paragraph">
-<p>To create a Microsoft AKS cluster, you will need:</p>
+<p>The following are requirements for using HCI with <a href="https://nks.netapp.io">NetApp Kubernetes Service (NKS)</a>. For more information about using NetApp HCI, see <a href="http://docs.netapp.com/hci/index.jsp">the official HCI documentation</a>.</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p>A set of Azure credentials with AKS permissions. <a href="https://docs.netapp.com/us-en/kubernetes-service/create-auth-credentials-on-azure.html">Find Your Azure Credentials</a>.</p>
+<p>An HCI system. We do not currently support cloud services on non-HCI systems.</p>
 </li>
 <li>
-<p>An NKS account.</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>For more details, see <a href="https://docs.netapp.com/us-en/kubernetes-service/nks-requirements.html">our Requirements page</a>.</p>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="step-1-add-cluster">Step 1: Add Cluster</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>Log in to <a href="https://nks.netapp.io">NetApp Kubernetes Service (NKS)</a> and click <strong>+ ADD CLUSTER</strong>.</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="assets/documentation/create-clusters/create-kubernetes-cluster-on-aks-01.png?raw=true" alt="Create Kubernetes Cluster on AKS">
-</div>
-</div>
-<div class="paragraph">
-<p>Click the <strong>Microsoft AKS</strong> tile to select AKS as a provider.</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="assets/documentation/create-clusters/create-kubernetes-cluster-on-aks-02.png?raw=true" alt="Create Kubernetes Cluster on AKS">
-</div>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="step-2-provider-configuration">Step 2: Provider Configuration</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>In this step, you will set your provider configurations. Here you can update any of the following if you wish:</p>
-</div>
+<p>System size requirements:</p>
 <div class="ulist">
 <ul>
 <li>
-<p>Number and size of master and worker nodes.</p>
+<p>2x4 systems are not supported for production use. However, you can use these for demo work.</p>
 </li>
 <li>
-<p>Region, Resource Group, Network, or Subnet.</p>
+<p>3x4 systems are the minimum production system size we support.</p>
 </li>
 <li>
-<p>NKS workspace.</p>
+<p>4x4 systems are the recommended minimum size.</p>
 </li>
 <li>
-<p>AKS credentials.</p>
-</li>
-<li>
-<p>SSH keypair.</p>
+<p>19.1 stack release or later.</p>
 </li>
 </ul>
 </div>
-<div class="imageblock">
-<div class="content">
-<img src="assets/documentation/create-clusters/create-kubernetes-cluster-on-aks-03.png?raw=true" alt="Create Kubernetes Cluster on AKS">
-</div>
-</div>
-<div class="paragraph">
-<p>If everything looks good, scroll down and click <strong>Submit</strong>.</p>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="step-3-cluster-configuration">Step 3: Cluster Configuration</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>On the third and final step, you can make any desired changes to your cluster configuration:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Update the cluster name.</p>
 </li>
 <li>
-<p>Change the Kubernetes version.</p>
+<p>Any NDE supported version of vSphere</p>
 </li>
 <li>
-<p>Change the OS distribution.</p>
+<p>vSphere distributed switches (VDS). We do not support installing to standard switches.</p>
 </li>
 <li>
-<p>Add Solutions to the cluster from our solutions gallery, trusted charts, or add your own Helm chart repo.</p>
+<p>Optional: Networks for NKS (and other services) pre-created in vCenter.</p>
+</li>
+<li>
+<p>HCI system successfully installed.</p>
+</li>
+<li>
+<p>An <a href="https://nks.netapp.io">NKS</a> account.</p>
+</li>
+<li>
+<p>An NKS API token, which will authorize the installer to access the NKS Organization. To create an NKS API token, log in to NKS and click your user icon in the upper right-hand corner. Click <strong>Edit Profile</strong> then <strong>Add Token</strong>.</p>
+</li>
+<li>
+<p>mNode 2.1 (requires updates from the 2.0 version shipped with 19.1 stack)<code>`</code></p>
 </li>
 </ul>
 </div>
-<div class="imageblock">
-<div class="content">
-<img src="assets/documentation/create-clusters/create-kubernetes-cluster-on-aks-04.png?raw=true" alt="Create Kubernetes Cluster on AKS">
-</div>
-</div>
-<div class="paragraph">
-<p>When your cluster configurations are ready, click <strong>Submit</strong>. Your cluster will begin building, and will be ready for use within minutes.</p>
-</div>
-</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Note</div>
+</td>
+<td class="content">
+We only support VDS as it stands today. If you only have VSS in place, you will not be able to install NKS
+</td>
+</tr>
+</table>
 </div>
 
         </article>
