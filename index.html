@@ -285,7 +285,7 @@
   
     <!-- Check Container -->
     <li class="subfolders">
-      <a href="#">Setup - Credentials</a>
+      <a href="#">Setup and Credentials</a>
       <ul>
         
 
@@ -349,28 +349,16 @@
   
     <!-- Check Container -->
     <li class="subfolders">
-      <a href="#">NetApp HCI</a>
-      <ul>
-        
-
-  
-    <li><a href="hci-requirements.html">Requirements</a></li>
-  
-
-
-      </ul>
-    </li>
-  
-
-  
-    <!-- Check Container -->
-    <li class="subfolders">
       <a href="#">Cluster Lifecycle</a>
       <ul>
         
 
   
-    <li><a href="nks-requirements.html">Requirements</a></li>
+    <li><a href="hci-requirements.html">NetApp HCI Requirements</a></li>
+  
+
+  
+    <li><a href="nks-requirements.html">NKS Requirements</a></li>
   
 
   
@@ -565,7 +553,7 @@
 
 <p class="page-details">
 
-<time datetime="2019-07-18 19:08:02 +0000">07/18/2019</time>
+<time datetime="2019-07-19 19:42:21 +0000">07/19/2019</time>
 
 
 <span>Contributors
@@ -598,8 +586,14 @@
 </div>
 </div>
 <div class="sect1">
-<h2 id="setup-credentials">Setup - Credentials</h2>
+<h2 id="setup-add-credentials">Setup - Add Credentials</h2>
 <div class="sectionbody">
+<div class="paragraph">
+<p>After you create an NKS account, one of your first tasks will be to add your provider credentials. Provider credentials are the authorization keys for your account on AWS, NetApp HCI, Azure, and other supported providers. This lets you create clusters on the supported provider of your choice.</p>
+</div>
+<div class="paragraph">
+<p>Get step-by-step instructions for adding provider credentials for:</p>
+</div>
 <div class="ulist">
 <ul>
 <li>
@@ -624,6 +618,12 @@
 <div class="sect1">
 <h2 id="application-lifecycle-management">Application Lifecycle Management</h2>
 <div class="sectionbody">
+<div class="paragraph">
+<p>Application Lifecycle Management provides a developer-friendly <code>git push</code> workflow which lets you deploy your application to an NKS Kubernetes cluster with a simple <code>git push nks master</code>. Apps can be deployed with monitoring and more.</p>
+</div>
+<div class="paragraph">
+<p>Explore Application Lifecycle Management in our series of guides and step-by-step instructional articles:</p>
+</div>
 <div class="ulist">
 <ul>
 <li>
@@ -648,6 +648,9 @@
 <div class="sect1">
 <h2 id="netapp-hci">NetApp HCI</h2>
 <div class="sectionbody">
+<div class="paragraph">
+<p>Get started with NetApp HCI on NKS by reading our guides on the following topics:</p>
+</div>
 <div class="ulist">
 <ul>
 <li>
@@ -658,16 +661,16 @@
 </div>
 </div>
 <div class="sect1">
-<h2 id="cluster-lifecycle">Cluster Lifecycle</h2>
+<h2 id="create-a-kubernetes-cluster">Create a Kubernetes Cluster</h2>
 <div class="sectionbody">
+<div class="paragraph">
+<p>Now that you have set up your NKS account, it&#8217;s time to launch a Kubernetes cluster with our famously easy, "three clicks and done" process.</p>
+</div>
+<div class="paragraph">
+<p>Learn how to create a cluster at the provider of your choice with our handy guides:</p>
+</div>
 <div class="ulist">
 <ul>
-<li>
-<p><a href="nks-requirements.html">Requirements</a></p>
-</li>
-<li>
-<p><a href="whitelist-ports-and-ip-addresses.html">Whitelist Ports and IP Addresses</a></p>
-</li>
 <li>
 <p><a href="create-aws-cluster.html">Create an Amazon Web Services (AWS) Cluster</a></p>
 </li>
@@ -686,6 +689,39 @@
 <li>
 <p><a href="create-gke-cluster.html">Create a Google Kubernetes Engine (GKE) Cluster</a></p>
 </li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="manage-access">Manage Access</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Learn how to use NKS Teams and Workspaces to manage access for your users. NKS lets you set up multiple levels of access, so that you can restrict authorization keys to certain groups of users, prevent users from one group from creating or deleting clusters in another group&#8217;s Workspace, and more.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="add-a-user.html">Add a User</a></p>
+</li>
+<li>
+<p><a href="add-a-team.html">Add a Team</a></p>
+</li>
+<li>
+<p><a href="add-a-workspace.html">Add a Workspace</a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="cluster-lifecycle">Cluster Lifecycle</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>You have set up your NKS account, and launched one or more Kubernetes clusters. Now what? Learn more about how to use and extend NKS, and how to automate your NKS workflow with our new Terraform provider.</p>
+</div>
+<div class="ulist">
+<ul>
 <li>
 <p><a href="add-a-kubernetes-master-node.html">Add a Kubernetes Master Node</a></p>
 </li>
@@ -704,27 +740,6 @@
 <li>
 <p><a href="intro-to-terraform-on-nks.html">Terraform on NKS</a></p>
 </li>
-<li>
-<p><a href="cipher-suites.html">Cipher Suites</a></p>
-</li>
-</ul>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="manage-access">Manage Access</h2>
-<div class="sectionbody">
-<div class="ulist">
-<ul>
-<li>
-<p><a href="add-a-user.html">Add a User</a></p>
-</li>
-<li>
-<p><a href="add-a-team.html">Add a Team</a></p>
-</li>
-<li>
-<p><a href="add-a-workspace.html">Add a Workspace</a></p>
-</li>
 </ul>
 </div>
 </div>
@@ -732,6 +747,12 @@
 <div class="sect1">
 <h2 id="api">API</h2>
 <div class="sectionbody">
+<div class="paragraph">
+<p>Interested in doing things programmatically instead of clicking through a UI? Check out our API. We provide full access to the NKS services through the API. Anything you can do in the UI, you can do through the API as well.</p>
+</div>
+<div class="paragraph">
+<p>See our extensive API documentation for more information:</p>
+</div>
 <div class="ulist">
 <ul>
 <li>
@@ -787,8 +808,35 @@
 </div>
 </div>
 <div class="sect1">
+<h2 id="requirements-and-other-details">Requirements and Other Details</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The following articles cover specific requirements and other details necessary for the healthy functioning of your NKS account and systems.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="hci-requirements.html">Requirements</a></p>
+</li>
+<li>
+<p><a href="nks-requirements.html">NKS Requirements</a></p>
+</li>
+<li>
+<p><a href="whitelist-ports-and-ip-addresses.html">Whitelist Ports and IP Addresses</a></p>
+</li>
+<li>
+<p><a href="cipher-suites.html">Cipher Suites</a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
 <h2 id="whats-new">What&#8217;s New</h2>
 <div class="sectionbody">
+<div class="paragraph">
+<p>Get the latest news and updates on NKS.</p>
+</div>
 <div class="ulist">
 <ul>
 <li>
