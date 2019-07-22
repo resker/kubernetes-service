@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-  <title>Whitelist Ports and IP Addresses | NetApp Cloud Docs</title>
+  <title>Notifications | NetApp Cloud Docs</title>
   <meta charset="utf-8">
-  <meta property="og:title" content="Whitelist Ports and IP Addresses | NetApp Cloud Docs" />
+  <meta property="og:title" content="Notifications | NetApp Cloud Docs" />
 	<meta property="og:type" content="website" />
-	<meta property="og:url" content="https://docs.netapp.com/kubernetes-service/us-en/whitelist-ports-and-ip-addresses.html" />
-	<meta property="og:description" content="Learn which NKS ports and IP addresses need to be whitelisted for your clusters." />
+	<meta property="og:url" content="https://docs.netapp.com/kubernetes-service/us-en/api-notifications.html" />
+	<meta property="og:description" content="How to use the Notifications API resource for the NKS API." />
   <meta property="og:image" content="https://docs.netapp.com/kubernetes-service/us-en/images/logo-tophat-social.png" />
   <meta property="og:image:alt" content="NetApp Logo" />
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -17,7 +17,7 @@
   <meta http-equiv="nss-type" content="Product Documentation"/>
   <meta http-equiv="nss-subtype" content="User Guide"/>
   
-  <meta name="description" content="Learn which NKS ports and IP addresses need to be whitelisted for your clusters.">
+  <meta name="description" content="How to use the Notifications API resource for the NKS API.">
   <meta name="keywords" content=" ">
   
 
@@ -362,7 +362,7 @@
   
 
   
-    <li class="active"><a href="whitelist-ports-and-ip-addresses.html">Whitelist Ports and IP Addresses</a></li>
+    <li><a href="whitelist-ports-and-ip-addresses.html">Whitelist Ports and IP Addresses</a></li>
   
 
   
@@ -514,7 +514,7 @@
   
 
   
-    <li><a href="api-notifications.html">Notifications</a></li>
+    <li class="active"><a href="api-notifications.html">Notifications</a></li>
   
 
 
@@ -541,11 +541,11 @@
           
 
 <div class="n-doc__component-detail-heading-wrap">
-  <h1 class="n-doc__component-detail-heading">Whitelist Ports and IP Addresses
+  <h1 class="n-doc__component-detail-heading">Notifications
     <span>
       
-        <a target="_blank" href="https://github.com/NetAppDocs/kubernetes-service/blob/master/whitelist-ports-and-ip-addresses.adoc" class="btn btn-default githubEditButton" role="button"><i class="fa fa-github fa-lg"></i> Edit on GitHub</a>
-        <a target="_blank" href="https://github.com/NetAppDocs/kubernetes-service/issues/new?body=Page%3A%20[Whitelist Ports and IP Addresses](https://docs.netapp.com/us-en/kubernetes-service/whitelist-ports-and-ip-addresses.html)" class="btn btn-default githubEditButton" role="button"><i class="fa fa-github fa-lg"></i> Request doc changes</a>
+        <a target="_blank" href="https://github.com/NetAppDocs/kubernetes-service/blob/master/api-notifications.adoc" class="btn btn-default githubEditButton" role="button"><i class="fa fa-github fa-lg"></i> Edit on GitHub</a>
+        <a target="_blank" href="https://github.com/NetAppDocs/kubernetes-service/issues/new?body=Page%3A%20[Notifications](https://docs.netapp.com/us-en/kubernetes-service/api-notifications.html)" class="btn btn-default githubEditButton" role="button"><i class="fa fa-github fa-lg"></i> Request doc changes</a>
       
     </span>
   </h1>
@@ -553,7 +553,7 @@
 
 <p class="page-details">
 
-<time datetime="2019-04-22 16:17:14 +0000">04/22/2019</time>
+<time datetime="2019-07-22 18:10:28 +0000">07/22/2019</time>
 
 
 <span>Contributors
@@ -570,46 +570,294 @@
 
 </p>
 
+<div id="preamble">
+<div class="sectionbody">
 <div class="paragraph">
-<p>We recommend you secure your clusters as appropriate for your infrastructure needs.</p>
-</div>
-<div class="paragraph">
-<p>If you decide to restrict access to your cluster, you will need to whitelist the following ports and IP addresses so that the <a href="https://nks.netapp.io">NetApp Kubernetes Service (NKS)</a> system will continue to work correctly:</p>
-</div>
-<div class="paragraph">
-<p>Ports:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>12443 (proxy to dashboard)</p>
-</li>
-<li>
-<p>6443 (Kubernetes API)</p>
-</li>
-<li>
-<p>443</p>
-</li>
-<li>
-<p>22 (Kubernetes upgrades and other local tasks)</p>
-</li>
-</ul>
+<p>The Notifications API resource lets you read notifications on your <a href="https://nks.netapp.io">NetApp Kubernetes Service (NKS)</a> account.</p>
 </div>
 <div class="paragraph">
-<p>IP addresses:</p>
+<p>Notifications are scoped to the user account, as determined by the API key. Notifications cannot be updated, marked as read, or deleted through the API.</p>
 </div>
-<div class="ulist">
-<ul>
-<li>
-<p>34.208.181.140</p>
-</li>
-<li>
-<p>54.187.65.159</p>
-</li>
-<li>
-<p>34.217.162.31</p>
-</li>
-</ul>
+</div>
+</div>
+<div class="sect1">
+<h2 id="get-all-notifications">GET All Notifications</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Get the details for all existing notifications for the user.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Note</div>
+</td>
+<td class="content">
+This query will return all notifications on the account, both read and unread. In most cases, the response from the API will be extensive. For better readability we recommend you pipe the results of the API request to a file as shown in the example request.
+</td>
+</tr>
+</table>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-shell" data-lang="shell">GET https://api.nks.netapp.io/orgs/user/notifications</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Example request:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-shell" data-lang="shell">curl -X GET \
+-H "Authorization: Bearer abcdef123456789abcdef123456789" \
+"https://api.nks.netapp.io/user/notifications" \
+&gt; nks-notifications.json</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Example response:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-json" data-lang="json">[
+  {
+    "pk": 74770,
+    "message": "",
+    "details": "",
+    "category": "cluster",
+    "topic": "cluster_component",
+    "level": "error",
+    "announcement": null,
+    "build_log": {
+      "pk": 110695,
+      "cluster": 6494,
+      "event_category": "kubernetes",
+      "event_type": "k8s_node_config",
+      "event_state": "failure",
+      "message": "Error configuring Kubernetes nodes: K8s Builder task [TASK: network_plugin\/flannel\/v0.10\/install : Create Flannel assets] failed. Error from server (Forbidden)",
+      "reference": "",
+      "created": "2019-06-26T16:38:54.237723Z"
+    },
+    "extra_data": {
+      "org": {
+        "pk": 132,
+        "name": "Sitting Ducks"
+      },
+      "cluster": {
+        "pk": 6494,
+        "name": "Istio Mesh 2"
+      }
+    },
+    "read": false,
+    "seen": false,
+    "issued": "2019-06-26T16:39:25.905771Z"
+  },
+  {
+    "pk": 74729,
+    "message": "",
+    "details": "",
+    "category": "cluster",
+    "topic": "cluster_component",
+    "level": "error",
+    "announcement": null,
+    "build_log": {
+      "pk": 110694,
+      "cluster": 6493,
+      "event_category": "kubernetes",
+      "event_type": "k8s_node_config",
+      "event_state": "failure",
+      "message": "Error configuring Kubernetes nodes: K8s Builder task [TASK: network_plugin\/flannel\/v0.10\/install : Create Flannel assets] failed. Error from server (Forbidden):",
+      "reference": "",
+      "created": "2019-06-26T16:38:21.916119Z"
+    },
+    "extra_data": {
+      "org": {
+        "pk": 132,
+        "name": "Sitting Ducks"
+      },
+      "cluster": {
+        "pk": 6493,
+        "name": "Istio Mesh 1"
+      }
+    },
+    "read": false,
+    "seen": false,
+    "issued": "2019-06-26T16:38:25.820345Z"
+  }
+]</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>Return Values</strong></p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Name</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Description</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>pk</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Notification ID.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>message</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Message content.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>details</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Additional details about the notification.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>category</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The notification category.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>topic</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The notification topic.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>level</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The notification level.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>announcement</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Announcement content.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>build_log</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Build log content, for build notifications.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>cluster</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The cluster ID referenced in the build notification.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>event_category</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The category of the event which triggered the build notification.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>event_type</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The type of event which triggered the build notification.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>event_state</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The state of the event which triggered the build notification.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>message</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The notification message.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>reference</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">A reference number.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>created</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The timestamp when the notification was created.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>extra_data</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">More identifying details for the notification: the organization and cluster.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>org</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The organization for which the notification was triggered.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>pk</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The Organization ID for which the notification was triggered.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>name</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The name of the organization for which the notification was triggered.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>cluster</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The cluster for which the notification was triggered.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>pk</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The Cluster ID for which the notification was triggered.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>name</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The cluster name for which the notification was triggered.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>read</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Whether or not the notification has been marked as read, <code>true</code> or <code>false</code>.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>seen</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Whether or not the notification has been see, <code>true</code> or <code>false</code>.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>issued</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The timestamp when the notification was created.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sect1">
+<h2 id="get-a-specific-notification">GET A Specific Notification</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Get the details for a specific notification.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-shell" data-lang="shell">GET https://api.nks.netapp.io/orgs/user/notifications/{Notification ID}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Example request:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-shell" data-lang="shell">curl -X GET \
+-H "Authorization: Bearer abcdef123456789abcdef123456789" \
+"https://api.nks.netapp.io/user/notifications/35" \</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Example response:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-json" data-lang="json">{
+  "pk": 74856,
+  "message": "Deletion initiated.",
+  "details": "",
+  "category": "cluster",
+  "topic": "cluster_delete",
+  "level": "info",
+  "announcement": null,
+  "build_log": null,
+  "extra_data": {
+    "org": {
+      "pk": 132,
+      "name": "Sitting Ducks"
+    },
+    "reference": 6494,
+    "cluster": {
+      "pk": 6494,
+      "name": "Istio Mesh 2"
+    }
+  },
+  "read": true,
+  "seen": true,
+  "issued": "2019-06-26T16:54:58.419514Z"
+}
+---</code></pre>
+</div>
+</div>
+</div>
 </div>
 
         </article>

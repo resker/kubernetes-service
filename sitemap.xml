@@ -15,7 +15,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/kubernetes-service/a-sysdig-kubernetes-adventure.html</loc>
       
-        <lastmod>2019-04-22T16:10:46+00:00</lastmod>
+        <lastmod>2019-04-22T16:17:14+00:00</lastmod>
       
     </url>
   
@@ -149,6 +149,13 @@
       <loc>https://docs.netapp.com/us-en/kubernetes-service/api-nodes.html</loc>
       
         <lastmod>2019-06-24T18:19:02+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/kubernetes-service/api-notifications.html</loc>
+      
+        <lastmod>2019-07-22T18:10:28+00:00</lastmod>
       
     </url>
   
@@ -309,21 +316,21 @@
     <url>
       <loc>https://docs.netapp.com/us-en/kubernetes-service/install-kubectl-to-control-a-kubernetes-cluster.html</loc>
       
-        <lastmod>2019-04-22T16:10:46+00:00</lastmod>
+        <lastmod>2019-04-22T16:17:14+00:00</lastmod>
       
     </url>
   
     <url>
       <loc>https://docs.netapp.com/us-en/kubernetes-service/managing-ingresses-on-kubernetes.html</loc>
       
-        <lastmod>2019-04-22T16:10:46+00:00</lastmod>
+        <lastmod>2019-04-22T16:17:14+00:00</lastmod>
       
     </url>
   
     <url>
       <loc>https://docs.netapp.com/us-en/kubernetes-service/news.html</loc>
       
-        <lastmod>2019-04-22T16:10:46+00:00</lastmod>
+        <lastmod>2019-04-22T16:17:14+00:00</lastmod>
       
     </url>
   
@@ -337,7 +344,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/kubernetes-service//search.html</loc>
       
-        <lastmod>2019-07-19T19:43:32+00:00</lastmod>
+        <lastmod>2019-07-22T18:12:05+00:00</lastmod>
       
     </url>
   
@@ -365,14 +372,14 @@
     <url>
       <loc>https://docs.netapp.com/us-en/kubernetes-service/using-the-kubernetes-cloud-backup.html</loc>
       
-        <lastmod>2019-04-22T16:10:46+00:00</lastmod>
+        <lastmod>2019-04-22T16:17:14+00:00</lastmod>
       
     </url>
   
     <url>
       <loc>https://docs.netapp.com/us-en/kubernetes-service/whitelist-ports-and-ip-addresses.html</loc>
       
-        <lastmod>2019-04-22T16:10:46+00:00</lastmod>
+        <lastmod>2019-04-22T16:17:14+00:00</lastmod>
       
     </url>
   
