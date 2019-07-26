@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-  <title>Find AWS Credentials for CVS | NetApp Cloud Docs</title>
+  <title>SSH to a Node in an NKS Cluster | NetApp Cloud Docs</title>
   <meta charset="utf-8">
-  <meta property="og:title" content="Find AWS Credentials for CVS | NetApp Cloud Docs" />
+  <meta property="og:title" content="SSH to a Node in an NKS Cluster | NetApp Cloud Docs" />
 	<meta property="og:type" content="website" />
-	<meta property="og:url" content="https://docs.netapp.com/kubernetes-service/find-aws-credentials-for-cvs.html" />
-	<meta property="og:description" content="Learn how to find your AWS credentials for CVS." />
-  <meta property="og:image" content="https://docs.netapp.com/kubernetes-service/images/logo-tophat-social.png" />
+	<meta property="og:url" content="https://docs.netapp.com/kubernetes-service/us-en/ssh-to-a-node-in-an-nks-cluster.html" />
+	<meta property="og:description" content="Learn how to SSH to a node in an NKS cluster." />
+  <meta property="og:image" content="https://docs.netapp.com/kubernetes-service/us-en/images/logo-tophat-social.png" />
   <meta property="og:image:alt" content="NetApp Logo" />
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="format-detection" content="telephone=no">
@@ -17,16 +17,16 @@
   <meta http-equiv="nss-type" content="Product Documentation"/>
   <meta http-equiv="nss-subtype" content="User Guide"/>
   
-  <meta name="description" content="Learn how to find your AWS credentials for CVS.">
+  <meta name="description" content="Learn how to SSH to a node in an NKS cluster.">
   <meta name="keywords" content=" ">
   
 
   <!-- Icons -->
-  <link rel="icon" href="/kubernetes-service/images/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="/kubernetes-service/us-en/images/favicon.ico" type="image/x-icon">
 
   <!-- RSS Feed -->
   
-  <link rel="alternate" type="application/rss+xml" title="NetApp Cloud Docs" href="/kubernetes-service/feed.xml">
+  <link rel="alternate" type="application/rss+xml" title="NetApp Cloud Docs" href="/kubernetes-service/us-en/feed.xml">
   
 
   <!-- CSS Definitions: NetApp CSS should be defined after generic css -->
@@ -35,23 +35,23 @@
   <link rel="stylesheet" href="//cdn.jsdelivr.net/searchkit/0.10.0/theme.css">
 
   <!-- LUCI CSS Content -->
-  <link rel="stylesheet" href="/kubernetes-service/common/css/esb.min.css">
-  <link rel="stylesheet" href="/kubernetes-service/common/css/netapp-library.min.css">
-  <link rel="stylesheet" href="/kubernetes-service/common/css/doc.css">
-  <link rel="stylesheet" href="/kubernetes-service/common/css/doc-components.css">
+  <link rel="stylesheet" href="/kubernetes-service/us-en/common/css/esb.min.css">
+  <link rel="stylesheet" href="/kubernetes-service/us-en/common/css/netapp-library.min.css">
+  <link rel="stylesheet" href="/kubernetes-service/us-en/common/css/doc.css">
+  <link rel="stylesheet" href="/kubernetes-service/us-en/common/css/doc-components.css">
 
-  <link rel="stylesheet" href='/kubernetes-service/css/na-sidebar.css' type='text/css'>
-  <link rel='stylesheet' href='/kubernetes-service/css/na-search.css' type='text/css'>
-  <link rel='stylesheet' href='/kubernetes-service/css/clouddocs.css' type='text/css'>
+  <link rel="stylesheet" href='/kubernetes-service/us-en/css/na-sidebar.css' type='text/css'>
+  <link rel='stylesheet' href='/kubernetes-service/us-en/css/na-search.css' type='text/css'>
+  <link rel='stylesheet' href='/kubernetes-service/us-en/css/clouddocs.css' type='text/css'>
 
   <!-- Font awesome seems to affect our GitHub Icon and generic "arrow box" for external links. -->
-  <link rel="stylesheet" type="text/css" href="/kubernetes-service/css/font-awesome.min.css">
-  <!-- <link rel="stylesheet" href="/kubernetes-service/css/customstyles.css"> -->
+  <link rel="stylesheet" type="text/css" href="/kubernetes-service/us-en/css/font-awesome.min.css">
+  <!-- <link rel="stylesheet" href="/kubernetes-service/us-en/css/customstyles.css"> -->
   <!-- Controls the shadow effect for search dropdown menu -->
-  <link rel="stylesheet" href="/kubernetes-service/css/boxshadowproperties.css">
+  <link rel="stylesheet" href="/kubernetes-service/us-en/css/boxshadowproperties.css">
 
   <!-- NetApp CSS controls the technical content -->
-  <link rel='stylesheet' href='/kubernetes-service/css/netapp.css' type='text/css'>
+  <link rel='stylesheet' href='/kubernetes-service/us-en/css/netapp.css' type='text/css'>
 
   
 
@@ -60,23 +60,23 @@
   <!-- Used to import Promise for IE. Required for SearchKit -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/bluebird/3.3.5/bluebird.min.js"></script>
   
-    <script src='/kubernetes-service/js/na-search.js'></script>
+    <script src='/kubernetes-service/us-en/js/na-search.js'></script>
   
 
   
-  <link rel='stylesheet' href='/kubernetes-service/css/na-pagenav.css' type='text/css' id="pagenav-css">
-  <script src='/kubernetes-service/js/na-pagenav.js'></script>
+  <link rel='stylesheet' href='/kubernetes-service/us-en/css/na-pagenav.css' type='text/css' id="pagenav-css">
+  <script src='/kubernetes-service/us-en/js/na-pagenav.js'></script>
   
 
-  <link rel='stylesheet' href='/kubernetes-service/css/prism.css' type='text/css'>
-  <link rel='stylesheet' href='/kubernetes-service/css/prism-netapp.css' type='text/css'>
+  <link rel='stylesheet' href='/kubernetes-service/us-en/css/prism.css' type='text/css'>
+  <link rel='stylesheet' href='/kubernetes-service/us-en/css/prism-netapp.css' type='text/css'>
 
-  <script src='/kubernetes-service/js/clouddocs.js'></script>
-  <script src='/kubernetes-service/js/s_code_impl.js'></script>
-  <script src='/kubernetes-service/js/jquery.navgoco.min.js'></script>
+  <script src='/kubernetes-service/us-en/js/clouddocs.js'></script>
+  <script src='/kubernetes-service/us-en/js/s_code_impl.js'></script>
+  <script src='/kubernetes-service/us-en/js/jquery.navgoco.min.js'></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-  <script src='/kubernetes-service/js/toc.js'></script>
-  <script src='/kubernetes-service/js/customscripts.js'></script>
+  <script src='/kubernetes-service/us-en/js/toc.js'></script>
+  <script src='/kubernetes-service/us-en/js/customscripts.js'></script>
 
   <script>
       $(document).ready(function() {
@@ -193,7 +193,7 @@
       <div class="n-property-bar__menu-toggle">
         <a href="#" class="n-property-bar__menu-toggle-link"><span class="n-property-bar__menu-toggle-text">Menu</span><svg class="n-icon-bars n-property-bar__menu-toggle-icon" aria-labelledby="title">
           <title>bars</title>
-          <use xlink:href="/kubernetes-service/common/svg/sprite.svg#bars"></use>
+          <use xlink:href="/kubernetes-service/us-en/common/svg/sprite.svg#bars"></use>
         </svg></a>
       </div>
       <div class="n-property-bar__property-mark n-property-bar__property-mark--has-property-name">
@@ -201,11 +201,11 @@
           <div class="n-property-bar__logo">
             <svg class="n-icon-netapp-mark n-property-bar__netapp-mark-icon" aria-labelledby="title">
               <title>netapp-mark</title>
-              <use xlink:href="/kubernetes-service/common/svg/sprite.svg#netapp-mark"></use>
+              <use xlink:href="/kubernetes-service/us-en/common/svg/sprite.svg#netapp-mark"></use>
             </svg>
             <svg class="n-property-bar__logo-svg" aria-labelledby="title">
               <title>NetApp</title>
-              <use xlink:href="/kubernetes-service/common/svg/sprite.svg#netapp-logo"></use>
+              <use xlink:href="/kubernetes-service/us-en/common/svg/sprite.svg#netapp-logo"></use>
             </svg>
           </div>
           <h2 class="n-property-bar__property-name">Cloud Docs</h2>
@@ -225,7 +225,7 @@
               <span class="ie-i18n-lang">English</span>
               <svg class="ie-i18n-icon-container" class="n-property-bar__logo-svg" aria-labelledby="title">
                 <title>globe</title>
-                <use xlink:href="/kubernetes-service/common/svg/sprite.svg#globe" class="n-icon-globe n-globe__icon"></use>
+                <use xlink:href="/kubernetes-service/us-en/common/svg/sprite.svg#globe" class="n-icon-globe n-globe__icon"></use>
               </svg>
             </a>
           </li>
@@ -294,7 +294,7 @@
   
 
   
-    <li class="active"><a href="find-aws-credentials-for-cvs.html">AWS Credentials for CVS</a></li>
+    <li><a href="find-aws-credentials-for-cvs.html">AWS Credentials for CVS</a></li>
   
 
   
@@ -442,7 +442,7 @@
   
 
   
-    <li><a href="ssh-to-a-node-in-an-nks-cluster.html">SSH to a Node in an NKS Cluster</a></li>
+    <li class="active"><a href="ssh-to-a-node-in-an-nks-cluster.html">SSH to a Node in an NKS Cluster</a></li>
   
 
 
@@ -545,11 +545,11 @@
           
 
 <div class="n-doc__component-detail-heading-wrap">
-  <h1 class="n-doc__component-detail-heading">Find AWS Credentials for CVS
+  <h1 class="n-doc__component-detail-heading">SSH to a Node in an NKS Cluster
     <span>
       
-        <a target="_blank" href="https://github.com/NetAppDocs/kubernetes-service/blob/master/find-aws-credentials-for-cvs.adoc" class="btn btn-default githubEditButton" role="button"><i class="fa fa-github fa-lg"></i> Edit on GitHub</a>
-        <a target="_blank" href="https://github.com/NetAppDocs/kubernetes-service/issues/new?body=Page%3A%20[Find AWS Credentials for CVS](https://docs.netapp.com/us-en/kubernetes-service/find-aws-credentials-for-cvs.html)" class="btn btn-default githubEditButton" role="button"><i class="fa fa-github fa-lg"></i> Request doc changes</a>
+        <a target="_blank" href="https://github.com/NetAppDocs/kubernetes-service/blob/master/ssh-to-a-node-in-an-nks-cluster.adoc" class="btn btn-default githubEditButton" role="button"><i class="fa fa-github fa-lg"></i> Edit on GitHub</a>
+        <a target="_blank" href="https://github.com/NetAppDocs/kubernetes-service/issues/new?body=Page%3A%20[SSH to a Node in an NKS Cluster](https://docs.netapp.com/us-en/kubernetes-service/ssh-to-a-node-in-an-nks-cluster.html)" class="btn btn-default githubEditButton" role="button"><i class="fa fa-github fa-lg"></i> Request doc changes</a>
       
     </span>
   </h1>
@@ -557,7 +557,7 @@
 
 <p class="page-details">
 
-<time datetime="2019-07-25 17:30:30 +0000">07/25/2019</time>
+<time datetime="2019-07-26 17:53:25 +0000">07/26/2019</time>
 
 
 <span>Contributors
@@ -574,105 +574,84 @@
 
 </p>
 
-<div class="sect1">
-<h2 id="overview">Overview</h2>
+<div id="preamble">
 <div class="sectionbody">
 <div class="paragraph">
-<p>Learn how to find your CVS credentials through the AWS Marketplace. Before creating a nks.netapp.io[NetApp Kubernetes Service (NKS)] cluster on AWS with CVS, you will need to add your CVS credentials to your NKS Organization.</p>
+<p>Whenever possible, you will want to use Dockerfiles or the <code>kubectl</code> command to interact with a cluster. However, there are some cases when you may need (or want) to SSH directly to a node in an NKS cluster.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Note</div>
+</td>
+<td class="content">
+If you are familiar with using SSH to interact with a Linux server, the username is <code>core</code> (on ContainerLinux) or <code>ubuntu</code> (on Ubuntu). Download the SSH keys from your NKS Profile page, then use them to authenticate on the node.
+</td>
+</tr>
+</table>
 </div>
 <div class="paragraph">
-<p><strong>Requirements</strong></p>
+<p>You can log in as the user <code>core</code> (on ContainerLinux) or <code>ubuntu</code> (on Ubuntu) with a command like:</p>
 </div>
-<div class="ulist">
-<ul>
-<li>
-<p>An NKS account. Sign up at nks.netapp.io[nks.netapp.io].</p>
-</li>
-<li>
-<p>An active AWS account, with an active <a href="https://aws.amazon.com/marketplace/pp/B07CRVLWTF">Cloud Volumes for AWS subscription</a>.</p>
-</li>
-<li>
-<p>An active CVS account.</p>
-</li>
-</ul>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code>ssh -i ~/.ssh/id_rsa core@192.168.0.1</code></pre>
 </div>
-<div class="paragraph">
-<p><strong>Related Articles</strong></p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>For step-by-step instructions on the separate process of setting up AWS credentials, see our article <a href="https://docs.netapp.com/us-en/kubernetes-service/create-auth-credentials-on-aws.html">Create Credentials on AWS</a>.</p>
-</li>
-<li>
-<p>For instructions on enabling the AWS subscription for CVS, see <a href="https://docs.netapp.com/us-en/cloud_volumes/aws/media/cvs_aws_account_setup.pdf">the NetApp Cloud Volumes Service for AWS: AWS Account Setup</a>.</p>
-</li>
-</ul>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="get-the-cvs-credentials">Get the CVS Credentials</h2>
+<h2 id="get-the-ssh-keys">Get the SSH Keys</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p><a href="https://aws.amazon.com/marketplace/saas/ordering?productId=5c5fb490-b6be-4fba-b720-190e0b8510ce&amp;ref_=saas_pdp_header_continue">Click here to log into the CVS page on the AWS console</a>.</p>
+<p>To improve security, NKS nodes use SSH keys for authentication instead of passwords. You will need to download and install these SSH keys before you can SSH to a node in the cluster. You will need to install the SSH keys on your desktop computer.</p>
 </div>
 <div class="paragraph">
-<p>Under "You already have a contract for this product," click <strong>Click here to setup your account</strong>.</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="assets/documentation/find-aws-credentials-for-cvs/click-here-to-setup.png?raw=true" alt="CVS credentials for AWS: Click here to setup your account">
-</div>
+<p>Log in to <a href="https://nks.netapp.io">NetApp Kubernetes Service (NKS)</a> and go to <strong>Organization &gt; Setup</strong>. In the <strong>SSH Keys</strong> section, click the "download" icon to download your SSH keypair.</p>
 </div>
 <div class="paragraph">
-<p>This redirects you to <a href="https://cds-aws-bundles.netapp.com">the Cloud Volumes page on NetApp Cloud Central</a>. Log in with your NetApp credentials.</p>
-</div>
-<div class="paragraph">
-<p>Click <strong>API access</strong>.</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="assets/documentation/find-aws-credentials-for-cvs/api-access.png?raw=true" alt="CVS credentials for AWS: Click here to setup your account">
-</div>
-</div>
-<div class="paragraph">
-<p>This displays your API Key and Secret Key. You will need to copy and paste these in the next step.</p>
+<p>Unzip the contents of this file, and move both files to the desired directory on your computer. By common convention, this directory is <code>/home/[your username]/.ssh</code> on Linux and Mac, and <code>C:\[your username]\.ssh</code> on Windows.</p>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="add-the-cvs-credentials-to-your-nks-account">Add the CVS Credentials to your NKS Account</h2>
+<h2 id="ssh-to-the-node">SSH to the Node</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Log in to <a href="https://nks.netapp.io">nks.netapp.io</a>. Click <strong>Organization &gt; Setup</strong>. Under <strong>Solution Credentials</strong> click <strong>ADD CREDENTIALS</strong>.</p>
+<p>To find the public IP for the node, go to the NKS <strong>Control Plane</strong> and click the cluster&#8217;s name. Note the Public IP address for the node.</p>
 </div>
-<div class="imageblock">
+<div class="paragraph">
+<p>Open a Terminal (on Mac) or PuTTY (on Windows) session and SSH to the node:</p>
+</div>
+<div class="listingblock">
 <div class="content">
-<img src="assets/documentation/find-aws-credentials-for-cvs/add-credentials-to-nks.png?raw=true" alt="CVS credentials for AWS: Add credentials to NKS">
+<pre class="highlight"><code>ssh -i [/path/to/id_rsa] [login name]@[public IP address]</code></pre>
 </div>
 </div>
 <div class="paragraph">
-<p>Add the credential details:</p>
+<p>The login name will depend on the node’s operating system:</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p>Click <strong>Solution</strong> and choose <strong>NetApp Cloud Volumes for AWS</strong>.</p>
+<p>ContainerLinux: <code>core</code></p>
 </li>
 <li>
-<p>Enter a name for your CVS credentials.</p>
-</li>
-<li>
-<p>Paste in the API key and Secret Key.</p>
+<p>Ubuntu: <code>ubuntu</code></p>
 </li>
 </ul>
 </div>
 <div class="paragraph">
-<p>Then click <strong>Create</strong>.</p>
+<p>For example, the command to connect to a ContainerLinux node at IP address 192.168.0.1 when you have stored your SSH keys in the <code>/home/JDoe/.ssh</code> directory is:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code>ssh -i /home/JDoe/.ssh/id_rsa core@192.168.0.1</code></pre>
+</div>
 </div>
 <div class="paragraph">
-<p><em>Did this article answer your question? If not, <a href="mailto:nks@netapp.com">contact us.</a></em></p>
+<p>This will connect you to the node.</p>
 </div>
 </div>
 </div>
@@ -718,7 +697,7 @@
                       <span class="n-footer__social-link-text">blog</span>
                       <svg class="n-icon-blog n-footer__social-link-icon" aria-labelledby="title">
                         <title>blog@</title>
-                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/kubernetes-service/common/svg/sprite.svg#blog"></use>
+                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/kubernetes-service/us-en/common/svg/sprite.svg#blog"></use>
                       </svg>
                     </a>
                   </li>
@@ -727,7 +706,7 @@
                       <span class="n-footer__social-link-text">community</span>
                       <svg class="n-icon-twitter n-footer__social-link-icon" aria-labelledby="title">
                         <title>community@</title>
-                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/kubernetes-service/common/svg/sprite.svg#comments"></use>
+                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/kubernetes-service/us-en/common/svg/sprite.svg#comments"></use>
                       </svg>
                     </a>
                   </li>
@@ -737,7 +716,7 @@
                       <span class="n-footer__social-link-text">twitter</span>
                       <svg class="n-icon-twitter n-footer__social-link-icon" aria-labelledby="title">
                         <title>twitter@</title>
-                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/kubernetes-service/common/svg/sprite.svg#twitter"></use>
+                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/kubernetes-service/us-en/common/svg/sprite.svg#twitter"></use>
                       </svg>
                     </a>
                   </li>
@@ -746,7 +725,7 @@
                       <span class="n-footer__social-link-text">youtube</span>
                       <svg class="n-icon-youtube n-footer__social-link-icon" aria-labelledby="title">
                         <title>youtube@</title>
-                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/kubernetes-service/common/svg/sprite.svg#youtube"></use>
+                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/kubernetes-service/us-en/common/svg/sprite.svg#youtube"></use>
                       </svg>
                     </a>
                   </li>
@@ -767,15 +746,15 @@
 
     </div>
 
-    <script src="/kubernetes-service/common/js/components.js"></script>
-    <script src="/kubernetes-service/common/js/doc-components.js"></script>
+    <script src="/kubernetes-service/us-en/common/js/components.js"></script>
+    <script src="/kubernetes-service/us-en/common/js/doc-components.js"></script>
 
     <!-- Elasticsearch JS -->
-    <script type="text/javascript" src='/kubernetes-service/js/bundle.js'></script>
+    <script type="text/javascript" src='/kubernetes-service/us-en/js/bundle.js'></script>
 
     <!-- Syntax Highlighting -->
-    <script type="text/javascript" src='/kubernetes-service/js/prism.js'></script>
-    <script type="text/javascript" src='/kubernetes-service/js/prism-curl.js'></script>
+    <script type="text/javascript" src='/kubernetes-service/us-en/js/prism.js'></script>
+    <script type="text/javascript" src='/kubernetes-service/us-en/js/prism-curl.js'></script>
 
   </body>
 

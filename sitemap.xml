@@ -15,7 +15,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/kubernetes-service/a-sysdig-kubernetes-adventure.html</loc>
       
-        <lastmod>2019-04-22T19:03:07+00:00</lastmod>
+        <lastmod>2019-05-10T17:53:08+00:00</lastmod>
       
     </url>
   
@@ -309,28 +309,28 @@
     <url>
       <loc>https://docs.netapp.com/us-en/kubernetes-service/</loc>
       
-        <lastmod>2019-07-25T17:30:30+00:00</lastmod>
+        <lastmod>2019-07-26T17:53:25+00:00</lastmod>
       
     </url>
   
     <url>
       <loc>https://docs.netapp.com/us-en/kubernetes-service/install-kubectl-to-control-a-kubernetes-cluster.html</loc>
       
-        <lastmod>2019-04-22T19:03:07+00:00</lastmod>
+        <lastmod>2019-05-10T17:53:08+00:00</lastmod>
       
     </url>
   
     <url>
       <loc>https://docs.netapp.com/us-en/kubernetes-service/managing-ingresses-on-kubernetes.html</loc>
       
-        <lastmod>2019-04-22T19:03:07+00:00</lastmod>
+        <lastmod>2019-05-10T17:53:08+00:00</lastmod>
       
     </url>
   
     <url>
       <loc>https://docs.netapp.com/us-en/kubernetes-service/news.html</loc>
       
-        <lastmod>2019-04-22T19:03:07+00:00</lastmod>
+        <lastmod>2019-05-10T17:53:08+00:00</lastmod>
       
     </url>
   
@@ -344,7 +344,14 @@
     <url>
       <loc>https://docs.netapp.com/us-en/kubernetes-service//search.html</loc>
       
-        <lastmod>2019-07-25T17:31:42+00:00</lastmod>
+        <lastmod>2019-07-26T17:54:32+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/kubernetes-service/ssh-to-a-node-in-an-nks-cluster.html</loc>
+      
+        <lastmod>2019-07-26T17:53:25+00:00</lastmod>
       
     </url>
   
@@ -372,14 +379,14 @@
     <url>
       <loc>https://docs.netapp.com/us-en/kubernetes-service/using-the-kubernetes-cloud-backup.html</loc>
       
-        <lastmod>2019-04-22T19:03:07+00:00</lastmod>
+        <lastmod>2019-05-10T17:53:08+00:00</lastmod>
       
     </url>
   
     <url>
       <loc>https://docs.netapp.com/us-en/kubernetes-service/whitelist-ports-and-ip-addresses.html</loc>
       
-        <lastmod>2019-04-22T19:03:07+00:00</lastmod>
+        <lastmod>2019-05-10T17:53:08+00:00</lastmod>
       
     </url>
   
