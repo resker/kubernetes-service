@@ -15,7 +15,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/kubernetes-service/a-sysdig-kubernetes-adventure.html</loc>
       
-        <lastmod>2019-05-17T18:38:19+00:00</lastmod>
+        <lastmod>2019-05-17T18:38:38+00:00</lastmod>
       
     </url>
   
@@ -149,6 +149,13 @@
       <loc>https://docs.netapp.com/us-en/kubernetes-service/api-nodes.html</loc>
       
         <lastmod>2019-06-24T18:19:02+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/kubernetes-service/api-push-notifications-to-slack.html</loc>
+      
+        <lastmod>2019-08-05T19:48:43+00:00</lastmod>
       
     </url>
   
@@ -309,28 +316,28 @@
     <url>
       <loc>https://docs.netapp.com/us-en/kubernetes-service/</loc>
       
-        <lastmod>2019-07-26T17:53:25+00:00</lastmod>
+        <lastmod>2019-08-05T19:48:43+00:00</lastmod>
       
     </url>
   
     <url>
       <loc>https://docs.netapp.com/us-en/kubernetes-service/install-kubectl-to-control-a-kubernetes-cluster.html</loc>
       
-        <lastmod>2019-05-17T18:38:19+00:00</lastmod>
+        <lastmod>2019-05-17T18:38:38+00:00</lastmod>
       
     </url>
   
     <url>
       <loc>https://docs.netapp.com/us-en/kubernetes-service/managing-ingresses-on-kubernetes.html</loc>
       
-        <lastmod>2019-05-17T18:38:19+00:00</lastmod>
+        <lastmod>2019-05-17T18:38:38+00:00</lastmod>
       
     </url>
   
     <url>
       <loc>https://docs.netapp.com/us-en/kubernetes-service/news.html</loc>
       
-        <lastmod>2019-05-17T18:38:19+00:00</lastmod>
+        <lastmod>2019-05-17T18:38:38+00:00</lastmod>
       
     </url>
   
@@ -344,7 +351,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/kubernetes-service//search.html</loc>
       
-        <lastmod>2019-08-05T18:36:42+00:00</lastmod>
+        <lastmod>2019-08-05T19:50:17+00:00</lastmod>
       
     </url>
   
@@ -379,14 +386,14 @@
     <url>
       <loc>https://docs.netapp.com/us-en/kubernetes-service/using-the-kubernetes-cloud-backup.html</loc>
       
-        <lastmod>2019-05-17T18:38:19+00:00</lastmod>
+        <lastmod>2019-05-17T18:38:38+00:00</lastmod>
       
     </url>
   
     <url>
       <loc>https://docs.netapp.com/us-en/kubernetes-service/whitelist-ports-and-ip-addresses.html</loc>
       
-        <lastmod>2019-05-17T18:38:19+00:00</lastmod>
+        <lastmod>2019-05-17T18:38:38+00:00</lastmod>
       
     </url>
   
