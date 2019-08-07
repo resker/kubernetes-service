@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-  <title>Whitelist Ports and IP Addresses | NetApp Cloud Docs</title>
+  <title>NKS API | NetApp Cloud Docs</title>
   <meta charset="utf-8">
-  <meta property="og:title" content="Whitelist Ports and IP Addresses | NetApp Cloud Docs" />
+  <meta property="og:title" content="NKS API | NetApp Cloud Docs" />
 	<meta property="og:type" content="website" />
-	<meta property="og:url" content="https://docs.netapp.com/kubernetes-service/whitelist-ports-and-ip-addresses.html" />
-	<meta property="og:description" content="Learn which NKS ports and IP addresses need to be whitelisted for your clusters." />
+	<meta property="og:url" content="https://docs.netapp.com/kubernetes-service/api.html" />
+	<meta property="og:description" content="Learn how to access and use the NKS API" />
   <meta property="og:image" content="https://docs.netapp.com/kubernetes-service/images/logo-tophat-social.png" />
   <meta property="og:image:alt" content="NetApp Logo" />
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -17,7 +17,7 @@
   <meta http-equiv="nss-type" content="Product Documentation"/>
   <meta http-equiv="nss-subtype" content="User Guide"/>
   
-  <meta name="description" content="Learn which NKS ports and IP addresses need to be whitelisted for your clusters.">
+  <meta name="description" content="Learn how to access and use the NKS API">
   <meta name="keywords" content=" ">
   
 
@@ -558,7 +558,7 @@
   
 
   
-    <li class="active"><a href="whitelist-ports-and-ip-addresses.html">Whitelist Ports and IP Addresses</a></li>
+    <li><a href="whitelist-ports-and-ip-addresses.html">Whitelist Ports and IP Addresses</a></li>
   
 
   
@@ -589,11 +589,11 @@
           
 
 <div class="n-doc__component-detail-heading-wrap">
-  <h1 class="n-doc__component-detail-heading">Whitelist Ports and IP Addresses
+  <h1 class="n-doc__component-detail-heading">NKS API
     <span>
       
-        <a target="_blank" href="https://github.com/NetAppDocs/kubernetes-service/blob/master/whitelist-ports-and-ip-addresses.adoc" class="btn btn-default githubEditButton" role="button"><i class="fa fa-github fa-lg"></i> Edit on GitHub</a>
-        <a target="_blank" href="https://github.com/NetAppDocs/kubernetes-service/issues/new?body=Page%3A%20[Whitelist Ports and IP Addresses](https://docs.netapp.com/us-en/kubernetes-service/whitelist-ports-and-ip-addresses.html)" class="btn btn-default githubEditButton" role="button"><i class="fa fa-github fa-lg"></i> Request doc changes</a>
+        <a target="_blank" href="https://github.com/NetAppDocs/kubernetes-service/blob/master/api.adoc" class="btn btn-default githubEditButton" role="button"><i class="fa fa-github fa-lg"></i> Edit on GitHub</a>
+        <a target="_blank" href="https://github.com/NetAppDocs/kubernetes-service/issues/new?body=Page%3A%20[NKS API](https://docs.netapp.com/us-en/kubernetes-service/api.html)" class="btn btn-default githubEditButton" role="button"><i class="fa fa-github fa-lg"></i> Request doc changes</a>
       
     </span>
   </h1>
@@ -601,7 +601,7 @@
 
 <p class="page-details">
 
-<time datetime="2019-05-23 18:56:52 +0000">05/23/2019</time>
+<time datetime="2019-08-07 16:06:03 +0000">08/07/2019</time>
 
 
 <span>Contributors
@@ -619,43 +619,60 @@
 </p>
 
 <div class="paragraph">
-<p>We recommend you secure your clusters as appropriate for your infrastructure needs.</p>
-</div>
-<div class="paragraph">
-<p>If you decide to restrict access to your cluster, you will need to whitelist the following ports and IP addresses so that the <a href="https://nks.netapp.io">NetApp Kubernetes Service (NKS)</a> system will continue to work correctly:</p>
-</div>
-<div class="paragraph">
-<p>Ports:</p>
+<p>Interested in doing things programmatically instead of clicking through a UI? We provide full access to the NKS services through the API. Anything you can do in the UI, you can do through the API as well.</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p>12443 (proxy to dashboard)</p>
+<p><a href="api-basics.html">API Basics</a></p>
 </li>
 <li>
-<p>6443 (Kubernetes API)</p>
+<p><a href="api-organizations.html">Organizations</a></p>
 </li>
 <li>
-<p>443</p>
+<p><a href="api-workspaces.html">Workspaces</a></p>
 </li>
 <li>
-<p>22 (Kubernetes upgrades and other local tasks)</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>IP addresses:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>34.208.181.140</p>
+<p><a href="api-teams.html">Teams</a></p>
 </li>
 <li>
-<p>54.187.65.159</p>
+<p><a href="api-members.html">Members</a></p>
 </li>
 <li>
-<p>34.217.162.31</p>
+<p><a href="api-user.html">User</a></p>
+</li>
+<li>
+<p><a href="api-keysets.html">Keysets</a></p>
+</li>
+<li>
+<p><a href="api-clusters.html">Clusters</a></p>
+</li>
+<li>
+<p><a href="api-nodes.html">Nodes</a></p>
+</li>
+<li>
+<p><a href="api-nodepools.html">Nodepools</a></p>
+</li>
+<li>
+<p><a href="api-federations.html">Federations</a></p>
+</li>
+<li>
+<p><a href="api-istio-mesh.html">Istio Mesh</a></p>
+</li>
+<li>
+<p><a href="api-trusted-charts.html">Trusted Charts</a></p>
+</li>
+<li>
+<p><a href="api-subscription.html">Subscription</a></p>
+</li>
+<li>
+<p><a href="api-invoice.html">Invoices</a></p>
+</li>
+<li>
+<p><a href="api-notifications.html">Notifications</a></p>
+</li>
+<li>
+<p><a href="api-notifications-to-slack.html">Tutorial: Push NKS Notifications to a Slack Channel</a></p>
 </li>
 </ul>
 </div>
