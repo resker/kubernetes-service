@@ -15,7 +15,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/kubernetes-service/a-sysdig-kubernetes-adventure.html</loc>
       
-        <lastmod>2019-05-23T18:56:52+00:00</lastmod>
+        <lastmod>2019-05-30T17:45:38+00:00</lastmod>
       
     </url>
   
@@ -232,7 +232,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/kubernetes-service/create-an-aws-cluster.html</loc>
       
-        <lastmod>2019-05-23T18:56:52+00:00</lastmod>
+        <lastmod>2019-05-30T17:45:38+00:00</lastmod>
       
     </url>
   
@@ -246,7 +246,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/kubernetes-service/create-auth-credentials-on-azure.html</loc>
       
-        <lastmod>2019-07-25T17:30:30+00:00</lastmod>
+        <lastmod>2019-08-09T19:37:19+00:00</lastmod>
       
     </url>
   
@@ -323,14 +323,14 @@
     <url>
       <loc>https://docs.netapp.com/us-en/kubernetes-service/install-kubectl-to-control-a-kubernetes-cluster.html</loc>
       
-        <lastmod>2019-05-23T18:56:52+00:00</lastmod>
+        <lastmod>2019-05-30T17:45:38+00:00</lastmod>
       
     </url>
   
     <url>
       <loc>https://docs.netapp.com/us-en/kubernetes-service/managing-ingresses-on-kubernetes.html</loc>
       
-        <lastmod>2019-05-23T18:56:52+00:00</lastmod>
+        <lastmod>2019-05-30T17:45:38+00:00</lastmod>
       
     </url>
   
@@ -344,21 +344,21 @@
     <url>
       <loc>https://docs.netapp.com/us-en/kubernetes-service/news.html</loc>
       
-        <lastmod>2019-05-23T18:56:52+00:00</lastmod>
+        <lastmod>2019-05-30T17:45:38+00:00</lastmod>
       
     </url>
   
     <url>
       <loc>https://docs.netapp.com/us-en/kubernetes-service/nks-requirements.html</loc>
       
-        <lastmod>2019-05-23T18:56:52+00:00</lastmod>
+        <lastmod>2019-05-30T17:45:38+00:00</lastmod>
       
     </url>
   
     <url>
       <loc>https://docs.netapp.com/us-en/kubernetes-service//search.html</loc>
       
-        <lastmod>2019-08-07T16:07:23+00:00</lastmod>
+        <lastmod>2019-08-09T19:38:41+00:00</lastmod>
       
     </url>
   
@@ -393,14 +393,14 @@
     <url>
       <loc>https://docs.netapp.com/us-en/kubernetes-service/using-the-kubernetes-cloud-backup.html</loc>
       
-        <lastmod>2019-05-23T18:56:52+00:00</lastmod>
+        <lastmod>2019-05-30T17:45:38+00:00</lastmod>
       
     </url>
   
     <url>
       <loc>https://docs.netapp.com/us-en/kubernetes-service/whitelist-ports-and-ip-addresses.html</loc>
       
-        <lastmod>2019-05-23T18:56:52+00:00</lastmod>
+        <lastmod>2019-05-30T17:45:38+00:00</lastmod>
       
     </url>
   
