@@ -601,7 +601,7 @@
 
 <p class="page-details">
 
-<time datetime="2019-08-06 16:43:57 +0000">08/06/2019</time>
+<time datetime="2019-08-13 21:12:22 +0000">08/13/2019</time>
 
 
 <span>Contributors
@@ -624,7 +624,7 @@
 <div class="ulist">
 <ul>
 <li>
-<p>A NetApp HCI system. We do not currently support cloud services on non-HCI systems.</p>
+<p>A NetApp HCI system successfully installed. We do not currently support cloud services on non-HCI systems.</p>
 </li>
 <li>
 <p>System size requirements:</p>
@@ -646,25 +646,35 @@
 </div>
 </li>
 <li>
-<p>Any NDE supported version of vSphere</p>
+<p>Any version of vSphere supported by NetApp HCI.</p>
 </li>
 <li>
 <p>vSphere distributed switches (VDS). We do not support installing to standard switches.</p>
 </li>
 <li>
-<p>Optional: Networks for NKS (and other services) pre-created in vCenter.</p>
+<p>Management node 2.1 (requires updates from the 2.0 version).</p>
 </li>
 <li>
-<p>NetApp HCI system successfully installed.</p>
+<p>Optional: Networks for NKS (and other services) pre-created in vCenter.</p>
 </li>
 <li>
 <p>An <a href="https://nks.netapp.io">NKS</a> account.</p>
 </li>
 <li>
-<p>An NKS API token, which will authorize the installer to access the NKS Organization. To create an NKS API token, log in to NKS and click your user icon in the upper right-hand corner. Click <strong>Edit Profile</strong> then <strong>Add Token</strong>.</p>
+<p>An NKS API token.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>This token authorizes the installer to access your NKS Organization.</p>
 </li>
 <li>
-<p>mNode 2.1 (requires updates from the 2.0 version shipped with 19.1 stack).</p>
+<p>To create an NKS API token, log in to NKS and click your user icon in the upper right-hand corner. Click <strong>Edit Profile</strong> then <strong>Add Token</strong>.</p>
+</li>
+<li>
+<p>You can create the token at any time, even if you have not yet enabled cloud services on NetApp HCI.</p>
+</li>
+</ul>
+</div>
 </li>
 </ul>
 </div>
