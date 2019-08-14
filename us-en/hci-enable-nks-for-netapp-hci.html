@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-  <title>Install kubectl to Control a Kubernetes Cluster | NetApp Cloud Docs</title>
+  <title>Enable NKS for Your NetApp HCI Account | NetApp Cloud Docs</title>
   <meta charset="utf-8">
-  <meta property="og:title" content="Install kubectl to Control a Kubernetes Cluster | NetApp Cloud Docs" />
+  <meta property="og:title" content="Enable NKS for Your NetApp HCI Account | NetApp Cloud Docs" />
 	<meta property="og:type" content="website" />
-	<meta property="og:url" content="https://docs.netapp.com/kubernetes-service/us-en/install-kubectl-to-control-a-kubernetes-cluster.html" />
-	<meta property="og:description" content="Learn how to install kubectl to control a Kubernetes cluster." />
+	<meta property="og:url" content="https://docs.netapp.com/kubernetes-service/us-en/hci-enable-nks-for-netapp-hci.html" />
+	<meta property="og:description" content="Learn how to enable NetApp Cloud Services for your NetApp HCI account" />
   <meta property="og:image" content="https://docs.netapp.com/kubernetes-service/us-en/images/logo-tophat-social.png" />
   <meta property="og:image:alt" content="NetApp Logo" />
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -17,8 +17,8 @@
   <meta http-equiv="nss-type" content="Product Documentation"/>
   <meta http-equiv="nss-subtype" content="User Guide"/>
   
-  <meta name="description" content="Learn how to install kubectl to control a Kubernetes cluster.">
-  <meta name="keywords" content=" ">
+  <meta name="description" content="Learn how to enable NetApp Cloud Services for your NetApp HCI account">
+  <meta name="keywords" content=" netapp, hci, on-premise, cloud services, kubernetes">
   
 
   <!-- Icons -->
@@ -450,7 +450,7 @@
   
 
   
-    <li class="active"><a href="install-kubectl-to-control-a-kubernetes-cluster.html">Install Kubectl</a></li>
+    <li><a href="install-kubectl-to-control-a-kubernetes-cluster.html">Install Kubectl</a></li>
   
 
   
@@ -589,11 +589,11 @@
           
 
 <div class="n-doc__component-detail-heading-wrap">
-  <h1 class="n-doc__component-detail-heading">Install kubectl to Control a Kubernetes Cluster
+  <h1 class="n-doc__component-detail-heading">Enable NKS for Your NetApp HCI Account
     <span>
       
-        <a target="_blank" href="https://github.com/NetAppDocs/kubernetes-service/blob/master/install-kubectl-to-control-a-kubernetes-cluster.adoc" class="btn btn-default githubEditButton" role="button"><i class="fa fa-github fa-lg"></i> Edit on GitHub</a>
-        <a target="_blank" href="https://github.com/NetAppDocs/kubernetes-service/issues/new?body=Page%3A%20[Install kubectl to Control a Kubernetes Cluster](https://docs.netapp.com/us-en/kubernetes-service/install-kubectl-to-control-a-kubernetes-cluster.html)" class="btn btn-default githubEditButton" role="button"><i class="fa fa-github fa-lg"></i> Request doc changes</a>
+        <a target="_blank" href="https://github.com/NetAppDocs/kubernetes-service/blob/master/hci-enable-nks-for-netapp-hci.adoc" class="btn btn-default githubEditButton" role="button"><i class="fa fa-github fa-lg"></i> Edit on GitHub</a>
+        <a target="_blank" href="https://github.com/NetAppDocs/kubernetes-service/issues/new?body=Page%3A%20[Enable NKS for Your NetApp HCI Account](https://docs.netapp.com/us-en/kubernetes-service/hci-enable-nks-for-netapp-hci.html)" class="btn btn-default githubEditButton" role="button"><i class="fa fa-github fa-lg"></i> Request doc changes</a>
       
     </span>
   </h1>
@@ -601,7 +601,7 @@
 
 <p class="page-details">
 
-<time datetime="2019-05-31 17:20:16 +0000">05/31/2019</time>
+<time datetime="2019-08-14 20:57:18 +0000">08/14/2019</time>
 
 
 <span>Contributors
@@ -618,244 +618,169 @@
 
 </p>
 
-<div class="sect1">
-<h2 id="contents">Contents</h2>
-<div class="sectionbody">
-<div class="ulist">
-<ul>
-<li>
-<p><a href="#introduction">Introduction</a></p>
-</li>
-<li>
-<p><a href="#windows">Windows</a></p>
-</li>
-<li>
-<p><a href="#mac-os">Mac OS</a></p>
-</li>
-<li>
-<p><a href="#external-linux-server">External Linux Server</a></p>
-</li>
-</ul>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="introduction">Introduction</h2>
+<div id="preamble">
 <div class="sectionbody">
 <div class="paragraph">
-<p>Kubectl is the command line interface for interacting with a Kubernetes cluster. The kubectl tool lets you connect and run commands against your <a href="https://nks.netapp.io">NetApp Kubernetes Service (NKS)</a> cluster.</p>
+<p>To use NKS with NetApp HCI, you will need to enable it for your NetApp HCI account. To do this, use the NetApp HCI Hybrid Cloud Control wizard to enable cloud services on NetApp HCI.</p>
 </div>
 <div class="paragraph">
-<p>More kubectl documentation can be found <a href="https://kubernetes.io/docs/reference/kubectl/overview/">on the official Kubernetes site</a>.</p>
+<p>For more details on using the Hybrid Cloud Control wizard, see the <a href="http://docs.netapp.com/hci/topic/com.netapp.doc.hci-ude-160/GUID-5BD8591B-0717-409E-93BC-7C4919DF19CF.html" target="_blank" rel="noopener">NetApp HCI documentation</a>.</p>
 </div>
-<div class="paragraph">
-<p>Kubectl gets its cluster connection and login information from the cluster’s <code>kubeconfig</code> file. In order to use kubectl you will need to:</p>
-</div>
-<div class="olist arabic">
-<ol class="arabic">
-<li>
-<p>Install kubectl on your local machine.</p>
-</li>
-<li>
-<p>Download the cluster’s kubeconfig file from the NKS Cluster Details page.</p>
-</li>
-<li>
-<p>Move the kubeconfig file to your user directory, then update your shell’s environment.</p>
-</li>
-</ol>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Note</div>
+</td>
+<td class="content">
+The following steps will enable cloud volumes with a 90-day trial license. To convert the trial license to a production license, upload the NetApp license file (.nlf file) to your account.
+</td>
+</tr>
+</table>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="windows">Windows</h2>
+<h2 id="log-in-at-netapp-cloud-central">Log In at NetApp Cloud Central</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>The easiest way to install kubectl on Windows is to use <a href="https://chocolatey.org/">the Chocolatey package manager</a>. You can install Chocolatey with a single command from a PowerShell or cmd window. The installation instructions for both Administrator and non-Administrator rights are <a href="https://chocolatey.org/install">here on the Chocolatey website</a>.</p>
+<p>To access the NetApp HCI Hybrid Cloud Control wizard, go to the IP address of the management node in a browser.</p>
 </div>
 <div class="paragraph">
-<p>After you have installed Chocolatey, open PowerShell or cmd, then install kubectl with the command:</p>
+<p>If you don&#8217;t have a Cloud Central login, you will be prompted to create one. Otherwise, click to enable NetApp Cloud Services.</p>
 </div>
-<div class="listingblock">
+<div class="imageblock">
 <div class="content">
-<pre>choco install kubernetes-cli</pre>
-</div>
-</div>
-<div class="paragraph">
-<p>Move to your home directory:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre>cd C:\users\[your username]</pre>
-</div>
-</div>
-<div class="paragraph">
-<p>For example:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre>cd C:\users\jdoe</pre>
-</div>
-</div>
-<div class="paragraph">
-<p>Create the <code>.kube</code> directory:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre>mkdir .kube</pre>
-</div>
-</div>
-<div class="paragraph">
-<p>Move to the <code>.kube</code> directory:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre>cd .kube</pre>
-</div>
-</div>
-<div class="paragraph">
-<p>In a web browser, log in to the StackPointcloud Control Plane. Click on your cluster to view the details. Download your cluster’s <code>kubeconfig</code> file from the menu on the left-hand side of the screen.</p>
-</div>
-<div class="paragraph">
-<p>Move this file to the <code>C:\users\yourusername\.kube</code> directory. Then update your shell environment to call the file:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre>$env:KUBECONFIG="C:\users\[your username]\.kube\[kubeconfig file name]"</pre>
-</div>
-</div>
-<div class="paragraph">
-<p>For example:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre>$env:KUBECONFIG="C:\users\jdoe\.kube\kubeconfig"</pre>
+<img src="assets/documentation/hci-enable-nks-on-netapp-hci/hcc-enable-cloud-services.png" alt="NetApp Hybrid Cloud Control wizard image">
 </div>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="mac-os">Mac OS</h2>
+<h2 id="enable-cloud-services">Enable Cloud Services</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>You can install kubectl on MacOS using either the <a href="https://brew.sh/">Homebrew</a> or <a href="https://www.macports.org/">Macports</a> package managers.</p>
-</div>
-<div class="paragraph">
-<p>To install with Homebrew, open a Terminal window and use the command:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre>brew install kubernetes-cli</pre>
-</div>
-</div>
-<div class="paragraph">
-<p>To install with Macports, open a Terminal window and use the command:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre>port install kubectl</pre>
-</div>
-</div>
-<div class="paragraph">
-<p>In a web browser, log in to the StackPointCloud Control Plane. Click on your cluster to view the details. Download your cluster’s <code>kubeconfig</code> file from the menu on the left-hand side of the screen.</p>
-</div>
-<div class="paragraph">
-<p>Move this file to your home directory:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre>mv /Users/username/Downloads/kubeconfig /Users/username/</pre>
-</div>
-</div>
-<div class="paragraph">
-<p>Then update your shell environment to call the file:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre>export KUBECONFIG=/Users/username/kubeconfig</pre>
-</div>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="external-linux-server">External Linux Server</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>Another option is to SSH to a server, install kubectl, then use it to control your Kubernetes cluster. If you have access to a Linux server, there are several advantages to this approach:</p>
+<p>Go to <strong>Enable Cloud Services &gt; Services</strong>, then select the services that you want to enable. In addition to NKS, you can also enable Cloud Volumes and Cloud Insights here.</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p>If you have root on the server, you will be able to install the Kubernetes software without having to deal with any desktop computer permissions problems.</p>
+<p><strong>Cloud Volumes</strong>: This service provides an on-demand shared file systems feature on your premises. Cloud Volumes also enables data fabric replication to and from public clouds.</p>
 </li>
 <li>
-<p>Speaking of computer permissions issues, I have found that in order to run Kubernetes on my Windows laptop, I need to run PowerShell on Windows as Administrator. If you are not able to run applications with administrator rights, you can avoid the issue by connecting to a Linux server with SSH and running kubectl from there.</p>
-</li>
-<li>
-<p>If you frequently find yourself using several different computers, you can SSH to the server from anywhere. This saves you from having to install Kubernetes on every machine you use.</p>
-</li>
-<li>
-<p>If you have customized your SSH program to your liking (fonts, colors, etc.) it can be nicer to use it than the stock terminal or PowerShell window.</p>
+<p><strong>Cloud Insights</strong>: Monitor cloud services on NetApp HCI.</p>
 </li>
 </ul>
 </div>
 <div class="paragraph">
-<p>To install kubectl on a Linux server, follow the instructions for your distribution.</p>
+<p>After choosing the service(s) you wish to enable, click <strong>Continue</strong> to go to the next step.</p>
 </div>
-<div class="sect2">
-<h3 id="ubuntu-debian-and-hypriotos">Ubuntu, Debian, and HypriotOS</h3>
+</div>
+</div>
+<div class="sect1">
+<h2 id="add-your-nks-api-token">Add Your NKS API Token</h2>
+<div class="sectionbody">
 <div class="paragraph">
-<p>Install with the commands:</p>
+<p>On this step, you will add your NKS API token. You can use an existing NKS API token if you have one. If you don&#8217;t already have an API token, click the link to <a href="https://nks.netapp.io/user/profile">your NKS User Profile page</a> to create one.</p>
 </div>
-<div class="listingblock">
-<div class="content">
-<pre>sudo apt-get update &amp;&amp; sudo apt-get install -y apt-transport-https
-
-curl -s https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo apt-key add -
-
-echo "deb http://apt.kubernetes.io/ kubernetes-xenial main" | sudo tee -a /etc/apt/sources.list.d/kubernetes.list
-
-sudo apt-get update
-
-sudo apt-get install -y kubectl</pre>
-</div>
-</div>
-</div>
-<div class="sect2">
-<h3 id="centos-rhel-and-fedora">CentOS, RHEL, and Fedora</h3>
 <div class="paragraph">
-<p>Install with the commands:</p>
+<p>Paste the API token into the field, then click <strong>Connect</strong>.</p>
 </div>
-<div class="listingblock">
+<div class="imageblock">
 <div class="content">
-<pre>cat &lt;&lt;EOF &gt; /etc/yum.repos.d/kubernetes.repo
-[kubernetes]
-name=Kubernetes
-baseurl=https://packages.cloud.google.com/yum/repos/kubernetes-el7-x86_64
-enabled=1
-gpgcheck=1
-repo_gpgcheck=1
-gpgkey=https://packages.cloud.google.com/yum/doc/yum-key.gpg     https://packages.cloud.google.com/yum/doc/rpm-package-key.gpg
-EOF
-
-yum install -y kubectl</pre>
+<img src="assets/documentation/hci-enable-nks-on-netapp-hci/nks-api-token-paste-small.png" alt="NetApp Hybrid Cloud Control wizard image">
 </div>
 </div>
 <div class="paragraph">
-<p>In a web browser, log in to the StackPointCloud Control Plane. Click on your cluster to view the details. Download your cluster’s <code>kubeconfig</code> file from the menu on the left-hand side of the screen. Upload the file to the server. Then update your shell environment to call the file:</p>
+<p>This creates your registration and connects you to Cloud Central.</p>
 </div>
-<div class="listingblock">
+</div>
+</div>
+<div class="sect1">
+<h2 id="register-your-installation">Register Your Installation</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>On the Enable Cloud Services step, select your Cloud Central organization and region name.</p>
+</div>
+<div class="paragraph">
+<p>The region name is used to identify your NetApp HCI installation. It is also used as the site name for any NKS clusters created on this installation.</p>
+</div>
+<div class="paragraph">
+<p>Click <strong>Continue</strong> to go to the next step.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="select-vcenter-resources">Select vCenter Resources</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>On the vCenter step, choose your Data center and Cluster. After you select these, the vCenter instance and related admin user will be displayed.</p>
+</div>
+<div class="imageblock">
 <div class="content">
-<pre>export KUBECONFIG=/path/to/kubeconfig</pre>
+<img src="assets/documentation/hci-enable-nks-on-netapp-hci/hcc-enable-cloud-services-vcenter.png" alt="Enable Cloud Services vCenter Resources page">
 </div>
 </div>
 <div class="paragraph">
-<p>For example:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre>export KUBECONFIG=/usr/home/jdoe/kubeconfig</pre>
+<p>Click <strong>Continue</strong> to go to the next step.</p>
 </div>
 </div>
+</div>
+<div class="sect1">
+<h2 id="select-networking-options">Select Networking Options</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>On the Networking page, review and configure the following:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>NetApp Kubernetes Service Management Network</strong>: Enter the IP addresses and info for your NKS service and workload clusters.</p>
+</li>
+<li>
+<p><strong>NetApp Kubernetes Service Workload Network</strong>: Enter the network information needed by your workload clusters (where you will host your applications). When you create your workload clusters, NKS uses the IP addresses entered here.</p>
+</li>
+<li>
+<p><strong>NetApp Kubernetes Service Data Network</strong>: Enter the network information to connect your Kubernetes workload clusters to persistent volume claims (PVCs) on your NetApp HCI system.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Click <strong>Continue</strong> to review and confirm your choices.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="review">Review</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>On the Review page, review your choices by expanding each option. When you are sure your options are all set correctly, click <strong>Continue</strong> to enable NetApp HCI cloud services.</p>
+</div>
+<div class="paragraph">
+<p>This redirects you to the NetApp Hybrid Cloud Control page. The Enable NetApp Cloud Services tile now shows the number of services enabled.</p>
+</div>
+<div class="paragraph">
+<p>NetApp HCI uses NKS to create a Kubernetes cluster which consists of four VMs (one Kubernetes master node and three Kubernetes worker compute nodes).</p>
+</div>
+<div class="paragraph">
+<p>You can now use NKS to create Kubernetes clusters on your NetApp HCI system.</p>
+</div>
+<h2 id="find-more-information" class="discrete">Find more information</h2>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://cloud.netapp.com/home" target="_blank" rel="noopener">NetApp Cloud Central</a></p>
+</li>
+<li>
+<p><a href="https://docs.netapp.com/us-en/cloud/">NetApp Cloud Documentation</a></p>
+</li>
+<li>
+<p><a href="https://docs.netapp.com/us-en/hybridcloudsolutions/" target="_blank" rel="noopener">Hybrid Cloud Solutions documentation</a></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><em>Did this article answer your question? If not, <a href="mailto:nks@netapp.com">contact us.</a></em></p>
 </div>
 </div>
 </div>
