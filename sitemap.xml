@@ -15,7 +15,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/kubernetes-service/a-sysdig-kubernetes-adventure.html</loc>
       
-        <lastmod>2019-06-04T22:23:33+00:00</lastmod>
+        <lastmod>2019-06-07T21:15:20+00:00</lastmod>
       
     </url>
   
@@ -232,7 +232,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/kubernetes-service/create-an-aws-cluster.html</loc>
       
-        <lastmod>2019-06-04T22:23:33+00:00</lastmod>
+        <lastmod>2019-06-07T21:15:20+00:00</lastmod>
       
     </url>
   
@@ -300,9 +300,16 @@
     </url>
   
     <url>
+      <loc>https://docs.netapp.com/us-en/kubernetes-service/create-netapp-hci-cluster.html</loc>
+      
+        <lastmod>2019-08-19T21:28:28+00:00</lastmod>
+      
+    </url>
+  
+    <url>
       <loc>https://docs.netapp.com/us-en/kubernetes-service/eol.html</loc>
       
-        <lastmod>2019-06-04T22:23:33+00:00</lastmod>
+        <lastmod>2019-06-07T21:15:20+00:00</lastmod>
       
     </url>
   
@@ -323,21 +330,21 @@
     <url>
       <loc>https://docs.netapp.com/us-en/kubernetes-service/</loc>
       
-        <lastmod>2019-08-16T18:37:40+00:00</lastmod>
+        <lastmod>2019-08-19T21:28:28+00:00</lastmod>
       
     </url>
   
     <url>
       <loc>https://docs.netapp.com/us-en/kubernetes-service/install-kubectl-to-control-a-kubernetes-cluster.html</loc>
       
-        <lastmod>2019-06-04T22:23:33+00:00</lastmod>
+        <lastmod>2019-06-07T21:15:20+00:00</lastmod>
       
     </url>
   
     <url>
       <loc>https://docs.netapp.com/us-en/kubernetes-service/managing-ingresses-on-kubernetes.html</loc>
       
-        <lastmod>2019-06-04T22:23:33+00:00</lastmod>
+        <lastmod>2019-06-07T21:15:20+00:00</lastmod>
       
     </url>
   
@@ -358,21 +365,21 @@
     <url>
       <loc>https://docs.netapp.com/us-en/kubernetes-service/news.html</loc>
       
-        <lastmod>2019-06-04T22:23:33+00:00</lastmod>
+        <lastmod>2019-06-07T21:15:20+00:00</lastmod>
       
     </url>
   
     <url>
       <loc>https://docs.netapp.com/us-en/kubernetes-service/nks-requirements.html</loc>
       
-        <lastmod>2019-06-04T22:23:33+00:00</lastmod>
+        <lastmod>2019-06-07T21:15:20+00:00</lastmod>
       
     </url>
   
     <url>
       <loc>https://docs.netapp.com/us-en/kubernetes-service//search.html</loc>
       
-        <lastmod>2019-08-16T18:39:06+00:00</lastmod>
+        <lastmod>2019-08-19T21:29:41+00:00</lastmod>
       
     </url>
   
@@ -407,14 +414,14 @@
     <url>
       <loc>https://docs.netapp.com/us-en/kubernetes-service/using-the-kubernetes-cloud-backup.html</loc>
       
-        <lastmod>2019-06-04T22:23:33+00:00</lastmod>
+        <lastmod>2019-06-07T21:15:20+00:00</lastmod>
       
     </url>
   
     <url>
       <loc>https://docs.netapp.com/us-en/kubernetes-service/whitelist-ports-and-ip-addresses.html</loc>
       
-        <lastmod>2019-06-04T22:23:33+00:00</lastmod>
+        <lastmod>2019-06-07T21:15:20+00:00</lastmod>
       
     </url>
   
