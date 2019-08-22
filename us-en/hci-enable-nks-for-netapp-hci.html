@@ -617,7 +617,7 @@
 
 <p class="page-details">
 
-<time datetime="2019-08-15 18:13:15 +0000">08/15/2019</time>
+<time datetime="2019-08-22 19:43:39 +0000">08/22/2019</time>
 
 
 <span>Contributors
@@ -657,7 +657,7 @@ The following steps will enable cloud volumes with a 90-day trial license. To co
 </div>
 </div>
 <div class="sect1">
-<h2 id="1-log-in-at-netapp-cloud-central">1. Log In at NetApp Cloud Central</h2>
+<h2 id="log-in-at-netapp-cloud-central">Log In at NetApp Cloud Central</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>To access the NetApp HCI Hybrid Cloud Control wizard, go to the IP address of the management node in a browser.</p>
@@ -673,7 +673,7 @@ The following steps will enable cloud volumes with a 90-day trial license. To co
 </div>
 </div>
 <div class="sect1">
-<h2 id="2-enable-cloud-services">2. Enable Cloud Services</h2>
+<h2 id="enable-cloud-services">Enable Cloud Services</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>Go to <strong>Enable Cloud Services &gt; Services</strong>, then select the services that you want to enable. In addition to NKS, you can also enable Cloud Volumes and Cloud Insights here.</p>
@@ -694,7 +694,7 @@ The following steps will enable cloud volumes with a 90-day trial license. To co
 </div>
 </div>
 <div class="sect1">
-<h2 id="3-add-your-nks-api-token">3. Add Your NKS API Token</h2>
+<h2 id="add-your-nks-api-token">Add Your NKS API Token</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>On this step, you will add your NKS API token. You can use an existing NKS API token if you have one. If you don&#8217;t already have an API token, click the link to <a href="https://nks.netapp.io/user/profile">your NKS User Profile page</a> to create one.</p>
@@ -713,7 +713,7 @@ The following steps will enable cloud volumes with a 90-day trial license. To co
 </div>
 </div>
 <div class="sect1">
-<h2 id="4-register-your-installation">4. Register Your Installation</h2>
+<h2 id="register-your-installation">Register Your Installation</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>On the Enable Cloud Services step, select your Cloud Central organization and region name.</p>
@@ -727,7 +727,7 @@ The following steps will enable cloud volumes with a 90-day trial license. To co
 </div>
 </div>
 <div class="sect1">
-<h2 id="5-select-vcenter-resources">5. Select vCenter Resources</h2>
+<h2 id="select-vcenter-resources">Select vCenter Resources</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>On the vCenter step, choose your Data center and Cluster. After you select these, the vCenter instance and related admin user will be displayed.</p>
@@ -743,7 +743,7 @@ The following steps will enable cloud volumes with a 90-day trial license. To co
 </div>
 </div>
 <div class="sect1">
-<h2 id="6-select-networking-options">6. Select Networking Options</h2>
+<h2 id="select-networking-options">Select Networking Options</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>On the Networking page, review and configure the following:</p>
@@ -751,13 +751,13 @@ The following steps will enable cloud volumes with a 90-day trial license. To co
 <div class="ulist">
 <ul>
 <li>
-<p><strong>NetApp Kubernetes Service Management Network</strong>: Enter the IP addresses and info for your NKS service and workload clusters.</p>
+<p><strong>NetApp Kubernetes Service Management Network</strong>:  Select the vSphere distributed port group to use for management traffic for the NKS service cluster. This network requires outbound Internet access.</p>
 </li>
 <li>
-<p><strong>NetApp Kubernetes Service Workload Network</strong>: Enter the network information needed by your workload clusters (where you will host your applications). When you create your workload clusters, NKS uses the IP addresses entered here.</p>
+<p><strong>NetApp Kubernetes Service Workload Network</strong>: Select the vSphere distributed port group to use for management traffic for the NKS user (workload) clusters. This network requires outbound Internet access.</p>
 </li>
 <li>
-<p><strong>NetApp Kubernetes Service Data Network</strong>: Enter the network information to connect your Kubernetes workload clusters to persistent volume claims (PVCs) on your NetApp HCI system.</p>
+<p><strong>NetApp Kubernetes Service Data Network</strong>: Select the vSphere distributed port group to use for persistent volume data traffic for the NKS user clusters. This is a private, non-routed network.</p>
 </li>
 </ul>
 </div>
