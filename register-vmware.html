@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-  <title>Register Your FlexPod Environment With NKS | NetApp Cloud Docs</title>
+  <title>Register Your VMware Environment With NKS | NetApp Cloud Docs</title>
   <meta charset="utf-8">
-  <meta property="og:title" content="Register Your FlexPod Environment With NKS | NetApp Cloud Docs" />
+  <meta property="og:title" content="Register Your VMware Environment With NKS | NetApp Cloud Docs" />
 	<meta property="og:type" content="website" />
-	<meta property="og:url" content="https://docs.netapp.com/kubernetes-service/us-en/flexpod-register-your-environment-with-nks.html" />
-	<meta property="og:description" content="How to register your FlexPod environment with NKS." />
-  <meta property="og:image" content="https://docs.netapp.com/kubernetes-service/us-en/images/logo-tophat-social.png" />
+	<meta property="og:url" content="https://docs.netapp.com/kubernetes-service/register-vmware.html" />
+	<meta property="og:description" content="How to register your VMware environment with NKS." />
+  <meta property="og:image" content="https://docs.netapp.com/kubernetes-service/images/logo-tophat-social.png" />
   <meta property="og:image:alt" content="NetApp Logo" />
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="format-detection" content="telephone=no">
@@ -17,16 +17,16 @@
   <meta http-equiv="nss-type" content="Product Documentation"/>
   <meta http-equiv="nss-subtype" content="User Guide"/>
   
-  <meta name="description" content="How to register your FlexPod environment with NKS.">
+  <meta name="description" content="How to register your VMware environment with NKS.">
   <meta name="keywords" content=" ">
   
 
   <!-- Icons -->
-  <link rel="icon" href="/kubernetes-service/us-en/images/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="/kubernetes-service/images/favicon.ico" type="image/x-icon">
 
   <!-- RSS Feed -->
   
-  <link rel="alternate" type="application/rss+xml" title="NetApp Cloud Docs" href="/kubernetes-service/us-en/feed.xml">
+  <link rel="alternate" type="application/rss+xml" title="NetApp Cloud Docs" href="/kubernetes-service/feed.xml">
   
 
   <!-- CSS Definitions: NetApp CSS should be defined after generic css -->
@@ -35,23 +35,23 @@
   <link rel="stylesheet" href="//cdn.jsdelivr.net/searchkit/0.10.0/theme.css">
 
   <!-- LUCI CSS Content -->
-  <link rel="stylesheet" href="/kubernetes-service/us-en/common/css/esb.min.css">
-  <link rel="stylesheet" href="/kubernetes-service/us-en/common/css/netapp-library.min.css">
-  <link rel="stylesheet" href="/kubernetes-service/us-en/common/css/doc.css">
-  <link rel="stylesheet" href="/kubernetes-service/us-en/common/css/doc-components.css">
+  <link rel="stylesheet" href="/kubernetes-service/common/css/esb.min.css">
+  <link rel="stylesheet" href="/kubernetes-service/common/css/netapp-library.min.css">
+  <link rel="stylesheet" href="/kubernetes-service/common/css/doc.css">
+  <link rel="stylesheet" href="/kubernetes-service/common/css/doc-components.css">
 
-  <link rel="stylesheet" href='/kubernetes-service/us-en/css/na-sidebar.css' type='text/css'>
-  <link rel='stylesheet' href='/kubernetes-service/us-en/css/na-search.css' type='text/css'>
-  <link rel='stylesheet' href='/kubernetes-service/us-en/css/clouddocs.css' type='text/css'>
+  <link rel="stylesheet" href='/kubernetes-service/css/na-sidebar.css' type='text/css'>
+  <link rel='stylesheet' href='/kubernetes-service/css/na-search.css' type='text/css'>
+  <link rel='stylesheet' href='/kubernetes-service/css/clouddocs.css' type='text/css'>
 
   <!-- Font awesome seems to affect our GitHub Icon and generic "arrow box" for external links. -->
-  <link rel="stylesheet" type="text/css" href="/kubernetes-service/us-en/css/font-awesome.min.css">
-  <!-- <link rel="stylesheet" href="/kubernetes-service/us-en/css/customstyles.css"> -->
+  <link rel="stylesheet" type="text/css" href="/kubernetes-service/css/font-awesome.min.css">
+  <!-- <link rel="stylesheet" href="/kubernetes-service/css/customstyles.css"> -->
   <!-- Controls the shadow effect for search dropdown menu -->
-  <link rel="stylesheet" href="/kubernetes-service/us-en/css/boxshadowproperties.css">
+  <link rel="stylesheet" href="/kubernetes-service/css/boxshadowproperties.css">
 
   <!-- NetApp CSS controls the technical content -->
-  <link rel='stylesheet' href='/kubernetes-service/us-en/css/netapp.css' type='text/css'>
+  <link rel='stylesheet' href='/kubernetes-service/css/netapp.css' type='text/css'>
 
   
 
@@ -60,23 +60,23 @@
   <!-- Used to import Promise for IE. Required for SearchKit -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/bluebird/3.3.5/bluebird.min.js"></script>
   
-    <script src='/kubernetes-service/us-en/js/na-search.js'></script>
+    <script src='/kubernetes-service/js/na-search.js'></script>
   
 
   
-  <link rel='stylesheet' href='/kubernetes-service/us-en/css/na-pagenav.css' type='text/css' id="pagenav-css">
-  <script src='/kubernetes-service/us-en/js/na-pagenav.js'></script>
+  <link rel='stylesheet' href='/kubernetes-service/css/na-pagenav.css' type='text/css' id="pagenav-css">
+  <script src='/kubernetes-service/js/na-pagenav.js'></script>
   
 
-  <link rel='stylesheet' href='/kubernetes-service/us-en/css/prism.css' type='text/css'>
-  <link rel='stylesheet' href='/kubernetes-service/us-en/css/prism-netapp.css' type='text/css'>
+  <link rel='stylesheet' href='/kubernetes-service/css/prism.css' type='text/css'>
+  <link rel='stylesheet' href='/kubernetes-service/css/prism-netapp.css' type='text/css'>
 
-  <script src='/kubernetes-service/us-en/js/clouddocs.js'></script>
-  <script src='/kubernetes-service/us-en/js/s_code_impl.js'></script>
-  <script src='/kubernetes-service/us-en/js/jquery.navgoco.min.js'></script>
+  <script src='/kubernetes-service/js/clouddocs.js'></script>
+  <script src='/kubernetes-service/js/s_code_impl.js'></script>
+  <script src='/kubernetes-service/js/jquery.navgoco.min.js'></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-  <script src='/kubernetes-service/us-en/js/toc.js'></script>
-  <script src='/kubernetes-service/us-en/js/customscripts.js'></script>
+  <script src='/kubernetes-service/js/toc.js'></script>
+  <script src='/kubernetes-service/js/customscripts.js'></script>
 
   <script>
       $(document).ready(function() {
@@ -193,7 +193,7 @@
       <div class="n-property-bar__menu-toggle">
         <a href="#" class="n-property-bar__menu-toggle-link"><span class="n-property-bar__menu-toggle-text">Menu</span><svg class="n-icon-bars n-property-bar__menu-toggle-icon" aria-labelledby="title">
           <title>bars</title>
-          <use xlink:href="/kubernetes-service/us-en/common/svg/sprite.svg#bars"></use>
+          <use xlink:href="/kubernetes-service/common/svg/sprite.svg#bars"></use>
         </svg></a>
       </div>
       <div class="n-property-bar__property-mark n-property-bar__property-mark--has-property-name">
@@ -201,11 +201,11 @@
           <div class="n-property-bar__logo">
             <svg class="n-icon-netapp-mark n-property-bar__netapp-mark-icon" aria-labelledby="title">
               <title>netapp-mark</title>
-              <use xlink:href="/kubernetes-service/us-en/common/svg/sprite.svg#netapp-mark"></use>
+              <use xlink:href="/kubernetes-service/common/svg/sprite.svg#netapp-mark"></use>
             </svg>
             <svg class="n-property-bar__logo-svg" aria-labelledby="title">
               <title>NetApp</title>
-              <use xlink:href="/kubernetes-service/us-en/common/svg/sprite.svg#netapp-logo"></use>
+              <use xlink:href="/kubernetes-service/common/svg/sprite.svg#netapp-logo"></use>
             </svg>
           </div>
           <h2 class="n-property-bar__property-name">Cloud Docs</h2>
@@ -225,7 +225,7 @@
               <span class="ie-i18n-lang">English</span>
               <svg class="ie-i18n-icon-container" class="n-property-bar__logo-svg" aria-labelledby="title">
                 <title>globe</title>
-                <use xlink:href="/kubernetes-service/us-en/common/svg/sprite.svg#globe" class="n-icon-globe n-globe__icon"></use>
+                <use xlink:href="/kubernetes-service/common/svg/sprite.svg#globe" class="n-icon-globe n-globe__icon"></use>
               </svg>
             </a>
           </li>
@@ -302,7 +302,7 @@
   
 
   
-    <li class="active"><a href="flexpod-register-your-environment-with-nks.html">FlexPod</a></li>
+    <li><a href="register-flexpod.html">FlexPod</a></li>
   
 
   
@@ -311,6 +311,10 @@
 
   
     <li><a href="create-auth-credentials-on-gke.html">GKE Credentials</a></li>
+  
+
+  
+    <li class="active"><a href="register-vmware.html">VMware</a></li>
   
 
 
@@ -366,7 +370,23 @@
   
 
   
+    <li><a href="register-flexpod.html">Register FlexPod</a></li>
+  
+
+  
+    <li class="active"><a href="register-vmware.html">Register VMware</a></li>
+  
+
+  
     <li><a href="create-netapp-hci-cluster.html">Create a NetApp HCI Cluster</a></li>
+  
+
+  
+    <li><a href="create-flexpod-cluster.html">Create a FlexPod Cluster</a></li>
+  
+
+  
+    <li><a href="create-vmware-cluster.html">Create a VMware Cluster</a></li>
   
 
 
@@ -398,7 +418,7 @@
   
 
   
-    <li><a href="create-a-netapp-hci-cluster-in-your-flexpod-environment.html">Create a FlexPod Cluster</a></li>
+    <li><a href="create-flexpod-cluster.html">Create a FlexPod Cluster</a></li>
   
 
   
@@ -411,6 +431,10 @@
 
   
     <li><a href="create-netapp-hci-cluster.html">Create a NetApp HCI Cluster</a></li>
+  
+
+  
+    <li><a href="create-vmware-cluster.html">Create a VMware Cluster</a></li>
   
 
 
@@ -613,11 +637,11 @@
           
 
 <div class="n-doc__component-detail-heading-wrap">
-  <h1 class="n-doc__component-detail-heading">Register Your FlexPod Environment With NKS
+  <h1 class="n-doc__component-detail-heading">Register Your VMware Environment With NKS
     <span>
       
-        <a target="_blank" href="https://github.com/NetAppDocs/kubernetes-service/blob/master/register-your-flexpod-environment-with-nks.adoc" class="btn btn-default githubEditButton" role="button"><i class="fa fa-github fa-lg"></i> Edit on GitHub</a>
-        <a target="_blank" href="https://github.com/NetAppDocs/kubernetes-service/issues/new?body=Page%3A%20[Register Your FlexPod Environment With NKS](https://docs.netapp.com/us-en/kubernetes-service/flexpod-register-your-environment-with-nks.html)" class="btn btn-default githubEditButton" role="button"><i class="fa fa-github fa-lg"></i> Request doc changes</a>
+        <a target="_blank" href="https://github.com/NetAppDocs/kubernetes-service/blob/master/register-vmware.adoc" class="btn btn-default githubEditButton" role="button"><i class="fa fa-github fa-lg"></i> Edit on GitHub</a>
+        <a target="_blank" href="https://github.com/NetAppDocs/kubernetes-service/issues/new?body=Page%3A%20[Register Your VMware Environment With NKS](https://docs.netapp.com/us-en/kubernetes-service/register-vmware.html)" class="btn btn-default githubEditButton" role="button"><i class="fa fa-github fa-lg"></i> Request doc changes</a>
       
     </span>
   </h1>
@@ -625,7 +649,7 @@
 
 <p class="page-details">
 
-<time datetime="2019-08-26 16:33:25 +0000">08/26/2019</time>
+<time datetime="2019-08-26 19:42:52 +0000">08/26/2019</time>
 
 
 <span>Contributors
@@ -645,7 +669,7 @@
 <div id="preamble">
 <div class="sectionbody">
 <div class="paragraph">
-<p>Learn how to register your FlexPod environment for <a href="https://nks.netapp.io">the NetApp Kubernetes Service (NKS)</a> so that you can use NKS to create Kubernetes clusters on FlexPod.</p>
+<p>Learn how to register your VMware environment for <a href="https://nks.netapp.io">the NetApp Kubernetes Service (NKS)</a> so that you can use NKS to create Kubernetes clusters on VMware.</p>
 </div>
 <div class="paragraph">
 <p><strong>Requirements</strong></p>
@@ -653,13 +677,49 @@
 <div class="ulist">
 <ul>
 <li>
-<p>NKS Registrator command-line tool installed and configured.</p>
-</li>
-<li>
-<p>FlexPod installed and configured.</p>
-</li>
-<li>
 <p>An NKS account. If you don&#8217;t have one already, you can sign up for a free 30-day trial with no credit card required at <a href="https://nks.netapp.io" class="bare">https://nks.netapp.io</a>.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>VMware</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>VMware Virtual Distributed Switch installed.</p>
+</li>
+<li>
+<p>DHCP on the VM network.</p>
+</li>
+<li>
+<p>A defined resource pool.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Your registration machine environment</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>An <code>id_rsa</code>, <code>id_rsa.pub</code> keypair in your <code>~/.ssh</code> directory.</p>
+</li>
+<li>
+<p>NKS Registration binary.</p>
+</li>
+<li>
+<p>Helpful but not required:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://golang.org/">Golang</a> version 1.12.5 or later installed.</p>
+</li>
+<li>
+<p><a href="https://github.com/vmware/govmomi">Govc</a> version 0.18.0 or later installed.</p>
+</li>
+</ul>
+</div>
 </li>
 </ul>
 </div>
@@ -669,7 +729,7 @@
 <h2 id="create-an-nks-api-token">Create an NKS API token</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>In order to register your FlexPod environment with NKS, you will need an NKS API token. You can use an existing NKS API token if you have one.</p>
+<p>In order to register your VMware environment with NKS, you will need an NKS API token. You can use an existing NKS API token if you have one.</p>
 </div>
 <div class="paragraph">
 <p>To create a new API token:</p>
@@ -693,7 +753,7 @@
 </div>
 </div>
 <div class="sect1">
-<h2 id="register-flexpod">Register FlexPod</h2>
+<h2 id="register-vmware">Register VMware</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>From the command line, invoke the NKS Registrator command-line utility. You have several possible options for registering in NKS:</p>
@@ -726,7 +786,7 @@
 </div>
 </div>
 <div class="paragraph">
-<p>In most cases, you will want to use <code>vsphere-easy</code> to register your FlexPod environment:</p>
+<p>In most cases, you will want to use <code>vsphere-easy</code> to register your VMware environment:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -778,7 +838,7 @@
 <p>Paste in your NKS API token.</p>
 </div>
 <div class="paragraph">
-<p>Use the arrow key to select the NKS organization you want to use for provisioning clusters on FlexPod.</p>
+<p>Use the arrow key to select the NKS organization you want to use for provisioning clusters on VMware.</p>
 </div>
 <div class="paragraph">
 <p>Optional: If you want to set up Element storage for your region, select it here.</p>
@@ -793,7 +853,7 @@
 <p>The progress meter will count up to 100, at which point the registration process is complete, and you are returned to the command line prompt. You can read the bootstrap output file to verify that registration completed successfully.</p>
 </div>
 <div class="paragraph">
-<p>You can now create a NetApp HCI cluster in your FlexPod environment. <a href="https://docs.netapp.com/us-en/kubernetes-service/create-a-netapp-hci-cluster-in-your-flexpod-environment.html">Click here for step-by-step instructions.</a></p>
+<p>You can now create a NetApp HCI cluster in your VMware environment. <a href="https://docs.netapp.com/us-en/kubernetes-service/create-vmware-cluster.html">Click here for step-by-step instructions.</a></p>
 </div>
 </div>
 </div>
@@ -836,7 +896,7 @@
                       <span class="n-footer__social-link-text">blog</span>
                       <svg class="n-icon-blog n-footer__social-link-icon" aria-labelledby="title">
                         <title>blog@</title>
-                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/kubernetes-service/us-en/common/svg/sprite.svg#blog"></use>
+                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/kubernetes-service/common/svg/sprite.svg#blog"></use>
                       </svg>
                     </a>
                   </li>
@@ -845,7 +905,7 @@
                       <span class="n-footer__social-link-text">community</span>
                       <svg class="n-icon-twitter n-footer__social-link-icon" aria-labelledby="title">
                         <title>community@</title>
-                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/kubernetes-service/us-en/common/svg/sprite.svg#comments"></use>
+                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/kubernetes-service/common/svg/sprite.svg#comments"></use>
                       </svg>
                     </a>
                   </li>
@@ -855,7 +915,7 @@
                       <span class="n-footer__social-link-text">twitter</span>
                       <svg class="n-icon-twitter n-footer__social-link-icon" aria-labelledby="title">
                         <title>twitter@</title>
-                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/kubernetes-service/us-en/common/svg/sprite.svg#twitter"></use>
+                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/kubernetes-service/common/svg/sprite.svg#twitter"></use>
                       </svg>
                     </a>
                   </li>
@@ -864,7 +924,7 @@
                       <span class="n-footer__social-link-text">youtube</span>
                       <svg class="n-icon-youtube n-footer__social-link-icon" aria-labelledby="title">
                         <title>youtube@</title>
-                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/kubernetes-service/us-en/common/svg/sprite.svg#youtube"></use>
+                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/kubernetes-service/common/svg/sprite.svg#youtube"></use>
                       </svg>
                     </a>
                   </li>
@@ -885,15 +945,15 @@
 
     </div>
 
-    <script src="/kubernetes-service/us-en/common/js/components.js"></script>
-    <script src="/kubernetes-service/us-en/common/js/doc-components.js"></script>
+    <script src="/kubernetes-service/common/js/components.js"></script>
+    <script src="/kubernetes-service/common/js/doc-components.js"></script>
 
     <!-- Elasticsearch JS -->
-    <script type="text/javascript" src='/kubernetes-service/us-en/js/bundle.js'></script>
+    <script type="text/javascript" src='/kubernetes-service/js/bundle.js'></script>
 
     <!-- Syntax Highlighting -->
-    <script type="text/javascript" src='/kubernetes-service/us-en/js/prism.js'></script>
-    <script type="text/javascript" src='/kubernetes-service/us-en/js/prism-curl.js'></script>
+    <script type="text/javascript" src='/kubernetes-service/js/prism.js'></script>
+    <script type="text/javascript" src='/kubernetes-service/js/prism-curl.js'></script>
 
   </body>
 

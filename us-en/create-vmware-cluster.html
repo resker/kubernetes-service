@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-  <title>Getting Started | NetApp Cloud Docs</title>
+  <title>Create a Kubernetes Cluster on NetApp HCI in Your VMware Environment | NetApp Cloud Docs</title>
   <meta charset="utf-8">
-  <meta property="og:title" content="Getting Started | NetApp Cloud Docs" />
+  <meta property="og:title" content="Create a Kubernetes Cluster on NetApp HCI in Your VMware Environment | NetApp Cloud Docs" />
 	<meta property="og:type" content="website" />
-	<meta property="og:url" content="https://docs.netapp.com/kubernetes-service/us-en/api-basics.html" />
-	<meta property="og:description" content="The basics of using the NKS API, including creating an API token and how to validate requests." />
+	<meta property="og:url" content="https://docs.netapp.com/kubernetes-service/us-en/create-vmware-cluster.html" />
+	<meta property="og:description" content="Learn how to create a Kubernetes cluster on NetApp HCI in your VMware environment" />
   <meta property="og:image" content="https://docs.netapp.com/kubernetes-service/us-en/images/logo-tophat-social.png" />
   <meta property="og:image:alt" content="NetApp Logo" />
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -17,7 +17,7 @@
   <meta http-equiv="nss-type" content="Product Documentation"/>
   <meta http-equiv="nss-subtype" content="User Guide"/>
   
-  <meta name="description" content="The basics of using the NKS API, including creating an API token and how to validate requests.">
+  <meta name="description" content="Learn how to create a Kubernetes cluster on NetApp HCI in your VMware environment">
   <meta name="keywords" content=" ">
   
 
@@ -386,7 +386,7 @@
   
 
   
-    <li><a href="create-vmware-cluster.html">Create a VMware Cluster</a></li>
+    <li class="active"><a href="create-vmware-cluster.html">Create a VMware Cluster</a></li>
   
 
 
@@ -434,7 +434,7 @@
   
 
   
-    <li><a href="create-vmware-cluster.html">Create a VMware Cluster</a></li>
+    <li class="active"><a href="create-vmware-cluster.html">Create a VMware Cluster</a></li>
   
 
 
@@ -514,7 +514,7 @@
         
 
   
-    <li class="active"><a href="api-basics.html">API Basics</a></li>
+    <li><a href="api-basics.html">API Basics</a></li>
   
 
   
@@ -637,11 +637,11 @@
           
 
 <div class="n-doc__component-detail-heading-wrap">
-  <h1 class="n-doc__component-detail-heading">Getting Started
+  <h1 class="n-doc__component-detail-heading">Create a Kubernetes Cluster on NetApp HCI in Your VMware Environment
     <span>
       
-        <a target="_blank" href="https://github.com/NetAppDocs/kubernetes-service/blob/master/api-basics.adoc" class="btn btn-default githubEditButton" role="button"><i class="fa fa-github fa-lg"></i> Edit on GitHub</a>
-        <a target="_blank" href="https://github.com/NetAppDocs/kubernetes-service/issues/new?body=Page%3A%20[Getting Started](https://docs.netapp.com/us-en/kubernetes-service/api-basics.html)" class="btn btn-default githubEditButton" role="button"><i class="fa fa-github fa-lg"></i> Request doc changes</a>
+        <a target="_blank" href="https://github.com/NetAppDocs/kubernetes-service/blob/master/create-vmware-cluster.adoc" class="btn btn-default githubEditButton" role="button"><i class="fa fa-github fa-lg"></i> Edit on GitHub</a>
+        <a target="_blank" href="https://github.com/NetAppDocs/kubernetes-service/issues/new?body=Page%3A%20[Create a Kubernetes Cluster on NetApp HCI in Your VMware Environment](https://docs.netapp.com/us-en/kubernetes-service/create-vmware-cluster.html)" class="btn btn-default githubEditButton" role="button"><i class="fa fa-github fa-lg"></i> Request doc changes</a>
       
     </span>
   </h1>
@@ -649,7 +649,7 @@
 
 <p class="page-details">
 
-<time datetime="2019-07-25 17:30:30 +0000">07/25/2019</time>
+<time datetime="2019-08-26 19:42:52 +0000">08/26/2019</time>
 
 
 <span>Contributors
@@ -669,238 +669,116 @@
 <div id="preamble">
 <div class="sectionbody">
 <div class="paragraph">
-<p>Welcome to the <a href="https://nks.netapp.io">NetApp Kubernetes Service (NKS)</a> API Reference. This section guides you through the setup process of creating an NKS API token, passing the token in your API requests, and the response codes returned by the API.</p>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="resource-url">Resource URL</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>The full resource URL for the NKS API is <code><a href="https://api.nks.netapp.io" class="bare">https://api.nks.netapp.io</a></code>.</p>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="authorization-requirements">Authorization Requirements</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>All API requests must be authenticated with your API token. To obtain a token:</p>
-</div>
-<div class="olist arabic">
-<ol class="arabic">
-<li>
-<p>Register or log in at <a href="https://nks.netapp.io">NKS</a>.</p>
-</li>
-<li>
-<p>Click your profile avatar in the top right corner and select <code>Edit Profile</code>.</p>
-</li>
-<li>
-<p>In the <strong>API Tokens</strong> section, click <strong>Add Token</strong>.</p>
-</li>
-<li>
-<p>Copy the token and save it somewhere safe. This is your only chance to view your API token. The token cannot be displayed after you leave or reload the page.</p>
-</li>
-</ol>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="access-rights">Access Rights</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>Your UI access and your API access are both tied to the same account. This means that you can only do through the API what you would be able to do through the UI.</p>
+<p>Learn how to create a Kubernetes cluster on NetApp HCI in your VMware environment in three clicks, using <a href="https://nks.netapp.io">NetApp Kubernetes Service (NKS)</a>.</p>
 </div>
 <div class="paragraph">
-<p>Most API operations are scoped under the organization. You will only be able to carry out these operations if you have <code>Owner</code> level access to the specified organization.</p>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="scope">Scope</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>The following resources are scoped under the organization:</p>
+<p>To create a VMware cluster, you will need:</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p>Workspaces</p>
+<p>VMware installed, configured, and registered with NKS. <a href="https://docs.netapp.com/us-en/kubernetes-service/register-vmware.html">Click here to learn how to register your VMware environment with NKS</a>.</p>
 </li>
 <li>
-<p>Teams</p>
+<p>NKS enabled for your NetApp HCI account. <a href="https://docs.netapp.com/us-en/kubernetes-service/hci-enable-nks-for-netapp-hci.html">Click here to learn how to enable NKS for NetApp HCI</a>.</p>
 </li>
 <li>
-<p>Members</p>
-</li>
-<li>
-<p>Keysets</p>
-</li>
-<li>
-<p>Clusters</p>
-</li>
-<li>
-<p>Nodes</p>
-</li>
-<li>
-<p>Node Pools</p>
-</li>
-<li>
-<p>Federations</p>
-</li>
-<li>
-<p>Istio Mesh</p>
-</li>
-<li>
-<p>Trusted Charts</p>
-</li>
-<li>
-<p>Subscription</p>
-</li>
-<li>
-<p>Invoices</p>
-</li>
-<li>
-<p>Notifications</p>
+<p>An NKS account. If you don&#8217;t have one already, you can sign up for a free 30-day trial with no credit card required at <a href="https://nks.netapp.io" class="bare">https://nks.netapp.io</a>.</p>
 </li>
 </ul>
 </div>
-<div class="paragraph">
-<p>The user resource is scoped under the user account.</p>
-</div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="usage">Usage</h2>
+<h2 id="step-1-add-cluster">Step 1: Add Cluster</h2>
 <div class="sectionbody">
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-shell" data-lang="shell">curl -X GET \
--H "Authorization: Bearer abcdef123456789abcdev123456789" \
-"https://api.nks.netapp.io/orgs"</code></pre>
-</div>
-</div>
 <div class="paragraph">
-<p>To authenticate, you must pass the API token as a Bearer token in the Authorization header for all API requests.</p>
-</div>
-<div class="paragraph">
-<p>To do this, add <code>-H "Authorization: Bearer {your API token}"</code> to the request, as demonstrated in the example on the right.</p>
-</div>
-<div class="sect2">
-<h3 id="organization-number">Organization Number</h3>
-<div class="paragraph">
-<p>After you create an API token, the page displays the example code to use it. This code includes your current organization ID, which is a critical component in your future API requests.</p>
-</div>
-<div class="paragraph">
-<p>Note: You can also fetch your current organization ID from the Organizations resource.</p>
-</div>
-<div class="paragraph">
-<p>In this example, the user&#8217;s organization ID is <code>381</code>:</p>
+<p>Log in to <a href="https://nks.netapp.io">NetApp Kubernetes Service (NKS)</a> and click <strong>+ ADD CLUSTER</strong>.</p>
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="assets/documentation/api/api-token-example-code.png?raw=true" alt="API token example code">
-</div>
-</div>
-</div>
-<div class="sect2">
-<h3 id="example">Example</h3>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-shell" data-lang="shell">curl -X GET \
--H "Authorization: Bearer {API token}" \
-"https://api.nks.netapp.io/orgs/{Org ID}/clusters"</code></pre>
+<img src="assets/documentation/create-clusters/create-kubernetes-cluster-on-vmware-01.png?raw=true" alt="Create Kubernetes Cluster on vmware">
 </div>
 </div>
 <div class="paragraph">
-<p>This query returns a list of your current active clusters within the selected organization.</p>
+<p>Click the <strong>NetApp HCI</strong> tile to select NetApp HCI as the provider.</p>
 </div>
-<div class="paragraph">
-<p>For example:</p>
-</div>
-<div class="listingblock">
+<div class="imageblock">
 <div class="content">
-<pre class="highlight"><code class="language-shell" data-lang="shell">curl -X GET \
--H "Authorization: Bearer abcdef123456789abcdev123456789" \
-"https://api.nks.netapp.io/orgs/381/clusters"</code></pre>
-</div>
+<img src="assets/documentation/create-clusters/create-kubernetes-cluster-on-vmware-02.png?raw=true" alt="Create Kubernetes Cluster on vmware">
 </div>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="response-codes">Response Codes</h2>
+<h2 id="step-2-provider-configuration">Step 2: Provider Configuration</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Example using the <code>-i</code> flag to view all headers:</p>
+<p>Click the <strong>Edit</strong> link on the left to edit the provider details. Select your VMware environment from the <strong>HCI Installation</strong> drop-down menu, then click <strong>Save</strong>.</p>
 </div>
-<div class="listingblock">
+<div class="imageblock">
 <div class="content">
-<pre class="highlight"><code class="language-shell" data-lang="shell">curl -i -X PATCH \
--H "Content-Type: application/json" \
--H "Authorization: Bearer abcdef123456789abcdev123456789" \
--d @updateorg.json "https://api.nks.netapp.io/orgs/381"</code></pre>
+<img src="assets/documentation/create-clusters/create-kubernetes-cluster-on-vmware-03.png?raw=true" alt="Create Kubernetes Cluster on vmware">
 </div>
 </div>
 <div class="paragraph">
-<p>This query will trigger a 400 error. Using the <code>-i</code> flag returns the additional response:</p>
+<p>Update any of the following if you wish:</p>
 </div>
-<div class="listingblock">
+<div class="ulist">
+<ul>
+<li>
+<p>Number and size of master and worker nodes.</p>
+</li>
+<li>
+<p>NKS workspace.</p>
+</li>
+<li>
+<p>SSH keypair.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
 <div class="content">
-<pre class="highlight"><code class="language-json" data-lang="json">{"detail":"JSON parse error - Expecting property name enclosed in double quotes: line 1 column 72 (char 71)"}</code></pre>
+<img src="assets/documentation/create-clusters/create-kubernetes-cluster-on-vmware-04.png?raw=true" alt="Create Kubernetes Cluster on vmware">
 </div>
 </div>
 <div class="paragraph">
-<p>The NKS API uses the following response codes:</p>
+<p>When your provider configurations are ready, click <strong>SUBMIT</strong>.</p>
 </div>
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 50%;">
-<col style="width: 50%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top">Response</th>
-<th class="tableblock halign-left valign-top">Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>200</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">OK: The request succeeded.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>400</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Bad Request: The data sent with the request is not valid. For more details, use the <code>-i</code> flag in your request to view all headers. This returns additional information about the cause of the error.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>401</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Unauthorized: "Authentication credentials were not provided." You did not provide an API key, or the provided API key is invalid.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>403</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Forbidden: You are not allowed to access this endpoint or resource.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>404</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Not Found: The endpoint or resource was not found.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>405</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Method Not Allowed: The endpoint does not allow this method.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>500</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Internal Server Error: We had a problem with our server. Try again later.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>503</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Service Unavailable: We are temporarily offline or experiencing an outage. If this error persists, please contact our support department.</p></td>
-</tr>
-</tbody>
-</table>
+</div>
+</div>
+<div class="sect1">
+<h2 id="step-3-configure-your-cluster">Step 3: Configure Your Cluster</h2>
+<div class="sectionbody">
 <div class="paragraph">
-<p><em>Did these articles answer your question? If not, <a href="mailto:nks@netapp.com">contact us.</a></em></p>
+<p>On this step, you can configure your Kubernetes cluster:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Set the cluster name.</p>
+</li>
+<li>
+<p>Change the Kubernetes version.</p>
+</li>
+<li>
+<p>Update the Pod and/or Service Network</p>
+</li>
+<li>
+<p>Change the OS distribution.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="assets/documentation/create-clusters/create-kubernetes-cluster-on-vmware-05.png?raw=true" alt="Create Kubernetes Cluster on vmware">
+</div>
+</div>
+<div class="paragraph">
+<p>Verify that all the choices are correct, then click <strong>Submit</strong>. This will start building your NetApp HCI cluster on VMware, and it will be ready for use within minutes.</p>
+</div>
+<div class="paragraph">
+<p><em>Did this article answer your question? If not, <a href="mailto:nks@netapp.com">contact us.</a></em></p>
 </div>
 </div>
 </div>
