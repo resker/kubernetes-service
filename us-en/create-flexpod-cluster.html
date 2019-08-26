@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-  <title>Create a Kubernetes Cluster on NetApp HCI in Your FlexPod Environment | NetApp Cloud Docs</title>
+  <title>Create a Kubernetes Cluster in Your FlexPod Environment | NetApp Cloud Docs</title>
   <meta charset="utf-8">
-  <meta property="og:title" content="Create a Kubernetes Cluster on NetApp HCI in Your FlexPod Environment | NetApp Cloud Docs" />
+  <meta property="og:title" content="Create a Kubernetes Cluster in Your FlexPod Environment | NetApp Cloud Docs" />
 	<meta property="og:type" content="website" />
 	<meta property="og:url" content="https://docs.netapp.com/kubernetes-service/us-en/create-flexpod-cluster.html" />
-	<meta property="og:description" content="Learn how to create a Kubernetes cluster on NetApp HCI in your FlexPod environment" />
+	<meta property="og:description" content="Learn how to create a Kubernetes cluster in your FlexPod environment" />
   <meta property="og:image" content="https://docs.netapp.com/kubernetes-service/us-en/images/logo-tophat-social.png" />
   <meta property="og:image:alt" content="NetApp Logo" />
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -17,7 +17,7 @@
   <meta http-equiv="nss-type" content="Product Documentation"/>
   <meta http-equiv="nss-subtype" content="User Guide"/>
   
-  <meta name="description" content="Learn how to create a Kubernetes cluster on NetApp HCI in your FlexPod environment">
+  <meta name="description" content="Learn how to create a Kubernetes cluster in your FlexPod environment">
   <meta name="keywords" content=" ">
   
 
@@ -370,23 +370,7 @@
   
 
   
-    <li><a href="register-flexpod.html">Register FlexPod</a></li>
-  
-
-  
-    <li><a href="register-vmware.html">Register VMware</a></li>
-  
-
-  
     <li><a href="create-netapp-hci-cluster.html">Create a NetApp HCI Cluster</a></li>
-  
-
-  
-    <li class="active"><a href="create-flexpod-cluster.html">Create a FlexPod Cluster</a></li>
-  
-
-  
-    <li><a href="create-vmware-cluster.html">Create a VMware Cluster</a></li>
   
 
 
@@ -637,11 +621,11 @@
           
 
 <div class="n-doc__component-detail-heading-wrap">
-  <h1 class="n-doc__component-detail-heading">Create a Kubernetes Cluster on NetApp HCI in Your FlexPod Environment
+  <h1 class="n-doc__component-detail-heading">Create a Kubernetes Cluster in Your FlexPod Environment
     <span>
       
         <a target="_blank" href="https://github.com/NetAppDocs/kubernetes-service/blob/master/create-flexpod-cluster.adoc" class="btn btn-default githubEditButton" role="button"><i class="fa fa-github fa-lg"></i> Edit on GitHub</a>
-        <a target="_blank" href="https://github.com/NetAppDocs/kubernetes-service/issues/new?body=Page%3A%20[Create a Kubernetes Cluster on NetApp HCI in Your FlexPod Environment](https://docs.netapp.com/us-en/kubernetes-service/create-flexpod-cluster.html)" class="btn btn-default githubEditButton" role="button"><i class="fa fa-github fa-lg"></i> Request doc changes</a>
+        <a target="_blank" href="https://github.com/NetAppDocs/kubernetes-service/issues/new?body=Page%3A%20[Create a Kubernetes Cluster in Your FlexPod Environment](https://docs.netapp.com/us-en/kubernetes-service/create-flexpod-cluster.html)" class="btn btn-default githubEditButton" role="button"><i class="fa fa-github fa-lg"></i> Request doc changes</a>
       
     </span>
   </h1>
@@ -649,7 +633,7 @@
 
 <p class="page-details">
 
-<time datetime="2019-08-26 19:42:52 +0000">08/26/2019</time>
+<time datetime="2019-08-26 20:43:06 +0000">08/26/2019</time>
 
 
 <span>Contributors
@@ -669,7 +653,7 @@
 <div id="preamble">
 <div class="sectionbody">
 <div class="paragraph">
-<p>Learn how to create a Kubernetes cluster on NetApp HCI in your FlexPod environment in three clicks, using <a href="https://nks.netapp.io">NetApp Kubernetes Service (NKS)</a>.</p>
+<p>Learn how to create a Kubernetes cluster in your FlexPod environment in three clicks, using <a href="https://nks.netapp.io">NetApp Kubernetes Service (NKS)</a>.</p>
 </div>
 <div class="paragraph">
 <p>To create a FlexPod cluster, you will need:</p>
@@ -678,9 +662,6 @@
 <ul>
 <li>
 <p>FlexPod installed, configured, and registered with NKS. <a href="https://docs.netapp.com/us-en/kubernetes-service/register-flexpod.html">Click here to learn how to register your FlexPod environment with NKS</a>.</p>
-</li>
-<li>
-<p>NKS enabled for your NetApp HCI account. <a href="https://docs.netapp.com/us-en/kubernetes-service/hci-enable-nks-for-netapp-hci.html">Click here to learn how to enable NKS for NetApp HCI</a>.</p>
 </li>
 <li>
 <p>An NKS account. If you don&#8217;t have one already, you can sign up for a free 30-day trial with no credit card required at <a href="https://nks.netapp.io" class="bare">https://nks.netapp.io</a>.</p>
@@ -697,15 +678,15 @@
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="assets/documentation/create-clusters/create-kubernetes-cluster-on-flexpod-01.png?raw=true" alt="Create Kubernetes Cluster on FlexPod">
+<img src="assets/documentation/create-clusters/flexpod-add-cluster.png?raw=true" alt="Create Kubernetes Cluster on FlexPod">
 </div>
 </div>
 <div class="paragraph">
-<p>Click the <strong>NetApp HCI</strong> tile to select NetApp HCI as the provider.</p>
+<p>Click the <strong>FlexPod</strong> tile to select FlexPod as the provider.</p>
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="assets/documentation/create-clusters/create-kubernetes-cluster-on-flexpod-02.png?raw=true" alt="Create Kubernetes Cluster on FlexPod">
+<img src="assets/documentation/create-clusters/flexpod-click-tile.png?raw=true" alt="Create Kubernetes Cluster on FlexPod">
 </div>
 </div>
 </div>
@@ -714,11 +695,11 @@
 <h2 id="step-2-provider-configuration">Step 2: Provider Configuration</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Click the <strong>Edit</strong> link on the left to edit the provider details. Select your FlexPod environment from the <strong>HCI Installation</strong> drop-down menu, then click <strong>Save</strong>.</p>
+<p>Click the <strong>Edit</strong> link on the left to edit the provider details. Select your FlexPod environment from the <strong>FlexPod Installation</strong> drop-down menu, then click <strong>Save</strong>.</p>
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="assets/documentation/create-clusters/create-kubernetes-cluster-on-flexpod-03.png?raw=true" alt="Create Kubernetes Cluster on FlexPod">
+<img src="assets/documentation/create-clusters/flexpod-choose-installation.png?raw=true" alt="Create Kubernetes Cluster on FlexPod">
 </div>
 </div>
 <div class="paragraph">
@@ -739,7 +720,7 @@
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="assets/documentation/create-clusters/create-kubernetes-cluster-on-flexpod-04.png?raw=true" alt="Create Kubernetes Cluster on FlexPod">
+<img src="assets/documentation/create-clusters/flexpod-configure-provider.png?raw=true" alt="Create Kubernetes Cluster on FlexPod">
 </div>
 </div>
 <div class="paragraph">
@@ -771,11 +752,11 @@
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="assets/documentation/create-clusters/create-kubernetes-cluster-on-flexpod-05.png?raw=true" alt="Create Kubernetes Cluster on FlexPod">
+<img src="assets/documentation/create-clusters/flexpod-configure-cluster.png?raw=true" alt="Create Kubernetes Cluster on FlexPod">
 </div>
 </div>
 <div class="paragraph">
-<p>Verify that all the choices are correct, then click <strong>Submit</strong>. This will start building your NetApp HCI cluster on FlexPod, and it will be ready for use within minutes.</p>
+<p>Verify that all the choices are correct, then click <strong>Submit</strong>. This will start building your FlexPod cluster, and it will be ready for use within minutes.</p>
 </div>
 <div class="paragraph">
 <p><em>Did this article answer your question? If not, <a href="mailto:nks@netapp.com">contact us.</a></em></p>
