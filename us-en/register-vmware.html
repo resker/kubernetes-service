@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-  <title>Organizations | NetApp Cloud Docs</title>
+  <title>Register Your VMware Environment With NKS | NetApp Cloud Docs</title>
   <meta charset="utf-8">
-  <meta property="og:title" content="Organizations | NetApp Cloud Docs" />
+  <meta property="og:title" content="Register Your VMware Environment With NKS | NetApp Cloud Docs" />
 	<meta property="og:type" content="website" />
-	<meta property="og:url" content="https://docs.netapp.com/kubernetes-service/us-en/api-organizations.html" />
-	<meta property="og:description" content="How to use the Organizations API resource for the NKS API." />
+	<meta property="og:url" content="https://docs.netapp.com/kubernetes-service/us-en/register-vmware.html" />
+	<meta property="og:description" content="How to register your VMware environment with NKS." />
   <meta property="og:image" content="https://docs.netapp.com/kubernetes-service/us-en/images/logo-tophat-social.png" />
   <meta property="og:image:alt" content="NetApp Logo" />
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -17,7 +17,7 @@
   <meta http-equiv="nss-type" content="Product Documentation"/>
   <meta http-equiv="nss-subtype" content="User Guide"/>
   
-  <meta name="description" content="How to use the Organizations API resource for the NKS API.">
+  <meta name="description" content="How to register your VMware environment with NKS.">
   <meta name="keywords" content=" ">
   
 
@@ -310,7 +310,7 @@
   
 
   
-    <li><a href="register-vmware.html">VMware Credentials</a></li>
+    <li class="active"><a href="register-vmware.html">VMware Credentials</a></li>
   
 
 
@@ -494,7 +494,7 @@
   
 
   
-    <li class="active"><a href="api-organizations.html">Organizations</a></li>
+    <li><a href="api-organizations.html">Organizations</a></li>
   
 
   
@@ -613,11 +613,11 @@
           
 
 <div class="n-doc__component-detail-heading-wrap">
-  <h1 class="n-doc__component-detail-heading">Organizations
+  <h1 class="n-doc__component-detail-heading">Register Your VMware Environment With NKS
     <span>
       
-        <a target="_blank" href="https://github.com/NetAppDocs/kubernetes-service/blob/master/api-organizations.adoc" class="btn btn-default githubEditButton" role="button"><i class="fa fa-github fa-lg"></i> Edit on GitHub</a>
-        <a target="_blank" href="https://github.com/NetAppDocs/kubernetes-service/issues/new?body=Page%3A%20[Organizations](https://docs.netapp.com/us-en/kubernetes-service/api-organizations.html)" class="btn btn-default githubEditButton" role="button"><i class="fa fa-github fa-lg"></i> Request doc changes</a>
+        <a target="_blank" href="https://github.com/NetAppDocs/kubernetes-service/blob/master/register-vmware.adoc" class="btn btn-default githubEditButton" role="button"><i class="fa fa-github fa-lg"></i> Edit on GitHub</a>
+        <a target="_blank" href="https://github.com/NetAppDocs/kubernetes-service/issues/new?body=Page%3A%20[Register Your VMware Environment With NKS](https://docs.netapp.com/us-en/kubernetes-service/register-vmware.html)" class="btn btn-default githubEditButton" role="button"><i class="fa fa-github fa-lg"></i> Request doc changes</a>
       
     </span>
   </h1>
@@ -625,7 +625,7 @@
 
 <p class="page-details">
 
-<time datetime="2019-07-10 23:36:43 +0000">07/10/2019</time>
+<time datetime="2019-08-27 00:38:26 +0000">08/27/2019</time>
 
 
 <span>Contributors
@@ -642,518 +642,195 @@
 
 </p>
 
-<div class="sect1">
-<h2 id="overview">Overview</h2>
+<div id="preamble">
 <div class="sectionbody">
 <div class="paragraph">
-<p>Organizations are the highest-level resource. The Organizations resource contains information about the Organization. This includes the ID, which is required for most other API calls.</p>
-</div>
-<div class="sect2">
-<h3 id="background">Background</h3>
-<div class="paragraph">
-<p>The first time you log in to <a href="https://nks.netapp.io">NKS</a>, we automatically create an Organization for you. You can customize the name and logo of this Organization on the Organization Setup page.</p>
-</div>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="get-all-organizations">GET All Organizations</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>Get the list of Organizations of which the user is a member.</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-shell" data-lang="shell">GET https://api.nks.netapp.io/orgs/</code></pre>
-</div>
+<p>Learn how to register your VMware environment for <a href="https://nks.netapp.io">the NetApp Kubernetes Service (NKS)</a> so that you can use NKS to create Kubernetes clusters on VMware.</p>
 </div>
 <div class="paragraph">
-<p>Example request:</p>
+<p><strong>Requirements</strong></p>
 </div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-shell" data-lang="shell">curl -X GET \
--H "Authorization: Bearer abcdef123456789abcdef123456789" \
-"https://api.nks.netapp.io/orgs"</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>Example response:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-json" data-lang="json">[
-  {
-    "pk": 2,
-    "name": "Company Organization",
-    "slug": "company-organization",
-    "logo": null,
-    "created": "2018-09-24T18:23:22.889260Z",
-    "updated": "2018-09-24T18:23:22.889291Z"
-  },
-  {
-    "pk": 1,
-    "name": "My Organization",
-    "slug": "my-organization",
-    "logo": null,
-    "created": "2018-08-05T14:35:53.161852Z",
-    "updated": "2019-01-31T18:31:21.583756Z"
-  }
-]</code></pre>
-</div>
+<div class="ulist">
+<ul>
+<li>
+<p>An NKS account. If you don&#8217;t have one already, you can sign up for a free 30-day trial with no credit card required at <a href="https://nks.netapp.io" class="bare">https://nks.netapp.io</a>.</p>
+</li>
+</ul>
 </div>
 <div class="paragraph">
-<p><strong>Return Values</strong></p>
+<p>VMware</p>
 </div>
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 50%;">
-<col style="width: 50%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top"><strong>Name</strong></th>
-<th class="tableblock halign-left valign-top"><strong>Description</strong></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>pk</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Organization ID.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>name</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Organization name.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>slug</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">A human-readable unique identifier, used for storing Organization data.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>logo</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Organization logo. This value is <code>null</code> if a custom logo has not been set.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>created</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Timestamp of the Organization&#8217;s create date.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>updated</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Timestamp of the last update to the Organization</p></td>
-</tr>
-</tbody>
-</table>
+<div class="ulist">
+<ul>
+<li>
+<p>VMware Virtual Distributed Switch installed.</p>
+</li>
+<li>
+<p>DHCP on the VM network.</p>
+</li>
+<li>
+<p>A defined resource pool.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Your registration machine environment</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>An <code>id_rsa</code>, <code>id_rsa.pub</code> keypair in your <code>~/.ssh</code> directory.</p>
+</li>
+<li>
+<p>NKS Registration binary.</p>
+</li>
+<li>
+<p>Helpful but not required:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://golang.org/">Golang</a> version 1.12.5 or later installed.</p>
+</li>
+<li>
+<p><a href="https://github.com/vmware/govmomi">Govc</a> version 0.18.0 or later installed.</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="get-a-specific-organization">GET a Specific Organization</h2>
+<h2 id="create-an-nks-api-token">Create an NKS API token</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Get information for a specific Organization.</p>
+<p>In order to register your VMware environment with NKS, you will need an NKS API token. You can use an existing NKS API token if you have one.</p>
 </div>
 <div class="paragraph">
-<p><strong>Path Parameter</strong></p>
+<p>To create a new API token:</p>
 </div>
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 33.3333%;">
-<col style="width: 33.3333%;">
-<col style="width: 33.3334%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top"><strong>Name</strong></th>
-<th class="tableblock halign-left valign-top"><strong>Required</strong></th>
-<th class="tableblock halign-left valign-top"><strong>Description</strong></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Org ID</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Yes</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The Organization ID.</p></td>
-</tr>
-</tbody>
-</table>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-shell" data-lang="shell">GET https://api.nks.netapp.io/orgs/{Org ID}</code></pre>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Register or log in at <a href="https://nks.netapp.io">NKS</a>.</p>
+</li>
+<li>
+<p>Click your profile avatar in the top right corner and select <code>Edit Profile</code>.</p>
+</li>
+<li>
+<p>In the <strong>API Tokens</strong> section, click <strong>Add Token</strong>.</p>
+</li>
+<li>
+<p>Copy the token and save it somewhere safe. This is your only chance to view your API token. The token cannot be displayed after you leave or reload the page.</p>
+</li>
+</ol>
 </div>
-</div>
-<div class="paragraph">
-<p>Example request:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-shell" data-lang="shell">curl -X GET \
--H "Authorization: Bearer abcdef123456789abcdef123456789" \
-"https://api.nks.netapp.io/orgs/2"</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>Example response:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-json" data-lang="json">{
-  "pk": 2,
-  "name": "My Organization",
-  "slug": "my-organization",
-  "logo": null,
-  "created": "2016-08-05T14:35:53.161852Z",
-  "updated": "2019-01-31T18:31:21.583756Z"
-}</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p><strong>Return Values</strong></p>
-</div>
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 50%;">
-<col style="width: 50%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top"><strong>Name</strong></th>
-<th class="tableblock halign-left valign-top"><strong>Description</strong></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>pk</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Organization ID.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>name</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Organization name.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>slug</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">A human-readable unique identifier, used for storing Organization data.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>logo</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Organization logo. This value is <code>null</code> if a custom logo has not been set.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>created</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Timestamp of the Organization&#8217;s create date.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>updated</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Timestamp of the last update to the Organization</p></td>
-</tr>
-</tbody>
-</table>
 </div>
 </div>
 <div class="sect1">
-<h2 id="post-a-new-organization">POST a New Organization</h2>
+<h2 id="register-vmware">Register VMware</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Create a new Organization in the user&#8217;s account.</p>
+<p>From the command line, invoke the NKS Registrator command-line utility. You have several possible options for registering in NKS:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>easy-configure</code>: Reads the configuration from vSphere and writes out the configuration.</p>
+</li>
+<li>
+<p><code>help</code>: Help information for any command.</p>
+</li>
+<li>
+<p><code>vsphere</code>: Register a vSphere environment with NKS (advanced).</p>
+</li>
+<li>
+<p><code>vsphere-easy</code>: Register a vSphere environment with NKS (easy).</p>
+</li>
+<li>
+<p><code>vsphere-unregister</code>: Unregister a vSphere environment with NKS.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>You can view these options at any time by using the command:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-shell" data-lang="shell">POST https://api.nks.netapp.io/orgs/</code></pre>
+<pre class="highlight"><code>./nks-register --help</code></pre>
 </div>
 </div>
 <div class="paragraph">
-<p>Example Request:</p>
+<p>In most cases, you will want to use <code>vsphere-easy</code> to register your VMware environment:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-shell" data-lang="shell">curl -X POST \
--H "Content-Type: application/json" \
--H "Authorization: Bearer abcdef123456789abcdef123456789" \
--d @postorg.json \
-"https://api.nks.netapp.io/orgs"</code></pre>
+<pre class="highlight"><code>./nks-register vsphere-easy</code></pre>
 </div>
 </div>
 <div class="paragraph">
-<p>Contents of <code>postorg.json</code>:</p>
+<p>To begin, you will need to log in to vCenter. Enter your information at the prompts:</p>
 </div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-shell" data-lang="shell">{
-  "name": "My New Organization"
-}</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>Example Response. If the new Organization is created successfully, the API will return a list of all Organizations of which the user is a member, including the newly-created Organization. The new Organization is listed first.</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-json" data-lang="json">[
- {
-    "pk": 2,
-    "name": "My New Organization",
-    "slug": "my-new-organization",
-    "logo": null,
-    "created": "2019-01-31T20:32:01.041059Z",
-    "updated": "2019-01-31T20:32:01.041093Z"
-},
-  {
-    "pk": 1,
-    "name": "My Organization",
-    "slug": "my-organization",
-    "logo": null,
-    "created": "2018-08-05T14:35:53.161852Z",
-    "updated": "2019-01-31T18:31:21.583756Z"
-  }
-]</code></pre>
-</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Your vCenter URL.</p>
+</li>
+<li>
+<p>Your vCenter username.</p>
+</li>
+<li>
+<p>Your vCenter password.</p>
+</li>
+</ul>
 </div>
 <div class="paragraph">
-<p><strong>Values</strong></p>
+<p>Next, you will be presented with a series of menus. Use your arrow key to navigate through the choices, and click Enter to select:</p>
 </div>
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 33.3333%;">
-<col style="width: 33.3333%;">
-<col style="width: 33.3334%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top"><strong>Name</strong></th>
-<th class="tableblock halign-left valign-top"><strong>Required</strong></th>
-<th class="tableblock halign-left valign-top"><strong>Description</strong></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>name</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Yes</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Organization name.</p></td>
-</tr>
-</tbody>
-</table>
-<div class="paragraph">
-<p><strong>Return Values</strong></p>
-</div>
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 50%;">
-<col style="width: 50%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top"><strong>Name</strong></th>
-<th class="tableblock halign-left valign-top"><strong>Description</strong></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>pk</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Organization ID.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>name</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Organization name.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>slug</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">A human-readable unique identifier, used for storing Organization data.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>logo</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Organization logo. This value is <code>null</code> if a custom logo has not been set.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>created</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Timestamp of the Organization&#8217;s create date.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>updated</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Timestamp of the last update to the Organization</p></td>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
-<div class="sect1">
-<h2 id="patch-update-an-organization">PATCH Update an Organization</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>Update information for an existing Organization.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Your vCenter resource pool. Use the arrow key to select <strong>NKS Pool</strong> from the list.</p>
+</li>
+<li>
+<p>Your vCenter datastore.</p>
+</li>
+<li>
+<p>Your vCenter Management Network. If you are unsure, choose <strong>VM_Network</strong>.</p>
+</li>
+<li>
+<p>Your vCenter Storage Network. If you are unsure, choose <strong>iSCSI&#8212;&#8203;B</strong>.</p>
+</li>
+</ul>
 </div>
 <div class="paragraph">
-<p><strong>Path Parameter</strong></p>
-</div>
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 33.3333%;">
-<col style="width: 33.3333%;">
-<col style="width: 33.3334%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top"><strong>Name</strong></th>
-<th class="tableblock halign-left valign-top"><strong>Required</strong></th>
-<th class="tableblock halign-left valign-top"><strong>Description</strong></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Org ID</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Yes</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The Organization ID.</p></td>
-</tr>
-</tbody>
-</table>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-shell" data-lang="shell">PATCH https://api.nks.netapp.io/orgs/{Org ID}</code></pre>
-</div>
+<p>Enter a name for your new region. This name should be unique to your system, and specific enough to be easily identifiable when you need to select it to provision an NKS cluster.</p>
 </div>
 <div class="paragraph">
-<p>Example Request: Update the Organization name from the contents of a JSON file:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-shell" data-lang="shell">curl -X PATCH \
--H "Content-Type: application/json" \
--H "Authorization: Bearer abcdef123456789abcdef123456789" \
--d @postorg.json \
-"https://api.nks.netapp.io/orgs/3"</code></pre>
-</div>
+<p>Enter the NKS API URL <a href="https://api.nks.netapp.io" class="bare">https://api.nks.netapp.io</a>.</p>
 </div>
 <div class="paragraph">
-<p>Contents of <code>postorg.json</code>:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-json" data-lang="json">{
-  "name": "New Organization Name"
-}</code></pre>
-</div>
+<p>Paste in your NKS API token.</p>
 </div>
 <div class="paragraph">
-<p>Alternate example: Update the Organization name as form data:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-shell" data-lang="shell">curl -X PATCH \
--H "Content-Type: multipart/form-data" \
--H "Authorization: Bearer abcdef123456789abcdef123456789" \
--F name="New Organization Name" \
-"https://api.nks.netapp.io/orgs/2"</code></pre>
-</div>
+<p>Use the arrow key to select the NKS organization you want to use for provisioning clusters on VMware.</p>
 </div>
 <div class="paragraph">
-<p>Example Response</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-json" data-lang="json">{
-  "pk": 2,
-  "name": "New Organization Name",
-  "slug": "new-organization-name",
-  "logo": null,
-  "created": "2019-01-31T20:32:01.041059Z",
-  "updated": "2019-01-31T21:21:07.607210Z"
-}</code></pre>
-</div>
+<p>Optional: If you want to set up Element storage for your region, select it here.</p>
 </div>
 <div class="paragraph">
-<p>Example request: Update the Organization logo as form data:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-shell" data-lang="shell">curl -X PATCH \
--H "Content-Type: multipart/form-data" \
--H "Authorization: Bearer abcdef123456789abcdef123456789" \
--F logo=@/path/to/file.jpg \
-"https://api.nks.netapp.io/orgs/2"</code></pre>
-</div>
+<p>This completes the information collection.</p>
 </div>
 <div class="paragraph">
-<p>Example response:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-json" data-lang="json">{
-  "pk": 2,
-  "name": "New Organization Name",
-  "slug": "new-organization-name",
-  "logo": "https:\/\/stackpoint_production.s3.amazonaws.com\/organization_logos\/logo.jpg",
-  "created": "2016-08-05T14:35:53.161852Z",
-  "updated": "2019-02-07T16:25:37.224597Z"
-}</code></pre>
-</div>
+<p>The registration process will begin, and you will see a message that the Bootstrap VM output will be dumped to a local file. Make a note of the bootstrap output file name.</p>
 </div>
 <div class="paragraph">
-<p><strong>Values</strong></p>
+<p>The progress meter will count up to 100, at which point the registration process is complete, and you are returned to the command line prompt. You can read the bootstrap output file to verify that registration completed successfully.</p>
 </div>
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 33.3333%;">
-<col style="width: 33.3333%;">
-<col style="width: 33.3334%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top"><strong>Name</strong></th>
-<th class="tableblock halign-left valign-top"><strong>Required</strong></th>
-<th class="tableblock halign-left valign-top"><strong>Description</strong></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>name</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Yes</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Organization name.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>logo</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">No</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Organization logo. This value is <code>null</code> if a custom logo has not been set. To set a custom logo, send it as content type <code>multipart/form-data</code> as shown above.</p></td>
-</tr>
-</tbody>
-</table>
 <div class="paragraph">
-<p><strong>Return Values</strong></p>
+<p>You can now create a NetApp HCI cluster in your VMware environment. <a href="https://docs.netapp.com/us-en/kubernetes-service/create-vmware-cluster.html">Click here for step-by-step instructions.</a></p>
 </div>
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 50%;">
-<col style="width: 50%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top"><strong>Name</strong></th>
-<th class="tableblock halign-left valign-top"><strong>Description</strong></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>pk</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Organization ID.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>name</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Organization name.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>slug</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">A human-readable unique identifier, used for storing Organization data.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>logo</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Organization logo. This value is <code>null</code> if a custom logo has not been set.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>created</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Timestamp of the Organization&#8217;s create date.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>updated</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Timestamp of the last update to the Organization</p></td>
-</tr>
-</tbody>
-</table>
 </div>
 </div>
 

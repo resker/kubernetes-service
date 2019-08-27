@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-  <title>Amazon Web Services (AWS) Credentials | NetApp Cloud Docs</title>
+  <title>Register Your VMware Environment With NKS | NetApp Cloud Docs</title>
   <meta charset="utf-8">
-  <meta property="og:title" content="Amazon Web Services (AWS) Credentials | NetApp Cloud Docs" />
+  <meta property="og:title" content="Register Your VMware Environment With NKS | NetApp Cloud Docs" />
 	<meta property="og:type" content="website" />
-	<meta property="og:url" content="https://docs.netapp.com/kubernetes-service/us-en/create-auth-credentials-on-aws.html" />
-	<meta property="og:description" content="Learn how to locate your AWS auth credentials, or create new AWS credentials, so that you can use NKS." />
-  <meta property="og:image" content="https://docs.netapp.com/kubernetes-service/us-en/images/logo-tophat-social.png" />
+	<meta property="og:url" content="https://docs.netapp.com/kubernetes-service/register-vmware.html" />
+	<meta property="og:description" content="How to register your VMware environment with NKS." />
+  <meta property="og:image" content="https://docs.netapp.com/kubernetes-service/images/logo-tophat-social.png" />
   <meta property="og:image:alt" content="NetApp Logo" />
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="format-detection" content="telephone=no">
@@ -17,16 +17,16 @@
   <meta http-equiv="nss-type" content="Product Documentation"/>
   <meta http-equiv="nss-subtype" content="User Guide"/>
   
-  <meta name="description" content="Learn how to locate your AWS auth credentials, or create new AWS credentials, so that you can use NKS.">
+  <meta name="description" content="How to register your VMware environment with NKS.">
   <meta name="keywords" content=" ">
   
 
   <!-- Icons -->
-  <link rel="icon" href="/kubernetes-service/us-en/images/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="/kubernetes-service/images/favicon.ico" type="image/x-icon">
 
   <!-- RSS Feed -->
   
-  <link rel="alternate" type="application/rss+xml" title="NetApp Cloud Docs" href="/kubernetes-service/us-en/feed.xml">
+  <link rel="alternate" type="application/rss+xml" title="NetApp Cloud Docs" href="/kubernetes-service/feed.xml">
   
 
   <!-- CSS Definitions: NetApp CSS should be defined after generic css -->
@@ -35,23 +35,23 @@
   <link rel="stylesheet" href="//cdn.jsdelivr.net/searchkit/0.10.0/theme.css">
 
   <!-- LUCI CSS Content -->
-  <link rel="stylesheet" href="/kubernetes-service/us-en/common/css/esb.min.css">
-  <link rel="stylesheet" href="/kubernetes-service/us-en/common/css/netapp-library.min.css">
-  <link rel="stylesheet" href="/kubernetes-service/us-en/common/css/doc.css">
-  <link rel="stylesheet" href="/kubernetes-service/us-en/common/css/doc-components.css">
+  <link rel="stylesheet" href="/kubernetes-service/common/css/esb.min.css">
+  <link rel="stylesheet" href="/kubernetes-service/common/css/netapp-library.min.css">
+  <link rel="stylesheet" href="/kubernetes-service/common/css/doc.css">
+  <link rel="stylesheet" href="/kubernetes-service/common/css/doc-components.css">
 
-  <link rel="stylesheet" href='/kubernetes-service/us-en/css/na-sidebar.css' type='text/css'>
-  <link rel='stylesheet' href='/kubernetes-service/us-en/css/na-search.css' type='text/css'>
-  <link rel='stylesheet' href='/kubernetes-service/us-en/css/clouddocs.css' type='text/css'>
+  <link rel="stylesheet" href='/kubernetes-service/css/na-sidebar.css' type='text/css'>
+  <link rel='stylesheet' href='/kubernetes-service/css/na-search.css' type='text/css'>
+  <link rel='stylesheet' href='/kubernetes-service/css/clouddocs.css' type='text/css'>
 
   <!-- Font awesome seems to affect our GitHub Icon and generic "arrow box" for external links. -->
-  <link rel="stylesheet" type="text/css" href="/kubernetes-service/us-en/css/font-awesome.min.css">
-  <!-- <link rel="stylesheet" href="/kubernetes-service/us-en/css/customstyles.css"> -->
+  <link rel="stylesheet" type="text/css" href="/kubernetes-service/css/font-awesome.min.css">
+  <!-- <link rel="stylesheet" href="/kubernetes-service/css/customstyles.css"> -->
   <!-- Controls the shadow effect for search dropdown menu -->
-  <link rel="stylesheet" href="/kubernetes-service/us-en/css/boxshadowproperties.css">
+  <link rel="stylesheet" href="/kubernetes-service/css/boxshadowproperties.css">
 
   <!-- NetApp CSS controls the technical content -->
-  <link rel='stylesheet' href='/kubernetes-service/us-en/css/netapp.css' type='text/css'>
+  <link rel='stylesheet' href='/kubernetes-service/css/netapp.css' type='text/css'>
 
   
 
@@ -60,23 +60,23 @@
   <!-- Used to import Promise for IE. Required for SearchKit -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/bluebird/3.3.5/bluebird.min.js"></script>
   
-    <script src='/kubernetes-service/us-en/js/na-search.js'></script>
+    <script src='/kubernetes-service/js/na-search.js'></script>
   
 
   
-  <link rel='stylesheet' href='/kubernetes-service/us-en/css/na-pagenav.css' type='text/css' id="pagenav-css">
-  <script src='/kubernetes-service/us-en/js/na-pagenav.js'></script>
+  <link rel='stylesheet' href='/kubernetes-service/css/na-pagenav.css' type='text/css' id="pagenav-css">
+  <script src='/kubernetes-service/js/na-pagenav.js'></script>
   
 
-  <link rel='stylesheet' href='/kubernetes-service/us-en/css/prism.css' type='text/css'>
-  <link rel='stylesheet' href='/kubernetes-service/us-en/css/prism-netapp.css' type='text/css'>
+  <link rel='stylesheet' href='/kubernetes-service/css/prism.css' type='text/css'>
+  <link rel='stylesheet' href='/kubernetes-service/css/prism-netapp.css' type='text/css'>
 
-  <script src='/kubernetes-service/us-en/js/clouddocs.js'></script>
-  <script src='/kubernetes-service/us-en/js/s_code_impl.js'></script>
-  <script src='/kubernetes-service/us-en/js/jquery.navgoco.min.js'></script>
+  <script src='/kubernetes-service/js/clouddocs.js'></script>
+  <script src='/kubernetes-service/js/s_code_impl.js'></script>
+  <script src='/kubernetes-service/js/jquery.navgoco.min.js'></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-  <script src='/kubernetes-service/us-en/js/toc.js'></script>
-  <script src='/kubernetes-service/us-en/js/customscripts.js'></script>
+  <script src='/kubernetes-service/js/toc.js'></script>
+  <script src='/kubernetes-service/js/customscripts.js'></script>
 
   <script>
       $(document).ready(function() {
@@ -193,7 +193,7 @@
       <div class="n-property-bar__menu-toggle">
         <a href="#" class="n-property-bar__menu-toggle-link"><span class="n-property-bar__menu-toggle-text">Menu</span><svg class="n-icon-bars n-property-bar__menu-toggle-icon" aria-labelledby="title">
           <title>bars</title>
-          <use xlink:href="/kubernetes-service/us-en/common/svg/sprite.svg#bars"></use>
+          <use xlink:href="/kubernetes-service/common/svg/sprite.svg#bars"></use>
         </svg></a>
       </div>
       <div class="n-property-bar__property-mark n-property-bar__property-mark--has-property-name">
@@ -201,11 +201,11 @@
           <div class="n-property-bar__logo">
             <svg class="n-icon-netapp-mark n-property-bar__netapp-mark-icon" aria-labelledby="title">
               <title>netapp-mark</title>
-              <use xlink:href="/kubernetes-service/us-en/common/svg/sprite.svg#netapp-mark"></use>
+              <use xlink:href="/kubernetes-service/common/svg/sprite.svg#netapp-mark"></use>
             </svg>
             <svg class="n-property-bar__logo-svg" aria-labelledby="title">
               <title>NetApp</title>
-              <use xlink:href="/kubernetes-service/us-en/common/svg/sprite.svg#netapp-logo"></use>
+              <use xlink:href="/kubernetes-service/common/svg/sprite.svg#netapp-logo"></use>
             </svg>
           </div>
           <h2 class="n-property-bar__property-name">Cloud Docs</h2>
@@ -225,7 +225,7 @@
               <span class="ie-i18n-lang">English</span>
               <svg class="ie-i18n-icon-container" class="n-property-bar__logo-svg" aria-labelledby="title">
                 <title>globe</title>
-                <use xlink:href="/kubernetes-service/us-en/common/svg/sprite.svg#globe" class="n-icon-globe n-globe__icon"></use>
+                <use xlink:href="/kubernetes-service/common/svg/sprite.svg#globe" class="n-icon-globe n-globe__icon"></use>
               </svg>
             </a>
           </li>
@@ -290,7 +290,7 @@
         
 
   
-    <li class="active"><a href="create-auth-credentials-on-aws.html">AWS Credentials</a></li>
+    <li><a href="create-auth-credentials-on-aws.html">AWS Credentials</a></li>
   
 
   
@@ -310,7 +310,7 @@
   
 
   
-    <li><a href="register-vmware.html">VMware Credentials</a></li>
+    <li class="active"><a href="register-vmware.html">VMware Credentials</a></li>
   
 
 
@@ -613,11 +613,11 @@
           
 
 <div class="n-doc__component-detail-heading-wrap">
-  <h1 class="n-doc__component-detail-heading">Amazon Web Services (AWS) Credentials
+  <h1 class="n-doc__component-detail-heading">Register Your VMware Environment With NKS
     <span>
       
-        <a target="_blank" href="https://github.com/NetAppDocs/kubernetes-service/blob/master/create-auth-credentials-on-aws.adoc" class="btn btn-default githubEditButton" role="button"><i class="fa fa-github fa-lg"></i> Edit on GitHub</a>
-        <a target="_blank" href="https://github.com/NetAppDocs/kubernetes-service/issues/new?body=Page%3A%20[Amazon Web Services (AWS) Credentials](https://docs.netapp.com/us-en/kubernetes-service/create-auth-credentials-on-aws.html)" class="btn btn-default githubEditButton" role="button"><i class="fa fa-github fa-lg"></i> Request doc changes</a>
+        <a target="_blank" href="https://github.com/NetAppDocs/kubernetes-service/blob/master/register-vmware.adoc" class="btn btn-default githubEditButton" role="button"><i class="fa fa-github fa-lg"></i> Edit on GitHub</a>
+        <a target="_blank" href="https://github.com/NetAppDocs/kubernetes-service/issues/new?body=Page%3A%20[Register Your VMware Environment With NKS](https://docs.netapp.com/us-en/kubernetes-service/register-vmware.html)" class="btn btn-default githubEditButton" role="button"><i class="fa fa-github fa-lg"></i> Request doc changes</a>
       
     </span>
   </h1>
@@ -625,7 +625,7 @@
 
 <p class="page-details">
 
-<time datetime="2019-08-19 21:43:44 +0000">08/19/2019</time>
+<time datetime="2019-08-27 00:38:26 +0000">08/27/2019</time>
 
 
 <span>Contributors
@@ -638,14 +638,6 @@
           style="border-radius: 50%;"/>
   </a>
   
-  <a target="_blank" href="https://github.com/akseldavis">
-    <img  class="avatar avatar-small"
-          alt="akseldavis"
-          width="20" height="20"
-          src="https://avatars2.githubusercontent.com/u/33839009?v=4"
-          style="border-radius: 50%;"/>
-  </a>
-  
 </span>
 
 </p>
@@ -653,363 +645,191 @@
 <div id="preamble">
 <div class="sectionbody">
 <div class="paragraph">
-<p>To create an Amazon Web Services (AWS) cluster through <a href="https://nks.netapp.io">NetApp Kubernetes Service (NKS)</a>, you will either need to create a new set of AWS credentials, or find your existing credential.</p>
+<p>Learn how to register your VMware environment for <a href="https://nks.netapp.io">the NetApp Kubernetes Service (NKS)</a> so that you can use NKS to create Kubernetes clusters on VMware.</p>
 </div>
 <div class="paragraph">
-<p>After you add your AWS credentials to your NKS account, <a href="https://docs.netapp.com/us-en/kubernetes-service/create-aws-cluster.html">click here to learn how to create a Kubernetes cluster on AWS</a></p>
+<p><strong>Requirements</strong></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>An NKS account. If you don&#8217;t have one already, you can sign up for a free 30-day trial with no credit card required at <a href="https://nks.netapp.io" class="bare">https://nks.netapp.io</a>.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>VMware</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>VMware Virtual Distributed Switch installed.</p>
+</li>
+<li>
+<p>DHCP on the VM network.</p>
+</li>
+<li>
+<p>A defined resource pool.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Your registration machine environment</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>An <code>id_rsa</code>, <code>id_rsa.pub</code> keypair in your <code>~/.ssh</code> directory.</p>
+</li>
+<li>
+<p>NKS Registration binary.</p>
+</li>
+<li>
+<p>Helpful but not required:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://golang.org/">Golang</a> version 1.12.5 or later installed.</p>
+</li>
+<li>
+<p><a href="https://github.com/vmware/govmomi">Govc</a> version 0.18.0 or later installed.</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="create-a-new-set-of-aws-credentials">Create a New Set of AWS Credentials</h2>
+<h2 id="create-an-nks-api-token">Create an NKS API token</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>To create an Amazon Web Services (AWS) cluster through <a href="https://nks.netapp.io">NetApp Kubernetes Service (NKS)</a>, you will need to:</p>
+<p>In order to register your VMware environment with NKS, you will need an NKS API token. You can use an existing NKS API token if you have one.</p>
+</div>
+<div class="paragraph">
+<p>To create a new API token:</p>
 </div>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>Create an AWS user.</p>
+<p>Register or log in at <a href="https://nks.netapp.io">NKS</a>.</p>
 </li>
 <li>
-<p>Create a policy which grants full access to:</p>
-<div class="ulist">
-<ul>
-<li>
-<p>Autoscaling</p>
+<p>Click your profile avatar in the top right corner and select <code>Edit Profile</code>.</p>
 </li>
 <li>
-<p>CloudWatch</p>
+<p>In the <strong>API Tokens</strong> section, click <strong>Add Token</strong>.</p>
 </li>
 <li>
-<p>EC2</p>
-</li>
-<li>
-<p>Elastic Load Balancing</p>
-</li>
-<li>
-<p>IAM</p>
-</li>
-<li>
-<p>Route 53</p>
-</li>
-</ul>
-</div>
-</li>
-<li>
-<p>Attach this policy to the user.</p>
+<p>Copy the token and save it somewhere safe. This is your only chance to view your API token. The token cannot be displayed after you leave or reload the page.</p>
 </li>
 </ol>
-</div>
-<div class="sect2">
-<h3 id="create-an-aws-user">Create an AWS User</h3>
-<div class="paragraph">
-<p>To create a user, sign into <a href="https://console.aws.amazon.com/console/home">the AWS Management Console</a> then click <strong>Services</strong>.</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="assets/documentation/create-auth-credentials-on-aws/click-services.png?raw=true" alt="Add Your Amazon Web Services (AWS) Credentials">
-</div>
-</div>
-<div class="paragraph">
-<p>In the <strong>Security, Identity &amp; Compliance</strong> column, click <strong>IAM</strong>.</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="assets/documentation/create-auth-credentials-on-aws/click-iam.png?raw=true" alt="Add Your Amazon Web Services (AWS) Credentials">
-</div>
-</div>
-<div class="paragraph">
-<p>Click <strong>Users</strong>.</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="assets/documentation/create-auth-credentials-on-aws/click-users.png?raw=true" alt="Add Your Amazon Web Services (AWS) Credentials">
-</div>
-</div>
-<div class="paragraph">
-<p>Click <strong>Add User</strong>.</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="assets/documentation/create-auth-credentials-on-aws/click-add-user.png?raw=true" alt="Add Your Amazon Web Services (AWS) Credentials">
-</div>
-</div>
-<div class="paragraph">
-<p>Enter the <strong>User Name</strong> then choose the <strong>Access type.</strong></p>
-</div>
-<div class="paragraph">
-<p>If this user will only be used to access the API, SDK, and other development tools, click <strong>Programmatic access.</strong> If this user is for someone who will need to log in to the AWS Management Console, choose <strong>AWS Management Console access</strong>.</p>
-</div>
-<div class="paragraph">
-<p>Then click <strong>Next: Permissions</strong> to continue.</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="assets/documentation/create-auth-credentials-on-aws/select-access-type.png?raw=true" alt="Add Your Amazon Web Services (AWS) Credentials">
-</div>
-</div>
-<div class="paragraph">
-<p>Choose whether to add the user to a group, copy permissions from an existing user, or attach existing policies directly.</p>
-</div>
-<div class="paragraph">
-<p>Note: Amazon recommends using groups as a "best practice" way to manage user permissions.</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="assets/documentation/create-auth-credentials-on-aws/set-permissions.png?raw=true" alt="Add Your Amazon Web Services (AWS) Credentials">
-</div>
-</div>
-<div class="paragraph">
-<p>If you need to create a new policy, see the next section for our recommended policy details.</p>
-</div>
-<div class="paragraph">
-<p>If you choose to add the user to a group, you can either create a new group or select an existing group.</p>
-</div>
-<div class="paragraph">
-<p>Then click <strong>Next: Review</strong> to continue.</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="assets/documentation/create-auth-credentials-on-aws/create-group.png?raw=true" alt="Add Your Amazon Web Services (AWS) Credentials">
-</div>
-</div>
-<div class="paragraph">
-<p>Confirm the new user&#8217;s information, then click <strong>Create user</strong> to create the user.</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="assets/documentation/create-auth-credentials-on-aws/confirm-user.png?raw=true" alt="Add Your Amazon Web Services (AWS) Credentials">
-</div>
-</div>
-<div class="paragraph">
-<p>Click <strong>Download .csv</strong> and save the user&#8217;s security credentials to your computer.</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="assets/documentation/create-auth-credentials-on-aws/download-csv.png?raw=true" alt="Add Your Amazon Web Services (AWS) Credentials">
-</div>
-</div>
-<div class="paragraph">
-<p>Then click <strong>Close</strong> to return to the <strong>Users</strong> page.</p>
-</div>
-</div>
-<div class="sect2">
-<h3 id="create-an-aws-policy">Create an AWS Policy</h3>
-<div class="paragraph">
-<p>When creating a new AWS policy, you will need to allow your user full access to the following services:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Autoscaling</p>
-</li>
-<li>
-<p>CloudWatch</p>
-</li>
-<li>
-<p>EC2</p>
-</li>
-<li>
-<p>Elastic Load Balancing</p>
-</li>
-<li>
-<p>IAM</p>
-</li>
-<li>
-<p>Route 53</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>For an easy way to create a single policy to grant all the necessary access, click <strong>Policies</strong>. You can also access this page from the user account creation process by selecting <strong>Attach existing policies directly &gt; Create policy</strong>.</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="assets/documentation/create-auth-credentials-on-aws/attach-existing-policy.png?raw=true" alt="Add Your Amazon Web Services (AWS) Credentials">
-</div>
-</div>
-<div class="paragraph">
-<p>Click <strong>Create Policy</strong>.</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="assets/documentation/create-auth-credentials-on-aws/click-create-policy.png?raw=true" alt="Add Your Amazon Web Services (AWS) Credentials">
-</div>
-</div>
-<div class="paragraph">
-<p>Click to select <strong>Create Your Own Policy</strong>.</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="assets/documentation/create-auth-credentials-on-aws/create-your-own-policy.png?raw=true" alt="Add Your Amazon Web Services (AWS) Credentials">
-</div>
-</div>
-<div class="paragraph">
-<p>Fill out the <strong>Policy Name</strong> field with a name you will be able to identify, like <code>StackPointCloudPolicy</code>.</p>
-</div>
-<div class="paragraph">
-<p>Note that you can only use alphanumeric characters plus a few other characters like <code>-</code> and <code>+</code>. You cannot use spaces in the policy name.</p>
-</div>
-<div class="paragraph">
-<p>Copy the following and paste it into the <strong>Policy Document</strong> field:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code>{
-    "Version": "2012-10-17",
-    "Statement": [
-        {
-            "Action": "ec2:*",
-            "Effect": "Allow",
-            "Resource": "*"
-        },
-        {
-            "Effect": "Allow",
-            "Action": "elasticloadbalancing:*",
-            "Resource": "*"
-        },
-        {
-            "Effect": "Allow",
-            "Action": "cloudwatch:*",
-            "Resource": "*"
-        },
-        {
-            "Effect": "Allow",
-            "Action": "autoscaling:*",
-            "Resource": "*"
-        },
-        {
-            "Effect": "Allow",
-            "Action": [
-                "route53:*"
-            ],
-            "Resource": [
-                "*"
-            ]
-        },
-        {
-            "Effect": "Allow",
-            "Action": [
-                "elasticloadbalancing:DescribeLoadBalancers"
-            ],
-            "Resource": [
-                "*"
-            ]
-        },
-        {
-            "Effect": "Allow",
-            "Action": "iam:*",
-            "Resource": "*"
-        }
-    ]
-}</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>Click <strong>Create Policy</strong> to create the policy and return to the Policy page.</p>
-</div>
-</div>
-<div class="sect2">
-<h3 id="attach-the-policy-to-an-existing-user">Attach the Policy to an Existing User</h3>
-<div class="paragraph">
-<p>Click <strong>Users</strong> to return to the Users page.</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="assets/documentation/create-auth-credentials-on-aws/return-to-users-page.png?raw=true" alt="Add Your Amazon Web Services (AWS) Credentials">
-</div>
-</div>
-<div class="paragraph">
-<p>Click your user account to go to the user management page.</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="assets/documentation/create-auth-credentials-on-aws/return-to-user-management-page.png?raw=true" alt="Add Your Amazon Web Services (AWS) Credentials">
-</div>
-</div>
-<div class="paragraph">
-<p>Click the <strong>Permissions</strong> tab, then click <strong>Attach Policy</strong>.</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="assets/documentation/create-auth-credentials-on-aws/permissions-attach-policy.png?raw=true" alt="Add Your Amazon Web Services (AWS) Credentials">
-</div>
-</div>
-<div class="paragraph">
-<p>Type the name of your policy into the <strong>Filter</strong> field to locate your policy. Tick the box to select the policy, then click <strong>Attach Policy</strong> to attach it to your user.</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="assets/documentation/create-auth-credentials-on-aws/attach-policy.png?raw=true" alt="Add Your Amazon Web Services (AWS) Credentials">
-</div>
-</div>
-<div class="paragraph">
-<p>The user account is now ready to be used to create a cluster from <a href="https://nks.netapp.io">the NKS website</a>. The user&#8217;s Access Key ID and Secret Access Key are in the <code>credentials.csv</code> file which you downloaded when you created the user.</p>
-</div>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="find-your-existing-aws-credentials">Find Your Existing AWS Credentials</h2>
+<h2 id="register-vmware">Register VMware</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>To create an Amazon Web Services (AWS) cluster through <a href="https://nks.netapp.io">NetApp Kubernetes Service (NKS)</a> you will need your Access Key ID and Secret Access Key. You can find these in the <code>credentials.csv</code> file which you downloaded when you created the user.</p>
+<p>From the command line, invoke the NKS Registrator command-line utility. You have several possible options for registering in NKS:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>easy-configure</code>: Reads the configuration from vSphere and writes out the configuration.</p>
+</li>
+<li>
+<p><code>help</code>: Help information for any command.</p>
+</li>
+<li>
+<p><code>vsphere</code>: Register a vSphere environment with NKS (advanced).</p>
+</li>
+<li>
+<p><code>vsphere-easy</code>: Register a vSphere environment with NKS (easy).</p>
+</li>
+<li>
+<p><code>vsphere-unregister</code>: Unregister a vSphere environment with NKS.</p>
+</li>
+</ul>
 </div>
 <div class="paragraph">
-<p>You can only view or download the Access Key ID and Secret Access Key when you create the user or the user&#8217;s access key. However, you can create new access keys at any time.</p>
+<p>You can view these options at any time by using the command:</p>
 </div>
-<div class="sect2">
-<h3 id="create-a-new-aws-access-key">Create a New AWS Access Key</h3>
-<div class="paragraph">
-<p>If you no longer have the <code>credentials.csv</code> file which you downloaded when you created the AWS user, you can create a new access key at any time.</p>
-</div>
-<div class="paragraph">
-<p>Sign in to the <a href="https://console.aws.amazon.com/console/home">AWS Management Console</a>. In the <strong>Find Services</strong> section, search for <code>IAM</code>. Click the search result for <code>IAM: Manage User Access and Encryption Keys</code>.</p>
-</div>
-<div class="imageblock">
+<div class="listingblock">
 <div class="content">
-<img src="assets/documentation/create-auth-credentials-on-aws/aws-auth-key-01-search-iam.png?raw=true" alt="Add Your Amazon Web Services (AWS) Credentials">
+<pre class="highlight"><code>./nks-register --help</code></pre>
 </div>
 </div>
 <div class="paragraph">
-<p>Click <strong>Users</strong>.</p>
+<p>In most cases, you will want to use <code>vsphere-easy</code> to register your VMware environment:</p>
 </div>
-<div class="imageblock">
+<div class="listingblock">
 <div class="content">
-<img src="assets/documentation/create-auth-credentials-on-aws/aws-auth-key-02-click-users.png?raw=true" alt="Add Your Amazon Web Services (AWS) Credentials">
+<pre class="highlight"><code>./nks-register vsphere-easy</code></pre>
 </div>
 </div>
 <div class="paragraph">
-<p>Click the user whose credentials you need to access.</p>
+<p>To begin, you will need to log in to vCenter. Enter your information at the prompts:</p>
 </div>
-<div class="imageblock">
-<div class="content">
-<img src="assets/documentation/create-auth-credentials-on-aws/aws-auth-key-03-click-user.png?raw=true" alt="Add Your Amazon Web Services (AWS) Credentials">
-</div>
-</div>
-<div class="paragraph">
-<p>Click the <strong>Security credentials</strong> tab.</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="assets/documentation/create-auth-credentials-on-aws/aws-auth-key-04-security-credentials.png?raw=true" alt="Add Your Amazon Web Services (AWS) Credentials">
-</div>
-</div>
-<div class="paragraph">
-<p>If the user has an active access key, delete it. Click <strong>Create access key</strong> to create a new access key.</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="assets/documentation/create-auth-credentials-on-aws/aws-auth-key-05-create-access-key.png?raw=true" alt="Add Your Amazon Web Services (AWS) Credentials">
-</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Your vCenter URL.</p>
+</li>
+<li>
+<p>Your vCenter username.</p>
+</li>
+<li>
+<p>Your vCenter password.</p>
+</li>
+</ul>
 </div>
 <div class="paragraph">
-<p>At the prompt, download the <code>credentials.csv</code> file. You can also copy and paste the Access Key ID and Secret Access Key from this pop-up window. Be sure to save <code>credentials.csv</code> in a safe place.</p>
+<p>Next, you will be presented with a series of menus. Use your arrow key to navigate through the choices, and click Enter to select:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Your vCenter resource pool. Use the arrow key to select <strong>NKS Pool</strong> from the list.</p>
+</li>
+<li>
+<p>Your vCenter datastore.</p>
+</li>
+<li>
+<p>Your vCenter Management Network. If you are unsure, choose <strong>VM_Network</strong>.</p>
+</li>
+<li>
+<p>Your vCenter Storage Network. If you are unsure, choose <strong>iSCSI&#8212;&#8203;B</strong>.</p>
+</li>
+</ul>
 </div>
 <div class="paragraph">
-<p><em>Did this article answer your question? If not, <a href="mailto:nks@netapp.com">contact us.</a></em></p>
+<p>Enter a name for your new region. This name should be unique to your system, and specific enough to be easily identifiable when you need to select it to provision an NKS cluster.</p>
 </div>
+<div class="paragraph">
+<p>Enter the NKS API URL <a href="https://api.nks.netapp.io" class="bare">https://api.nks.netapp.io</a>.</p>
+</div>
+<div class="paragraph">
+<p>Paste in your NKS API token.</p>
+</div>
+<div class="paragraph">
+<p>Use the arrow key to select the NKS organization you want to use for provisioning clusters on VMware.</p>
+</div>
+<div class="paragraph">
+<p>Optional: If you want to set up Element storage for your region, select it here.</p>
+</div>
+<div class="paragraph">
+<p>This completes the information collection.</p>
+</div>
+<div class="paragraph">
+<p>The registration process will begin, and you will see a message that the Bootstrap VM output will be dumped to a local file. Make a note of the bootstrap output file name.</p>
+</div>
+<div class="paragraph">
+<p>The progress meter will count up to 100, at which point the registration process is complete, and you are returned to the command line prompt. You can read the bootstrap output file to verify that registration completed successfully.</p>
+</div>
+<div class="paragraph">
+<p>You can now create a NetApp HCI cluster in your VMware environment. <a href="https://docs.netapp.com/us-en/kubernetes-service/create-vmware-cluster.html">Click here for step-by-step instructions.</a></p>
 </div>
 </div>
 </div>
@@ -1052,7 +872,7 @@
                       <span class="n-footer__social-link-text">blog</span>
                       <svg class="n-icon-blog n-footer__social-link-icon" aria-labelledby="title">
                         <title>blog@</title>
-                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/kubernetes-service/us-en/common/svg/sprite.svg#blog"></use>
+                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/kubernetes-service/common/svg/sprite.svg#blog"></use>
                       </svg>
                     </a>
                   </li>
@@ -1061,7 +881,7 @@
                       <span class="n-footer__social-link-text">community</span>
                       <svg class="n-icon-twitter n-footer__social-link-icon" aria-labelledby="title">
                         <title>community@</title>
-                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/kubernetes-service/us-en/common/svg/sprite.svg#comments"></use>
+                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/kubernetes-service/common/svg/sprite.svg#comments"></use>
                       </svg>
                     </a>
                   </li>
@@ -1071,7 +891,7 @@
                       <span class="n-footer__social-link-text">twitter</span>
                       <svg class="n-icon-twitter n-footer__social-link-icon" aria-labelledby="title">
                         <title>twitter@</title>
-                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/kubernetes-service/us-en/common/svg/sprite.svg#twitter"></use>
+                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/kubernetes-service/common/svg/sprite.svg#twitter"></use>
                       </svg>
                     </a>
                   </li>
@@ -1080,7 +900,7 @@
                       <span class="n-footer__social-link-text">youtube</span>
                       <svg class="n-icon-youtube n-footer__social-link-icon" aria-labelledby="title">
                         <title>youtube@</title>
-                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/kubernetes-service/us-en/common/svg/sprite.svg#youtube"></use>
+                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/kubernetes-service/common/svg/sprite.svg#youtube"></use>
                       </svg>
                     </a>
                   </li>
@@ -1101,15 +921,15 @@
 
     </div>
 
-    <script src="/kubernetes-service/us-en/common/js/components.js"></script>
-    <script src="/kubernetes-service/us-en/common/js/doc-components.js"></script>
+    <script src="/kubernetes-service/common/js/components.js"></script>
+    <script src="/kubernetes-service/common/js/doc-components.js"></script>
 
     <!-- Elasticsearch JS -->
-    <script type="text/javascript" src='/kubernetes-service/us-en/js/bundle.js'></script>
+    <script type="text/javascript" src='/kubernetes-service/js/bundle.js'></script>
 
     <!-- Syntax Highlighting -->
-    <script type="text/javascript" src='/kubernetes-service/us-en/js/prism.js'></script>
-    <script type="text/javascript" src='/kubernetes-service/us-en/js/prism-curl.js'></script>
+    <script type="text/javascript" src='/kubernetes-service/js/prism.js'></script>
+    <script type="text/javascript" src='/kubernetes-service/js/prism-curl.js'></script>
 
   </body>
 
