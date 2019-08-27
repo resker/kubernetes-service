@@ -15,7 +15,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/kubernetes-service/a-sysdig-kubernetes-adventure.html</loc>
       
-        <lastmod>2019-07-10T23:36:43+00:00</lastmod>
+        <lastmod>2019-07-11T16:48:24+00:00</lastmod>
       
     </url>
   
@@ -57,56 +57,56 @@
     <url>
       <loc>https://docs.netapp.com/us-en/kubernetes-service/alm-applications.html</loc>
       
-        <lastmod>2019-07-25T17:30:30+00:00</lastmod>
+        <lastmod>2019-08-27T18:51:59+00:00</lastmod>
       
     </url>
   
     <url>
       <loc>https://docs.netapp.com/us-en/kubernetes-service/alm-packages.html</loc>
       
-        <lastmod>2019-07-25T17:30:30+00:00</lastmod>
+        <lastmod>2019-08-27T18:51:59+00:00</lastmod>
       
     </url>
   
     <url>
       <loc>https://docs.netapp.com/us-en/kubernetes-service/alm-projects.html</loc>
       
-        <lastmod>2019-07-25T17:30:30+00:00</lastmod>
+        <lastmod>2019-08-27T18:51:59+00:00</lastmod>
       
     </url>
   
     <url>
       <loc>https://docs.netapp.com/us-en/kubernetes-service/alm-quickstart.html</loc>
       
-        <lastmod>2019-08-06T18:17:34+00:00</lastmod>
+        <lastmod>2019-08-27T18:51:59+00:00</lastmod>
       
     </url>
   
     <url>
       <loc>https://docs.netapp.com/us-en/kubernetes-service/alm-trackers.html</loc>
       
-        <lastmod>2019-08-01T17:08:10+00:00</lastmod>
+        <lastmod>2019-08-27T18:51:59+00:00</lastmod>
       
     </url>
   
     <url>
       <loc>https://docs.netapp.com/us-en/kubernetes-service/api-basics.html</loc>
       
-        <lastmod>2019-07-25T17:30:30+00:00</lastmod>
+        <lastmod>2019-08-27T18:51:59+00:00</lastmod>
       
     </url>
   
     <url>
       <loc>https://docs.netapp.com/us-en/kubernetes-service/api-clusters.html</loc>
       
-        <lastmod>2019-07-10T23:36:43+00:00</lastmod>
+        <lastmod>2019-07-11T16:48:24+00:00</lastmod>
       
     </url>
   
     <url>
       <loc>https://docs.netapp.com/us-en/kubernetes-service/api-federations.html</loc>
       
-        <lastmod>2019-07-10T23:36:43+00:00</lastmod>
+        <lastmod>2019-07-11T16:48:24+00:00</lastmod>
       
     </url>
   
@@ -120,35 +120,35 @@
     <url>
       <loc>https://docs.netapp.com/us-en/kubernetes-service/api-istio-mesh.html</loc>
       
-        <lastmod>2019-07-10T23:36:43+00:00</lastmod>
+        <lastmod>2019-07-11T16:48:24+00:00</lastmod>
       
     </url>
   
     <url>
       <loc>https://docs.netapp.com/us-en/kubernetes-service/api-keysets.html</loc>
       
-        <lastmod>2019-07-10T23:36:43+00:00</lastmod>
+        <lastmod>2019-07-11T16:48:24+00:00</lastmod>
       
     </url>
   
     <url>
       <loc>https://docs.netapp.com/us-en/kubernetes-service/api-members.html</loc>
       
-        <lastmod>2019-07-10T23:36:43+00:00</lastmod>
+        <lastmod>2019-07-11T16:48:24+00:00</lastmod>
       
     </url>
   
     <url>
       <loc>https://docs.netapp.com/us-en/kubernetes-service/api-nodepools.html</loc>
       
-        <lastmod>2019-07-10T23:36:43+00:00</lastmod>
+        <lastmod>2019-07-11T16:48:24+00:00</lastmod>
       
     </url>
   
     <url>
       <loc>https://docs.netapp.com/us-en/kubernetes-service/api-nodes.html</loc>
       
-        <lastmod>2019-07-10T23:36:43+00:00</lastmod>
+        <lastmod>2019-07-11T16:48:24+00:00</lastmod>
       
     </url>
   
@@ -169,28 +169,28 @@
     <url>
       <loc>https://docs.netapp.com/us-en/kubernetes-service/api-organizations.html</loc>
       
-        <lastmod>2019-07-10T23:36:43+00:00</lastmod>
+        <lastmod>2019-07-11T16:48:24+00:00</lastmod>
       
     </url>
   
     <url>
       <loc>https://docs.netapp.com/us-en/kubernetes-service/api-subscription.html</loc>
       
-        <lastmod>2019-07-10T23:36:43+00:00</lastmod>
+        <lastmod>2019-07-11T16:48:24+00:00</lastmod>
       
     </url>
   
     <url>
       <loc>https://docs.netapp.com/us-en/kubernetes-service/api-teams.html</loc>
       
-        <lastmod>2019-07-10T23:36:43+00:00</lastmod>
+        <lastmod>2019-07-11T16:48:24+00:00</lastmod>
       
     </url>
   
     <url>
       <loc>https://docs.netapp.com/us-en/kubernetes-service/api-trusted-charts.html</loc>
       
-        <lastmod>2019-07-10T23:36:43+00:00</lastmod>
+        <lastmod>2019-07-11T16:48:24+00:00</lastmod>
       
     </url>
   
@@ -204,7 +204,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/kubernetes-service/api-workspaces.html</loc>
       
-        <lastmod>2019-07-10T23:36:43+00:00</lastmod>
+        <lastmod>2019-07-11T16:48:24+00:00</lastmod>
       
     </url>
   
@@ -225,84 +225,91 @@
     <url>
       <loc>https://docs.netapp.com/us-en/kubernetes-service/create-aks-cluster.html</loc>
       
-        <lastmod>2019-08-19T21:43:44+00:00</lastmod>
+        <lastmod>2019-08-27T18:51:59+00:00</lastmod>
       
     </url>
   
     <url>
       <loc>https://docs.netapp.com/us-en/kubernetes-service/create-an-aws-cluster.html</loc>
       
-        <lastmod>2019-07-10T23:36:43+00:00</lastmod>
+        <lastmod>2019-07-11T16:48:24+00:00</lastmod>
       
     </url>
   
     <url>
       <loc>https://docs.netapp.com/us-en/kubernetes-service/create-auth-credentials-on-aws.html</loc>
       
-        <lastmod>2019-08-19T21:43:44+00:00</lastmod>
+        <lastmod>2019-08-27T18:51:59+00:00</lastmod>
       
     </url>
   
     <url>
       <loc>https://docs.netapp.com/us-en/kubernetes-service/create-auth-credentials-on-azure.html</loc>
       
-        <lastmod>2019-08-19T21:43:44+00:00</lastmod>
+        <lastmod>2019-08-27T18:51:59+00:00</lastmod>
       
     </url>
   
     <url>
       <loc>https://docs.netapp.com/us-en/kubernetes-service/create-auth-credentials-on-gce.html</loc>
       
-        <lastmod>2019-08-19T21:43:44+00:00</lastmod>
+        <lastmod>2019-08-27T18:51:59+00:00</lastmod>
       
     </url>
   
     <url>
       <loc>https://docs.netapp.com/us-en/kubernetes-service/create-auth-credentials-on-gke.html</loc>
       
-        <lastmod>2019-08-19T21:43:44+00:00</lastmod>
+        <lastmod>2019-08-27T18:51:59+00:00</lastmod>
       
     </url>
   
     <url>
       <loc>https://docs.netapp.com/us-en/kubernetes-service/create-aws-cluster.html</loc>
       
-        <lastmod>2019-08-19T21:43:44+00:00</lastmod>
+        <lastmod>2019-08-27T18:51:59+00:00</lastmod>
       
     </url>
   
     <url>
       <loc>https://docs.netapp.com/us-en/kubernetes-service/create-azure-cluster.html</loc>
       
-        <lastmod>2019-08-19T21:43:44+00:00</lastmod>
+        <lastmod>2019-08-27T18:51:59+00:00</lastmod>
       
     </url>
   
     <url>
       <loc>https://docs.netapp.com/us-en/kubernetes-service/create-eks-cluster.html</loc>
       
-        <lastmod>2019-08-19T21:43:44+00:00</lastmod>
+        <lastmod>2019-08-27T18:51:59+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/kubernetes-service/create-flexpod-cluster.html</loc>
+      
+        <lastmod>2019-08-27T18:51:59+00:00</lastmod>
       
     </url>
   
     <url>
       <loc>https://docs.netapp.com/us-en/kubernetes-service/create-gce-cluster.html</loc>
       
-        <lastmod>2019-08-19T21:43:44+00:00</lastmod>
+        <lastmod>2019-08-27T18:51:59+00:00</lastmod>
       
     </url>
   
     <url>
       <loc>https://docs.netapp.com/us-en/kubernetes-service/create-gke-cluster.html</loc>
       
-        <lastmod>2019-08-19T21:43:44+00:00</lastmod>
+        <lastmod>2019-08-27T18:51:59+00:00</lastmod>
       
     </url>
   
     <url>
       <loc>https://docs.netapp.com/us-en/kubernetes-service/create-netapp-hci-cluster.html</loc>
       
-        <lastmod>2019-08-20T17:27:27+00:00</lastmod>
+        <lastmod>2019-08-27T18:51:59+00:00</lastmod>
       
     </url>
   
@@ -316,14 +323,14 @@
     <url>
       <loc>https://docs.netapp.com/us-en/kubernetes-service/eol.html</loc>
       
-        <lastmod>2019-07-10T23:36:43+00:00</lastmod>
+        <lastmod>2019-07-11T16:48:24+00:00</lastmod>
       
     </url>
   
     <url>
       <loc>https://docs.netapp.com/us-en/kubernetes-service/find-aws-credentials-for-cvs.html</loc>
       
-        <lastmod>2019-07-25T17:30:30+00:00</lastmod>
+        <lastmod>2019-08-27T18:51:59+00:00</lastmod>
       
     </url>
   
@@ -337,21 +344,21 @@
     <url>
       <loc>https://docs.netapp.com/us-en/kubernetes-service/</loc>
       
-        <lastmod>2019-08-27T00:38:26+00:00</lastmod>
+        <lastmod>2019-08-27T18:51:59+00:00</lastmod>
       
     </url>
   
     <url>
       <loc>https://docs.netapp.com/us-en/kubernetes-service/install-kubectl-to-control-a-kubernetes-cluster.html</loc>
       
-        <lastmod>2019-07-10T23:36:43+00:00</lastmod>
+        <lastmod>2019-07-11T16:48:24+00:00</lastmod>
       
     </url>
   
     <url>
       <loc>https://docs.netapp.com/us-en/kubernetes-service/managing-ingresses-on-kubernetes.html</loc>
       
-        <lastmod>2019-07-10T23:36:43+00:00</lastmod>
+        <lastmod>2019-07-11T16:48:24+00:00</lastmod>
       
     </url>
   
@@ -372,14 +379,14 @@
     <url>
       <loc>https://docs.netapp.com/us-en/kubernetes-service/news.html</loc>
       
-        <lastmod>2019-07-10T23:36:43+00:00</lastmod>
+        <lastmod>2019-07-11T16:48:24+00:00</lastmod>
       
     </url>
   
     <url>
       <loc>https://docs.netapp.com/us-en/kubernetes-service/nks-requirements.html</loc>
       
-        <lastmod>2019-07-10T23:36:43+00:00</lastmod>
+        <lastmod>2019-08-27T18:51:59+00:00</lastmod>
       
     </url>
   
@@ -393,21 +400,21 @@
     <url>
       <loc>https://docs.netapp.com/us-en/kubernetes-service//search.html</loc>
       
-        <lastmod>2019-08-27T00:39:48+00:00</lastmod>
+        <lastmod>2019-08-27T18:53:15+00:00</lastmod>
       
     </url>
   
     <url>
       <loc>https://docs.netapp.com/us-en/kubernetes-service/ssh-to-a-node-in-an-nks-cluster.html</loc>
       
-        <lastmod>2019-07-26T17:53:25+00:00</lastmod>
+        <lastmod>2019-08-27T18:51:59+00:00</lastmod>
       
     </url>
   
     <url>
       <loc>https://docs.netapp.com/us-en/kubernetes-service/intro-to-terraform-on-nks.html</loc>
       
-        <lastmod>2019-08-02T19:02:16+00:00</lastmod>
+        <lastmod>2019-08-27T18:51:59+00:00</lastmod>
       
     </url>
   
@@ -421,14 +428,14 @@
     <url>
       <loc>https://docs.netapp.com/us-en/kubernetes-service/upgrade-to-the-newest-version-of-kubernetes.html</loc>
       
-        <lastmod>2019-07-10T23:36:43+00:00</lastmod>
+        <lastmod>2019-07-11T16:48:24+00:00</lastmod>
       
     </url>
   
     <url>
       <loc>https://docs.netapp.com/us-en/kubernetes-service/using-the-kubernetes-cloud-backup.html</loc>
       
-        <lastmod>2019-07-10T23:36:43+00:00</lastmod>
+        <lastmod>2019-07-11T16:48:24+00:00</lastmod>
       
     </url>
   
